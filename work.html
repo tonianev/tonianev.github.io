@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Selected work by Toni Anev.">
+  <meta name="description" content="Selected ML platform, MLOps, and applied machine learning engineering work by Toni Anev.">
   <meta name="google" content="notranslate">
   <meta name="author" content="Toni Anev">
   <meta name="theme-color" content="#0b1020">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Work | Toni Anev">
-  <meta property="og:description" content="Selected analytics work patterns: KPI dashboards, experiment readouts, and operations performance analysis.">
+  <meta property="og:description" content="Selected ML platform and MLOps work across Sanofi, Petco, and Loblaw.">
   <meta property="og:url" content="https://tonianev.github.io/work.html">
   <meta property="og:image" content="https://tonianev.github.io/assets/images/intropic.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -47,49 +47,72 @@
         <section class="section-card" data-reveal>
           <p class="eyebrow">Selected work</p>
           <h1>Selected Work</h1>
-          <p>A few representative project patterns that reflect how I approach analytics work: start with the decision, build usable analysis, and communicate impact clearly.</p>
+          <p>Representative platform and ML engineering work. Public details are summarized, but the scope, outcomes, and technical patterns reflect real systems I have led and shipped.</p>
         </section>
 
         <section class="projects" aria-label="Project highlights">
           <article class="project-card" data-reveal>
-            <img src="./assets/images/intropic.jpg" alt="Project visualization placeholder image for KPI analytics">
             <div class="project-body">
-              <p class="project-meta">Reporting systems · KPI monitoring</p>
-              <h2 class="project-title">KPI Health Dashboard</h2>
-              <p class="project-copy">Built a daily KPI monitoring layer designed to surface trend shifts early, reduce manual reporting churn, and give stakeholders one shared source of truth.</p>
+              <div class="project-card-head">
+                <p class="project-meta">Sanofi · Machine Learning Engineering Lead</p>
+                <h2 class="project-title">AI Infrastructure &amp; ML Platform Scale-Out</h2>
+              </div>
+              <p class="project-copy">Directed architecture and scale-out of AI infrastructure supporting research workloads across multiple therapeutic areas, with a focus on throughput, reproducibility, and operational reliability.</p>
               <ul class="project-points">
-                <li>Aligned metric definitions across stakeholders before dashboard buildout</li>
-                <li>Structured views for quick triage and deeper drill-down analysis</li>
-                <li>Focused on signals that support day-to-day operating decisions</li>
+                <li>Managed a $12M+ global HPC platform spanning Nvidia A100/H100, EKS, FSx, and S3-based storage patterns</li>
+                <li>Standardized Terraform-based IaC and automated compute provisioning pipelines, improving throughput by 23%</li>
+                <li>Operationalized internal models with SageMaker and Bedrock, reducing time-to-production by 26% across 7+ R&amp;D teams</li>
+                <li>Led vendor integrations and performance/SLA alignment for next-generation protein prediction systems</li>
               </ul>
+              <div class="project-stats" aria-label="Key outcomes">
+                <span class="project-stat">$12M+ platform</span>
+                <span class="project-stat">23% throughput gain</span>
+                <span class="project-stat">26% faster productionization</span>
+              </div>
+              <p class="project-tools">AWS · EKS · FSx · S3 · SageMaker · Bedrock · Terraform · HPC</p>
             </div>
           </article>
 
           <article class="project-card" data-reveal>
-            <img src="./assets/images/intropic.jpg" alt="Project visualization placeholder image for experimentation analysis">
             <div class="project-body">
-              <p class="project-meta">Experimentation · Decision communication</p>
-              <h2 class="project-title">Experiment Readout Framework</h2>
-              <p class="project-copy">Standardized experiment narratives and result templates so product teams could compare launches consistently and act on outcomes faster.</p>
+              <div class="project-card-head">
+                <p class="project-meta">Petco · Technology Lead</p>
+                <h2 class="project-title">Pricing &amp; Personalization ML Delivery</h2>
+              </div>
+              <p class="project-copy">Led ML engineering delivery across pricing and personalization systems, modernizing platform standards and reducing the time required to get models into production.</p>
               <ul class="project-points">
-                <li>Created a repeatable structure for hypotheses, metrics, and caveats</li>
-                <li>Improved comparability across cohorts and release cycles</li>
-                <li>Reduced ambiguity in handoffs from analysis to product decisions</li>
+                <li>Built and led a 5-person ML engineering team and established modern MLOps standards on GCP</li>
+                <li>Redesigned a price-elasticity modeling platform, cutting runtime from 24 hours to 4 hours and reducing compute load by 32%</li>
+                <li>Directed a $3M personalization program that delivered a 3% basket-size uplift and ~$13M/month incremental revenue</li>
               </ul>
+              <div class="project-stats" aria-label="Key outcomes">
+                <span class="project-stat">24h → 4h runtime</span>
+                <span class="project-stat">32% compute reduction</span>
+                <span class="project-stat">$13M/mo incremental revenue</span>
+              </div>
+              <p class="project-tools">GCP · GKE · Dataproc · Vertex AI · Airflow · Snowflake · Seldon</p>
             </div>
           </article>
 
           <article class="project-card" data-reveal>
-            <img src="./assets/images/intropic.jpg" alt="Project visualization placeholder image for operations analytics">
             <div class="project-body">
-              <p class="project-meta">Operations · Process improvement</p>
-              <h2 class="project-title">Ops Performance Audit</h2>
-              <p class="project-copy">Mapped process bottlenecks across workflow stages and produced a prioritized recommendation set tied to throughput and service-level goals.</p>
+              <div class="project-card-head">
+                <p class="project-meta">Loblaw Companies Limited · Data / MLOps Engineering</p>
+                <h2 class="project-title">Enterprise Pricing, Promotions &amp; Segmentation Systems</h2>
+              </div>
+              <p class="project-copy">Built and scaled data and ML systems used across pricing, promotions, and targeted marketing, spanning early in-house decisioning engines through enterprise MLOps orchestration.</p>
               <ul class="project-points">
-                <li>Separated true constraints from noisy one-off exceptions</li>
-                <li>Paired analysis with implementation-ready recommendations</li>
-                <li>Communicated tradeoffs clearly for cross-functional stakeholders</li>
+                <li>Led rollout of a promotion optimization engine across 16 divisions and 200+ product categories on GCP + Terraform + Airflow</li>
+                <li>Built orchestration services that reduced batch latency by 73% and cut compute cost by $2.7K/month</li>
+                <li>Launched a segmentation platform processing 1B+ annual transactions from 21M loyalty members, driving $42M annual incremental revenue</li>
+                <li>Designed early in-house ML decisioning for price sensitivity and markdown timing, contributing $15–20M annual revenue lift</li>
               </ul>
+              <div class="project-stats" aria-label="Key outcomes">
+                <span class="project-stat">73% lower batch latency</span>
+                <span class="project-stat">$42M annual increment</span>
+                <span class="project-stat">$15–20M revenue lift</span>
+              </div>
+              <p class="project-tools">GCP · Dataproc · Cloud Composer · Terraform · Airflow · Microservices</p>
             </div>
           </article>
         </section>
@@ -98,29 +121,29 @@
           <div class="section-head">
             <p class="eyebrow">Engagement modes</p>
             <h2 class="section-title">Ways I typically contribute</h2>
-            <p class="section-intro">Projects vary, but most of the work falls into a few repeatable patterns.</p>
+            <p class="section-intro">The exact domain changes, but the engineering patterns are consistent.</p>
           </div>
           <div class="grid-3">
             <article class="feature-card" data-reveal>
-              <h3>Reporting rebuilds</h3>
-              <p>When teams have dashboards or recurring reports but the definitions, usability, or trust in the numbers need to be reset.</p>
+              <h3>ML platform modernization</h3>
+              <p>Infrastructure and workflow upgrades that improve throughput, reproducibility, and operational ownership for ML teams.</p>
             </article>
             <article class="feature-card" data-reveal>
-              <h3>Decision support analysis</h3>
-              <p>When there is a specific operational, product, or growth question that needs a clear answer with context and caveats.</p>
+              <h3>Production ML acceleration</h3>
+              <p>Reducing the time from model development to safe deployment through better pipelines, standards, and release paths.</p>
             </article>
             <article class="feature-card" data-reveal>
-              <h3>Analytics process cleanup</h3>
-              <p>When too much time is spent on ad hoc requests and the team needs reusable templates, definitions, and reporting flows.</p>
+              <h3>Technical leadership at scale</h3>
+              <p>Leading teams and cross-functional programs where architecture, execution, and stakeholder alignment all matter.</p>
             </article>
           </div>
         </section>
 
         <section class="cta-panel" data-reveal>
           <div>
-            <p class="eyebrow">Need details?</p>
-            <h2>I can share more project context in a conversation</h2>
-            <p>For confidentiality reasons, public examples are summarized here. I can walk through methods, tradeoffs, and results in more detail directly.</p>
+            <p class="eyebrow">More detail</p>
+            <h2>I can share deeper architecture and delivery detail in conversation</h2>
+            <p>Some implementation specifics are confidential. I’m happy to discuss design choices, tradeoffs, team structure, and delivery patterns in more detail directly.</p>
           </div>
           <div class="inline-actions">
             <a class="button button-primary" href="./contact.html">Contact me</a>
