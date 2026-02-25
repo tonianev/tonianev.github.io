@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Selected ML platform, MLOps, and applied machine learning engineering work by Toni Anev.">
+  <meta name="description" content="Selected ML platform, MLOps, and production engineering work by Toni Anev.">
   <meta name="google" content="notranslate">
   <meta name="author" content="Toni Anev">
-  <meta name="theme-color" content="#0b1020">
+  <meta name="theme-color" content="#edf1f7">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Work | Toni Anev">
   <meta property="og:description" content="Selected ML platform and MLOps work across Sanofi, Petco, and Loblaw.">
@@ -17,7 +17,7 @@
   <link rel="icon" type="image/png" href="./assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./site.css">
   <title>Work | Toni Anev</title>
 </head>
@@ -43,111 +43,124 @@
     </header>
 
     <main class="page" id="main-content">
-      <div class="container stack-lg">
+      <div class="container stack-xl">
         <section class="section-card" data-reveal>
-          <p class="eyebrow">Selected work</p>
-          <h1>Selected Work</h1>
-          <p>Representative platform and ML engineering work. Public details are summarized, but the scope, outcomes, and technical patterns reflect real systems I have led and shipped.</p>
+          <p class="eyebrow">Work</p>
+          <h1>Selected work</h1>
+          <p>Public summaries of platform and ML engineering work. Details are condensed, but the scope and outcomes are representative.</p>
         </section>
 
         <section class="projects" aria-label="Project highlights">
-          <article class="project-card" data-reveal>
-            <div class="project-body">
-              <div class="project-card-head">
+          <article class="project-card" id="sanofi" data-reveal>
+            <div class="project-layout">
+              <div class="project-main">
                 <p class="project-meta">Sanofi · Machine Learning Engineering Lead</p>
-                <h2 class="project-title">AI Infrastructure &amp; ML Platform Scale-Out</h2>
+                <h2 class="project-title">AI infrastructure and ML platform scale-out</h2>
+                <p class="project-copy">Led platform architecture and delivery systems for AI/ML workloads used across global R&amp;D teams, with an emphasis on throughput, reproducibility, and production readiness.</p>
+                <ul class="project-points">
+                  <li>Scaled a global AI / HPC platform spanning Nvidia A100/H100, EKS, FSx, and S3-backed storage patterns.</li>
+                  <li>Standardized Terraform-based IaC and automated compute provisioning to improve platform throughput by 23%.</li>
+                  <li>Operationalized internal models through SageMaker and Bedrock, reducing time-to-production by 26% across 7+ teams.</li>
+                </ul>
               </div>
-              <p class="project-copy">Directed architecture and scale-out of AI infrastructure supporting research workloads across multiple therapeutic areas, with a focus on throughput, reproducibility, and operational reliability.</p>
-              <ul class="project-points">
-                <li>Managed a $12M+ global HPC platform spanning Nvidia A100/H100, EKS, FSx, and S3-based storage patterns</li>
-                <li>Standardized Terraform-based IaC and automated compute provisioning pipelines, improving throughput by 23%</li>
-                <li>Operationalized internal models with SageMaker and Bedrock, reducing time-to-production by 26% across 7+ R&amp;D teams</li>
-                <li>Led vendor integrations and performance/SLA alignment for next-generation protein prediction systems</li>
-              </ul>
-              <div class="project-stats" aria-label="Key outcomes">
-                <span class="project-stat">$12M+ platform</span>
-                <span class="project-stat">23% throughput gain</span>
-                <span class="project-stat">26% faster productionization</span>
-              </div>
-              <p class="project-tools">AWS · EKS · FSx · S3 · SageMaker · Bedrock · Terraform · HPC</p>
+              <aside class="impact-panel" aria-label="Sanofi impact summary">
+                <p class="eyebrow">Impact</p>
+                <dl class="metric-list compact">
+                  <div>
+                    <dt>Platform budget / scale</dt>
+                    <dd>$12M+</dd>
+                  </div>
+                  <div>
+                    <dt>Throughput</dt>
+                    <dd>+23%</dd>
+                  </div>
+                  <div>
+                    <dt>Productionization time</dt>
+                    <dd>-26%</dd>
+                  </div>
+                </dl>
+                <p class="impact-note">Leadership scope included a core engineering team plus PM and contractor coordination.</p>
+              </aside>
             </div>
+            <p class="project-tools">Stack · AWS · EKS · FSx · S3 · SageMaker · Bedrock · Terraform · HPC</p>
           </article>
 
-          <article class="project-card" data-reveal>
-            <div class="project-body">
-              <div class="project-card-head">
+          <article class="project-card" id="petco" data-reveal>
+            <div class="project-layout">
+              <div class="project-main">
                 <p class="project-meta">Petco · Technology Lead</p>
-                <h2 class="project-title">Pricing &amp; Personalization ML Delivery</h2>
+                <h2 class="project-title">Pricing and personalization ML delivery</h2>
+                <p class="project-copy">Led ML engineering delivery for pricing and personalization systems, modernizing platform standards and improving the speed of experimentation and deployment.</p>
+                <ul class="project-points">
+                  <li>Built and led a 5-person ML engineering team and introduced modern MLOps practices on GCP.</li>
+                  <li>Redesigned a price-elasticity platform, reducing runtime from 24 hours to 4 hours and compute load by 32%.</li>
+                  <li>Directed a personalization program that delivered a 3% basket-size uplift and approximately $13M/month in incremental revenue.</li>
+                </ul>
               </div>
-              <p class="project-copy">Led ML engineering delivery across pricing and personalization systems, modernizing platform standards and reducing the time required to get models into production.</p>
-              <ul class="project-points">
-                <li>Built and led a 5-person ML engineering team and established modern MLOps standards on GCP</li>
-                <li>Redesigned a price-elasticity modeling platform, cutting runtime from 24 hours to 4 hours and reducing compute load by 32%</li>
-                <li>Directed a $3M personalization program that delivered a 3% basket-size uplift and ~$13M/month incremental revenue</li>
-              </ul>
-              <div class="project-stats" aria-label="Key outcomes">
-                <span class="project-stat">24h → 4h runtime</span>
-                <span class="project-stat">32% compute reduction</span>
-                <span class="project-stat">$13M/mo incremental revenue</span>
-              </div>
-              <p class="project-tools">GCP · GKE · Dataproc · Vertex AI · Airflow · Snowflake · Seldon</p>
+              <aside class="impact-panel" aria-label="Petco impact summary">
+                <p class="eyebrow">Impact</p>
+                <dl class="metric-list compact">
+                  <div>
+                    <dt>Runtime</dt>
+                    <dd>24h → 4h</dd>
+                  </div>
+                  <div>
+                    <dt>Compute load</dt>
+                    <dd>-32%</dd>
+                  </div>
+                  <div>
+                    <dt>Incremental revenue</dt>
+                    <dd>~$13M/mo</dd>
+                  </div>
+                </dl>
+                <p class="impact-note">Included pricing experimentation and recommendation engine delivery across multiple data sources.</p>
+              </aside>
             </div>
+            <p class="project-tools">Stack · GCP · GKE · Dataproc · Vertex AI · Airflow · Snowflake · Seldon</p>
           </article>
 
-          <article class="project-card" data-reveal>
-            <div class="project-body">
-              <div class="project-card-head">
+          <article class="project-card" id="loblaw" data-reveal>
+            <div class="project-layout">
+              <div class="project-main">
                 <p class="project-meta">Loblaw Companies Limited · Data / MLOps Engineering</p>
-                <h2 class="project-title">Enterprise Pricing, Promotions &amp; Segmentation Systems</h2>
+                <h2 class="project-title">Enterprise pricing, promotions, and segmentation systems</h2>
+                <p class="project-copy">Built and scaled production data / ML systems across pricing, promotions, and targeted marketing, from early decisioning engines to enterprise MLOps orchestration.</p>
+                <ul class="project-points">
+                  <li>Led rollout of a promotion optimization engine across 16 divisions and 200+ product categories on GCP, Terraform, and Airflow.</li>
+                  <li>Built orchestration services that reduced batch latency by 73% and lowered compute cost by $2.7K/month.</li>
+                  <li>Contributed to segmentation and pricing systems tied to $42M+ annual incremental revenue and $15–20M revenue lift in earlier pricing decisioning work.</li>
+                </ul>
               </div>
-              <p class="project-copy">Built and scaled data and ML systems used across pricing, promotions, and targeted marketing, spanning early in-house decisioning engines through enterprise MLOps orchestration.</p>
-              <ul class="project-points">
-                <li>Led rollout of a promotion optimization engine across 16 divisions and 200+ product categories on GCP + Terraform + Airflow</li>
-                <li>Built orchestration services that reduced batch latency by 73% and cut compute cost by $2.7K/month</li>
-                <li>Launched a segmentation platform processing 1B+ annual transactions from 21M loyalty members, driving $42M annual incremental revenue</li>
-                <li>Designed early in-house ML decisioning for price sensitivity and markdown timing, contributing $15–20M annual revenue lift</li>
-              </ul>
-              <div class="project-stats" aria-label="Key outcomes">
-                <span class="project-stat">73% lower batch latency</span>
-                <span class="project-stat">$42M annual increment</span>
-                <span class="project-stat">$15–20M revenue lift</span>
-              </div>
-              <p class="project-tools">GCP · Dataproc · Cloud Composer · Terraform · Airflow · Microservices</p>
+              <aside class="impact-panel" aria-label="Loblaw impact summary">
+                <p class="eyebrow">Impact</p>
+                <dl class="metric-list compact">
+                  <div>
+                    <dt>Batch latency</dt>
+                    <dd>-73%</dd>
+                  </div>
+                  <div>
+                    <dt>Segmentation impact</dt>
+                    <dd>$42M+</dd>
+                  </div>
+                  <div>
+                    <dt>Pricing decisioning lift</dt>
+                    <dd>$15–20M</dd>
+                  </div>
+                </dl>
+                <p class="impact-note">Work spanned Data Engineer, Senior Data Engineer, and Senior MLOps Engineer roles.</p>
+              </aside>
             </div>
+            <p class="project-tools">Stack · GCP · Dataproc · Cloud Composer · Terraform · Airflow · Microservices</p>
           </article>
         </section>
 
         <section class="section-card" data-reveal>
-          <div class="section-head">
-            <p class="eyebrow">Engagement modes</p>
-            <h2 class="section-title">Ways I typically contribute</h2>
-            <p class="section-intro">The exact domain changes, but the engineering patterns are consistent.</p>
-          </div>
-          <div class="grid-3">
-            <article class="feature-card" data-reveal>
-              <h3>ML platform modernization</h3>
-              <p>Infrastructure and workflow upgrades that improve throughput, reproducibility, and operational ownership for ML teams.</p>
-            </article>
-            <article class="feature-card" data-reveal>
-              <h3>Production ML acceleration</h3>
-              <p>Reducing the time from model development to safe deployment through better pipelines, standards, and release paths.</p>
-            </article>
-            <article class="feature-card" data-reveal>
-              <h3>Technical leadership at scale</h3>
-              <p>Leading teams and cross-functional programs where architecture, execution, and stakeholder alignment all matter.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="cta-panel" data-reveal>
-          <div>
-            <p class="eyebrow">More detail</p>
-            <h2>I can share deeper architecture and delivery detail in conversation</h2>
-            <p>Some implementation specifics are confidential. I’m happy to discuss design choices, tradeoffs, team structure, and delivery patterns in more detail directly.</p>
-          </div>
-          <div class="inline-actions">
-            <a class="button button-primary" href="./contact.html">Contact me</a>
-            <a class="button button-secondary" href="./CV.html">Review CV</a>
+          <p class="eyebrow">Notes</p>
+          <h2 class="section-title">Public summaries only</h2>
+          <p>Some implementation detail is confidential. I’m happy to discuss architecture decisions, tradeoffs, and delivery patterns in a direct conversation.</p>
+          <div class="inline-actions top-gap">
+            <a class="button button-primary" href="./contact.html">Contact</a>
+            <a class="button button-secondary" href="./CV.html">Open CV</a>
           </div>
         </section>
       </div>
@@ -155,7 +168,7 @@
 
     <footer class="site-footer">
       <div class="container">
-        <p>&copy; <span data-year></span> Toni Anev. Built with standards-based HTML, CSS, and JavaScript.</p>
+        <p>&copy; <span data-year></span> Toni Anev.</p>
       </div>
     </footer>
   </div>
