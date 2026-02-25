@@ -730,27 +730,6 @@ textarea {
   margin-top: 0.95rem;
 }
 
-.social-links {
-  margin-top: 0.9rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 0.8rem;
-}
-
-.social-links a {
-  color: var(--muted);
-  text-decoration: none;
-  padding: 0.2rem 0;
-  border-bottom: 1px solid transparent;
-  transition: color 120ms ease, border-color 120ms ease;
-}
-
-.social-links a:hover,
-.social-links a:focus-visible {
-  color: var(--ink);
-  border-color: rgba(245, 166, 35, 0.34);
-}
-
 .hero-side .glass-card {
   background: linear-gradient(180deg, var(--glass-pane-top), color-mix(in srgb, var(--glass-pane-bottom) 86%, transparent));
 }
@@ -1424,10 +1403,6 @@ textarea {
     flex: 1 1 100%;
   }
 
-  .social-links {
-    gap: 0.35rem 0.75rem;
-  }
-
   .footer-inner {
     grid-template-columns: 1fr;
     gap: 0.65rem;
@@ -1463,7 +1438,6 @@ textarea {
   .site-nav a,
   .button,
   .case-preview,
-  .social-links a,
   .theme-toggle,
   .theme-toggle-knob,
   .footer-nav a,
