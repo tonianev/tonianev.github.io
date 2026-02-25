@@ -10,14 +10,25 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Toni Anev | ML Engineering Lead">
   <meta property="og:description" content="ML platform engineering, MLOps, and technical leadership for production-scale systems.">
-  <meta property="og:url" content="https://tonianev.github.io/">
-  <meta property="og:image" content="https://tonianev.github.io/assets/images/intropic.jpg">
+  <meta property="og:url" content="https://tonianev.com/">
+  <meta property="og:image" content="https://tonianev.com/assets/images/intropic.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://tonianev.github.io/">
+  <link rel="canonical" href="https://tonianev.com/">
   <link rel="icon" type="image/png" href="./assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("toni-theme");
+        if (theme === "light" || theme === "dark") {
+          document.documentElement.setAttribute("data-theme", theme);
+          document.documentElement.style.colorScheme = theme;
+        }
+      } catch (e) {}
+    })();
+  </script>
   <link rel="stylesheet" href="./site.css">
   <title>Toni Anev | ML Engineering Lead</title>
 </head>
@@ -39,6 +50,13 @@
           <a href="./CV.html">CV</a>
           <a href="./contact.html">Contact</a>
         </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-glyph theme-glyph-sun">☀</span>
+            <span class="theme-glyph theme-glyph-moon">☾</span>
+            <span class="theme-toggle-knob"></span>
+          </span>
+        </button>
       </div>
     </header>
 
@@ -74,19 +92,19 @@
                 <dl class="metric-list compact">
                   <div>
                     <dt>Sanofi AI / HPC platform</dt>
-                    <dd>$12M+</dd>
+                    <dd data-count-to="12" data-count-prefix="$" data-count-suffix="M+">$12M+</dd>
                   </div>
                   <div>
                     <dt>Platform throughput improvement</dt>
-                    <dd>+23%</dd>
+                    <dd data-count-to="23" data-count-prefix="+" data-count-suffix="%">+23%</dd>
                   </div>
                   <div>
                     <dt>Model productionization time</dt>
-                    <dd>-26%</dd>
+                    <dd data-count-to="26" data-count-prefix="-" data-count-suffix="%">-26%</dd>
                   </div>
                   <div>
                     <dt>Petco personalization impact</dt>
-                    <dd>~$13M/mo</dd>
+                    <dd data-count-to="13" data-count-prefix="~$" data-count-suffix="M/mo">~$13M/mo</dd>
                   </div>
                 </dl>
               </article>
@@ -160,8 +178,24 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p>&copy; <span data-year></span> Toni Anev.</p>
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a class="footer-name" href="./index.html">Toni Anev</a>
+          <p class="footer-note">Built by Toni Anev.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./work.html">Work</a>
+          <a href="./CV.html">CV</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <div class="footer-social" aria-label="Social links">
+          <a href="https://github.com/tonianev" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/tonianev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:tonianev@gmail.com">Email</a>
+        </div>
+        <p class="footer-copy">&copy; <span data-year></span> Toni Anev.</p>
       </div>
     </footer>
   </div>
