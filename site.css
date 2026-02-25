@@ -992,13 +992,6 @@ textarea {
   object-fit: cover;
 }
 
-.profile-card figcaption {
-  margin-top: 0.55rem;
-  color: var(--muted);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.72rem;
-}
-
 .timeline {
   list-style: none;
   margin: 0;
