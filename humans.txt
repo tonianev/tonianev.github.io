@@ -1,0 +1,15 @@
+/* TEAM */
+Name: Toni Anev
+Role: Machine Learning Engineering Lead
+Site: https://tonianev.com
+Contact: tonianev@gmail.com
+GitHub: https://github.com/tonianev
+LinkedIn: https://www.linkedin.com/in/tonianev/
+
+/* SITE */
+Stack: Static HTML, CSS, JavaScript
+Accessibility: Keyboard navigation, skip links, reduced-motion support
+Machine Readability: JSON-LD, sitemap.xml, robots.txt, llms.txt
+
+/* UPDATED */
+Last updated: 2026-02-27

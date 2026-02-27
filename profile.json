@@ -1,0 +1,23 @@
+{
+  "name": "Toni Anev",
+  "headline": "Machine Learning Engineering Lead",
+  "location": "Toronto, ON, Canada",
+  "summary": "ML platform engineering leadership focused on AI infrastructure, MLOps delivery systems, and production reliability.",
+  "website": "https://tonianev.com",
+  "email": "tonianev@gmail.com",
+  "links": {
+    "github": "https://github.com/tonianev",
+    "linkedin": "https://www.linkedin.com/in/tonianev/",
+    "resume_pdf": "https://tonianev.com/resume.pdf",
+    "resume_ats": "https://tonianev.com/resume-ats.txt",
+    "work": "https://tonianev.com/work.html",
+    "proof": "https://tonianev.com/proof.html"
+  },
+  "focus_areas": [
+    "ML platform architecture",
+    "MLOps standards and release gates",
+    "Cloud AI infrastructure",
+    "Production ML delivery",
+    "Engineering leadership"
+  ]
+}

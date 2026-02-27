@@ -1,0 +1,27 @@
+# robots.txt for https://tonianev.com
+# This site is intended to be accessible to search engines, AI assistants, and users.
+
+User-agent: *
+Allow: /
+
+# Explicitly allow common AI and assistant crawlers.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Host: tonianev.com
+Sitemap: https://tonianev.com/sitemap.xml

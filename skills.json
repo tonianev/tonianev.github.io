@@ -1,0 +1,9 @@
+{
+  "person": "Toni Anev",
+  "skills": {
+    "languages": ["Python", "SQL", "Go", "Bash"],
+    "cloud": ["AWS", "GCP"],
+    "platform": ["EKS", "GKE", "SageMaker", "Bedrock", "Vertex AI", "Dataproc", "Airflow", "Cloud Composer", "Terraform", "Snowflake"],
+    "focus": ["ML platform architecture", "MLOps", "CI/CD", "Release governance", "Production reliability"]
+  }
+}
