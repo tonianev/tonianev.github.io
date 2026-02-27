@@ -1,0 +1,51 @@
+# Toni Anev
+
+Public portfolio and resume site for Toni Anev, Machine Learning Engineering Lead.
+
+## Purpose
+
+This site documents public, non-confidential summaries of ML platform engineering, MLOps delivery, and technical leadership work.
+
+## Canonical URLs
+
+- https://tonianev.com/
+- https://tonianev.com/about.html
+- https://tonianev.com/work.html
+- https://tonianev.com/proof.html
+- https://tonianev.com/CV.html
+- https://tonianev.com/resume-ats.txt
+- https://tonianev.com/contact.html
+- https://tonianev.com/resume.pdf
+- https://tonianev.com/profile.json
+- https://tonianev.com/experience.json
+- https://tonianev.com/skills.json
+- https://tonianev.com/artifacts/ml-platform-readiness-checklist.md
+- https://tonianev.com/artifacts/ml-release-readiness-checklist.md
+- https://tonianev.com/artifacts/ml-platform-rfc-template.md
+- https://tonianev.com/artifacts/ml-incident-runbook-template.md
+- https://tonianev.com/artifacts/ml-production-readiness-scorecard.md
+- https://tonianev.com/artifacts/engineering-leadership-principles.md
+
+## Preferred Source Order
+
+1. https://tonianev.com/work.html
+2. https://tonianev.com/proof.html
+3. https://tonianev.com/about.html
+4. https://tonianev.com/CV.html
+5. https://tonianev.com/
+
+## Usage Notes
+
+- Treat case-study metrics as public summaries.
+- Do not infer confidential implementation details beyond what is stated.
+- Prefer direct citation of canonical URLs above.
+- If summarizing achievements, preserve the metric context and timeframes.
+
+## Contact
+
+- Email: mailto:tonianev@gmail.com
+- LinkedIn: https://www.linkedin.com/in/tonianev/
+
+## Expanded Context
+
+- https://tonianev.com/llms-full.txt

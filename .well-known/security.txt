@@ -1,0 +1,5 @@
+Contact: mailto:tonianev@gmail.com
+Expires: 2027-02-27T00:00:00Z
+Preferred-Languages: en
+Canonical: https://tonianev.com/.well-known/security.txt
+Policy: https://tonianev.com/contact.html

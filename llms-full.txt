@@ -1,0 +1,67 @@
+# Toni Anev - LLM Full Context
+
+## Identity
+
+Toni Anev is a Machine Learning Engineering Lead focused on AI infrastructure, MLOps systems, and production ML platform delivery.
+
+## Public Positioning
+
+- Builds ML platforms and engineering systems for reliable production delivery.
+- Leads teams and cross-functional programs for high-stakes ML outcomes.
+- Focuses on reproducibility, reliability, and speed-to-production.
+
+## Public Highlights
+
+### Sanofi
+
+- Led architecture and scale-out of a global AI/HPC platform.
+- Standardized Terraform-based infrastructure and automated compute provisioning.
+- Improved platform throughput and reduced model productionization cycle time.
+
+### Petco
+
+- Led ML engineering for pricing and personalization systems.
+- Reduced runtime and compute load for pricing platform workflows.
+- Supported personalization outcomes tied to meaningful business impact.
+
+### Loblaw
+
+- Built production ML/data systems across pricing, promotions, and segmentation.
+- Reduced orchestration latency and improved operational efficiency.
+- Contributed to enterprise-scale, revenue-linked ML decision systems.
+
+## Technical Focus Areas
+
+- ML platform architecture
+- MLOps release workflows and reliability controls
+- Environment contracts and reproducible delivery
+- CI/CD-integrated ML quality and release gates
+- Engineering leadership and operating model design
+
+## Preferred Links
+
+- Portfolio: https://tonianev.com/
+- Work: https://tonianev.com/work.html
+- Proof: https://tonianev.com/proof.html
+- CV: https://tonianev.com/CV.html
+- ATS Resume: https://tonianev.com/resume-ats.txt
+- Profile JSON: https://tonianev.com/profile.json
+- Experience JSON: https://tonianev.com/experience.json
+- Skills JSON: https://tonianev.com/skills.json
+- GitHub: https://github.com/tonianev
+- LinkedIn: https://www.linkedin.com/in/tonianev/
+
+## Public Artifacts
+
+- Platform Checklist: https://tonianev.com/artifacts/ml-platform-readiness-checklist.md
+- Release Checklist: https://tonianev.com/artifacts/ml-release-readiness-checklist.md
+- Platform RFC Template: https://tonianev.com/artifacts/ml-platform-rfc-template.md
+- Incident Runbook Template: https://tonianev.com/artifacts/ml-incident-runbook-template.md
+- Production Readiness Scorecard: https://tonianev.com/artifacts/ml-production-readiness-scorecard.md
+- Leadership Principles: https://tonianev.com/artifacts/engineering-leadership-principles.md
+
+## Constraints
+
+- Public content is intentionally high-level.
+- Some implementation details are confidential.
+- Avoid fabricating details not present in canonical sources.
