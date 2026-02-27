@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="About Toni Anev: ML platform engineering leadership, MLOps, and production system design across pharma and retail.">
-  <meta name="keywords" content="About Toni Anev, ML engineering leadership, MLOps, AI platform architecture, production ML">
+  <meta name="description" content="Proof artifacts and machine-readable engineering references by Toni Anev.">
+  <meta name="keywords" content="ML platform proof, MLOps artifacts, machine-readable profile, engineering leadership evidence">
   <meta name="google" content="notranslate">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
@@ -15,15 +15,15 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Toni Anev">
   <meta property="og:locale" content="en_CA">
-  <meta property="og:title" content="About | Toni Anev">
-  <meta property="og:description" content="Background, approach, and technical focus across ML platforms, MLOps, and engineering leadership.">
-  <meta property="og:url" content="https://tonianev.com/about.html">
+  <meta property="og:title" content="Proof | Toni Anev">
+  <meta property="og:description" content="Public engineering artifacts, checklists, and machine-readable references for ML platform leadership work.">
+  <meta property="og:url" content="https://tonianev.com/proof.html">
   <meta property="og:image" content="https://tonianev.com/assets/images/intropic.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About | Toni Anev">
-  <meta name="twitter:description" content="Background, approach, and technical focus across ML platforms, MLOps, and engineering leadership.">
+  <meta name="twitter:title" content="Proof | Toni Anev">
+  <meta name="twitter:description" content="Public engineering artifacts, checklists, and machine-readable references for ML platform leadership work.">
   <meta name="twitter:image" content="https://tonianev.com/assets/images/intropic.jpg">
-  <link rel="canonical" href="https://tonianev.com/about.html">
+  <link rel="canonical" href="https://tonianev.com/proof.html">
   <link rel="sitemap" type="application/xml" href="https://tonianev.com/sitemap.xml">
   <link rel="alternate" type="text/plain" href="https://tonianev.com/llms.txt" title="LLMs Context">
   <link rel="alternate" type="text/plain" href="https://tonianev.com/humans.txt" title="Humans">
@@ -56,28 +56,39 @@
           "name": "Toni Anev",
           "url": "https://tonianev.com/",
           "jobTitle": "Machine Learning Engineering Lead",
-          "email": "mailto:tonianev@gmail.com",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Toronto",
-            "addressCountry": "CA"
-          },
           "sameAs": [
             "https://github.com/tonianev",
             "https://www.linkedin.com/in/tonianev/"
           ]
         },
         {
-          "@type": "AboutPage",
-          "@id": "https://tonianev.com/about.html#webpage",
-          "url": "https://tonianev.com/about.html",
-          "name": "About | Toni Anev",
+          "@type": "CollectionPage",
+          "@id": "https://tonianev.com/proof.html#webpage",
+          "url": "https://tonianev.com/proof.html",
+          "name": "Proof | Toni Anev",
           "isPartOf": {
             "@id": "https://tonianev.com/#website"
           },
           "about": {
             "@id": "https://tonianev.com/#person"
-          }
+          },
+          "hasPart": [
+            {
+              "@type": "CreativeWork",
+              "name": "ML Platform Readiness Checklist",
+              "url": "https://tonianev.com/artifacts/ml-platform-readiness-checklist.md"
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "ML Release Readiness Checklist",
+              "url": "https://tonianev.com/artifacts/ml-release-readiness-checklist.md"
+            },
+            {
+              "@type": "Dataset",
+              "name": "Public Experience Summary",
+              "url": "https://tonianev.com/experience.json"
+            }
+          ]
         }
       ]
     }
@@ -94,7 +105,7 @@
     })();
   </script>
   <link rel="stylesheet" href="./site.css">
-  <title>About | Toni Anev</title>
+  <title>Proof | Toni Anev</title>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -127,112 +138,76 @@
 
     <main class="page" id="main-content">
       <div class="container stack-xl">
-        <section class="section-card two-col align-start" data-reveal>
-          <div>
-            <p class="eyebrow">About</p>
-            <h1>I work on the engineering layer that makes ML usable.</h1>
-            <p>I lead machine learning engineering with a focus on platform architecture, MLOps, and production delivery. The throughline in my work is simple: make good models easier to build, ship, and operate.</p>
-            <p>My background spans research analysis, data engineering, MLOps, and ML platform leadership. That range helps me connect infrastructure decisions to delivery speed, team workflows, and business impact.</p>
-            <div class="inline-actions top-gap">
-              <a class="button button-primary" href="./work.html">Selected work</a>
-              <a class="button button-secondary" href="./proof.html">Proof</a>
-              <a class="button button-secondary" href="./CV.html">CV</a>
-            </div>
-          </div>
-
-          <figure class="profile-card">
-            <img src="./assets/images/intropic.jpg" alt="Toni Anev portrait">
-          </figure>
-        </section>
-
-        <section class="section-card two-col align-start" data-reveal>
-          <div>
-            <p class="eyebrow">Approach</p>
-            <h2 class="section-title">How I work</h2>
-            <ul class="checklist checklist-light">
-              <li>Design for reliability and repeatability from day one.</li>
-              <li>Prefer reusable platform leverage over one-off heroics.</li>
-              <li>Make tradeoffs explicit: cost, speed, complexity, ownership.</li>
-              <li>Build teams and standards that improve over time.</li>
-            </ul>
-          </div>
-
-          <div class="stack">
-            <article class="mini-panel" data-reveal>
-              <h3>Where I add value</h3>
-              <p>Teams scaling ML delivery who need stronger platform foundations, faster productionization, or clearer technical direction.</p>
-            </article>
-            <article class="mini-panel" data-reveal>
-              <h3>Leadership style</h3>
-              <p>High standards, low drama, clear ownership. I care about technical quality and execution discipline more than presentation.</p>
-            </article>
+        <section class="section-card" data-reveal>
+          <p class="eyebrow">Evidence</p>
+          <h1>Public proof artifacts</h1>
+          <p>Implementation details are intentionally sanitized, but these artifacts show how I structure platform decisions, release governance, and delivery quality controls.</p>
+          <div class="inline-actions top-gap">
+            <a class="button button-primary" href="https://github.com/tonianev/ml-platform-reference" target="_blank" rel="noopener noreferrer">Platform reference repo</a>
+            <a class="button button-secondary" href="./work.html">Case studies</a>
           </div>
         </section>
 
         <section class="section-card" data-reveal>
           <div class="section-head">
-            <p class="eyebrow">Career</p>
-            <h2 class="section-title">Path</h2>
+            <p class="eyebrow">Artifacts</p>
+            <h2 class="section-title">Engineering checklists</h2>
+            <p class="section-intro">Reusable artifacts that reflect production-quality delivery standards.</p>
           </div>
+          <div class="case-preview-list" aria-label="Engineering artifacts">
+            <a class="case-preview" href="./artifacts/ml-platform-readiness-checklist.md" target="_blank" rel="noopener noreferrer">
+              <p class="case-preview-meta">Platform Architecture</p>
+              <p class="case-preview-title">ML platform readiness checklist</p>
+              <p class="case-preview-copy">Control plane boundaries, reproducibility contracts, SLOs, ownership model, and operational safety requirements.</p>
+            </a>
 
-          <ol class="timeline" aria-label="Career timeline">
-            <li>
-              <div class="timeline-meta">2023 — Present</div>
-              <div class="timeline-body">
-                <p class="timeline-title">Sanofi</p>
-                <p class="timeline-copy">Machine Learning Engineering Lead · AI infrastructure and ML platform engineering for global R&amp;D.</p>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-meta">2023</div>
-              <div class="timeline-body">
-                <p class="timeline-title">Petco</p>
-                <p class="timeline-copy">Technology Lead · ML engineering leadership across pricing and personalization systems.</p>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-meta">2019 — 2023</div>
-              <div class="timeline-body">
-                <p class="timeline-title">Loblaw Companies Limited</p>
-                <p class="timeline-copy">Data Engineering and MLOps roles across pricing, promotions, segmentation, and orchestration systems.</p>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-meta">2016 — 2019</div>
-              <div class="timeline-body">
-                <p class="timeline-title">Numeris</p>
-                <p class="timeline-copy">Research Analyst · automation and quality monitoring for national audience data pipelines.</p>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-meta">2014 — 2015</div>
-              <div class="timeline-body">
-                <p class="timeline-title">University of Toronto</p>
-                <p class="timeline-copy">Research Analyst · ETL and warehousing for research and funding analytics.</p>
-              </div>
-            </li>
-          </ol>
+            <a class="case-preview" href="./artifacts/ml-release-readiness-checklist.md" target="_blank" rel="noopener noreferrer">
+              <p class="case-preview-meta">Release Governance</p>
+              <p class="case-preview-title">ML release readiness checklist</p>
+              <p class="case-preview-copy">Candidate quality gates, policy checks, rollback safeguards, and post-release monitoring controls.</p>
+            </a>
+
+            <a class="case-preview" href="./artifacts/engineering-leadership-principles.md" target="_blank" rel="noopener noreferrer">
+              <p class="case-preview-meta">Leadership</p>
+              <p class="case-preview-title">Engineering leadership principles</p>
+              <p class="case-preview-copy">A concise operating philosophy for high-signal platform teams and long-horizon technical quality.</p>
+            </a>
+          </div>
         </section>
 
         <section class="section-card" data-reveal>
           <div class="section-head">
-            <p class="eyebrow">Core stack</p>
-            <h2 class="section-title">Tools and platforms</h2>
+            <p class="eyebrow">Machine-readable</p>
+            <h2 class="section-title">Data endpoints</h2>
+            <p class="section-intro">Structured endpoints for crawlers, AI systems, and internal indexing workflows.</p>
           </div>
-          <div class="tag-list">
-            <span class="tag">Python</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Go</span>
-            <span class="tag">Terraform</span>
-            <span class="tag">AWS</span>
-            <span class="tag">GCP</span>
-            <span class="tag">Airflow / Cloud Composer</span>
-            <span class="tag">Vertex AI</span>
-            <span class="tag">SageMaker / Bedrock</span>
-            <span class="tag">Spark / Dataproc</span>
-            <span class="tag">Snowflake</span>
-            <span class="tag">CI/CD</span>
+          <div class="grid-3">
+            <article class="feature-card" data-reveal>
+              <p class="feature-kicker">JSON</p>
+              <h3>Profile</h3>
+              <p><a href="./profile.json" target="_blank" rel="noopener noreferrer">profile.json</a> with canonical identity and focus areas.</p>
+            </article>
+            <article class="feature-card" data-reveal>
+              <p class="feature-kicker">JSON</p>
+              <h3>Experience</h3>
+              <p><a href="./experience.json" target="_blank" rel="noopener noreferrer">experience.json</a> with role summaries and key outcomes.</p>
+            </article>
+            <article class="feature-card" data-reveal>
+              <p class="feature-kicker">JSON</p>
+              <h3>Skills</h3>
+              <p><a href="./skills.json" target="_blank" rel="noopener noreferrer">skills.json</a> with core stack and platform competencies.</p>
+            </article>
           </div>
+        </section>
+
+        <section class="section-card" data-reveal>
+          <p class="eyebrow">Open-source references</p>
+          <h2 class="section-title">Production-style public repositories</h2>
+          <ul class="simple-list">
+            <li><a href="https://github.com/tonianev/ml-platform-reference" target="_blank" rel="noopener noreferrer">ml-platform-reference</a>: architecture and operating model patterns</li>
+            <li><a href="https://github.com/tonianev/ml-release-gates" target="_blank" rel="noopener noreferrer">ml-release-gates</a>: policy-driven model promotion gate evaluator</li>
+            <li><a href="https://github.com/tonianev/feature-pipeline-quality" target="_blank" rel="noopener noreferrer">feature-pipeline-quality</a>: feature dataset contract and quality checks</li>
+          </ul>
         </section>
       </div>
     </main>

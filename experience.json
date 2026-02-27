@@ -1,0 +1,56 @@
+{
+  "person": "Toni Anev",
+  "roles": [
+    {
+      "company": "Sanofi",
+      "title": "Machine Learning Engineering Lead",
+      "location": "Toronto, ON",
+      "start": "2023-06",
+      "end": "present",
+      "highlights": [
+        "Directed architecture and scale-out of a global AI/HPC platform with NVIDIA A100/H100, EKS, FSx, and S3.",
+        "Standardized Terraform IaC and automated compute provisioning, improving throughput by 23%.",
+        "Reduced model time-to-production by 26% across 7+ teams with SageMaker and Bedrock workflows."
+      ],
+      "metrics": {
+        "platform_scale_usd": "12M+",
+        "throughput_gain_pct": 23,
+        "productionization_time_reduction_pct": 26
+      }
+    },
+    {
+      "company": "Petco",
+      "title": "Technology Lead",
+      "location": "Toronto, ON",
+      "start": "2023-01",
+      "end": "2023-06",
+      "highlights": [
+        "Built and led a 5-person ML engineering team and modernized MLOps standards on GCP.",
+        "Redesigned price-elasticity platform runtime from 24h to 4h with 32% lower compute load.",
+        "Led personalization program with 3% basket-size uplift and approximately $13M/month incremental revenue."
+      ],
+      "metrics": {
+        "runtime_before_hours": 24,
+        "runtime_after_hours": 4,
+        "compute_reduction_pct": 32,
+        "incremental_revenue_per_month_usd": "13M"
+      }
+    },
+    {
+      "company": "Loblaw Companies Limited",
+      "title": "Senior MLOps Engineer / Senior Data Engineer / Data Engineer",
+      "location": "Toronto, ON",
+      "start": "2019-01",
+      "end": "2023-01",
+      "highlights": [
+        "Led promotion optimization rollout across 16 divisions and 200+ product categories.",
+        "Built orchestration services reducing batch latency by 73%.",
+        "Contributed to pricing and segmentation systems tied to $42M+ annual incremental revenue."
+      ],
+      "metrics": {
+        "batch_latency_reduction_pct": 73,
+        "annual_incremental_revenue_usd": "42M+"
+      }
+    }
+  ]
+}
