@@ -8,12 +8,11 @@
   "links": {
     "github": "https://github.com/tonianev",
     "linkedin": "https://www.linkedin.com/in/tonianev/",
-    "resume_pdf": "https://tonianev.com/resume.pdf",
-    "resume_ats": "https://tonianev.com/resume-ats.txt",
     "work": "https://tonianev.com/work.html",
     "about": "https://tonianev.com/#about",
     "contact": "https://tonianev.com/#contact"
   },
+  "resume_available_on_request": true,
   "focus_areas": [
     "ML platform architecture",
     "MLOps standards and release gates",

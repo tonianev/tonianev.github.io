@@ -434,7 +434,6 @@ textarea {
 .mini-panel,
 .feature-card,
 .project-card,
-.cv-frame-wrap,
 .cta-panel,
 .contact-item {
   position: relative;
@@ -1305,45 +1304,6 @@ textarea {
   margin-top: 0.8rem;
 }
 
-/* ============================================================
-   CV FRAME
-   ============================================================ */
-.cv-frame-wrap {
-  overflow: hidden;
-  padding: 0;
-  background: var(--surface);
-}
-
-.cv-frame-wrap.is-fallback {
-  padding: clamp(1rem, 2vw, 1.25rem);
-}
-
-.cv-frame {
-  width: 100%;
-  min-height: 78vh;
-  border: 0;
-  display: block;
-  background: #fff;
-}
-
-.cv-preview-fallback {
-  display: none;
-  min-height: min(60vh, 34rem);
-  align-content: center;
-}
-
-.cv-preview-fallback[hidden] {
-  display: none;
-}
-
-.cv-frame-wrap.is-fallback .cv-frame {
-  display: none;
-}
-
-.cv-frame-wrap.is-fallback .cv-preview-fallback {
-  display: grid;
-}
-
 .note {
   color: var(--muted);
   margin-top: 0.25rem;
@@ -1591,9 +1551,6 @@ textarea {
     gap: 0.3rem;
   }
 
-  .cv-frame {
-    min-height: 68vh;
-  }
 }
 
 /* ============================================================

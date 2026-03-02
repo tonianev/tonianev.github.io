@@ -297,50 +297,6 @@
     });
   }
 
-  function initCvPreview() {
-    var wrap = document.querySelector("[data-cv-frame-wrap]");
-    var frame = document.querySelector("[data-cv-frame]");
-    var fallback = document.querySelector("[data-cv-fallback]");
-
-    if (!wrap || !frame || !fallback) {
-      return;
-    }
-
-    var loadSettled = false;
-    var fallbackDelayMs = 1200;
-
-    function setFallbackVisible(visible) {
-      wrap.classList.toggle("is-fallback", visible);
-      fallback.hidden = !visible;
-      frame.setAttribute("aria-hidden", visible ? "true" : "false");
-    }
-
-    var fallbackTimer = window.setTimeout(function () {
-      if (!loadSettled) {
-        setFallbackVisible(true);
-      }
-    }, fallbackDelayMs);
-
-    frame.addEventListener(
-      "load",
-      function () {
-        loadSettled = true;
-        window.clearTimeout(fallbackTimer);
-        setFallbackVisible(false);
-      },
-      { once: true }
-    );
-
-    frame.addEventListener(
-      "error",
-      function () {
-        window.clearTimeout(fallbackTimer);
-        setFallbackVisible(true);
-      },
-      { once: true }
-    );
-  }
-
   function initHeroReveal() {
     var items = Array.from(document.querySelectorAll("[data-hero-reveal]"));
     if (items.length === 0) {
@@ -722,7 +678,6 @@
     initSmoothScrollAnchors();
     initRevealAnimations();
     initCounters();
-    initCvPreview();
     initHeroReveal();
     initAgentLabs();
   });

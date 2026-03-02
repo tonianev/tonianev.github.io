@@ -1,6 +1,6 @@
 # tonianev.github.io
 
-Personal website for Toni Anev: ML platform engineering leadership, selected case studies, and CV.
+Personal website for Toni Anev: ML platform engineering leadership, selected case studies, and contact-driven hiring conversations.
 
 ## Live Site
 
@@ -24,13 +24,11 @@ Personal website for Toni Anev: ML platform engineering leadership, selected cas
 - `work.html` - case studies and outcomes
 - `proof.html` - public proof artifacts and machine-readable references
 - `agent-soul-kit.html` - agent soul kit concept and interactive demo
-- `CV.html` - resume/CV page and PDF preview
+- `CV.html` - legacy resume URL converted into a resume-request landing page
 - `contact.html` - contact entry points
 - `site.css` - shared styling
 - `site.js` - interaction behavior
 - `agent-soul-kit/` - standalone scaffold for a portable soul/memory/posture repository
-- `resume.pdf` - downloadable resume
-- `resume-ats.txt` - ATS and parser-friendly resume text
 - `profile.json` - machine-readable profile summary
 - `experience.json` - machine-readable role highlights
 - `skills.json` - machine-readable skills taxonomy

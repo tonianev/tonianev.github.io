@@ -11,9 +11,6 @@ This site documents public, non-confidential summaries of ML platform engineerin
 - https://tonianev.com/
 - https://tonianev.com/work.html
 - https://tonianev.com/agent-soul-kit.html
-- https://tonianev.com/CV.html
-- https://tonianev.com/resume-ats.txt
-- https://tonianev.com/resume.pdf
 - https://tonianev.com/profile.json
 - https://tonianev.com/experience.json
 - https://tonianev.com/skills.json
@@ -30,7 +27,6 @@ This site documents public, non-confidential summaries of ML platform engineerin
 1. https://tonianev.com/work.html
 2. https://tonianev.com/agent-soul-kit.html
 3. https://tonianev.com/
-4. https://tonianev.com/CV.html
 
 ## Usage Notes
 
@@ -38,6 +34,7 @@ This site documents public, non-confidential summaries of ML platform engineerin
 - Do not infer confidential implementation details beyond what is stated.
 - Prefer direct citation of canonical URLs above.
 - If summarizing achievements, preserve the metric context and timeframes.
+- Resume is available on request via the contact channel rather than as a public download.
 
 ## Contact
 
