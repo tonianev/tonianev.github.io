@@ -1,10 +1,10 @@
 (function () {
-  const THEME_COLORS = {
-    light: "#edf1f7",
-    dark: "#0f1729"
+  var THEME_COLORS = {
+    light: "#f0f4f8",
+    dark: "#0a0f1e"
   };
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  var prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
   function supportsMotion() {
     return !prefersReducedMotion.matches;
@@ -15,20 +15,21 @@
   }
 
   function applyTheme(theme) {
-    const nextTheme = theme === "dark" ? "dark" : "light";
+    var nextTheme = theme === "dark" ? "dark" : "light";
 
     document.documentElement.dataset.theme = nextTheme;
     document.documentElement.style.colorScheme = nextTheme;
-    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+
+    var themeColorMeta = document.querySelector('meta[name="theme-color"]');
     if (themeColorMeta) {
-      themeColorMeta.setAttribute("content", THEME_COLORS[nextTheme] || THEME_COLORS.light);
+      themeColorMeta.setAttribute("content", THEME_COLORS[nextTheme] || THEME_COLORS.dark);
     }
   }
 
   function initSystemTheme() {
     applyTheme(systemTheme());
 
-    const handleSchemeChange = () => {
+    var handleSchemeChange = function () {
       applyTheme(systemTheme());
     };
 
@@ -40,25 +41,25 @@
   }
 
   function initNavigation() {
-    const toggle = document.querySelector(".nav-toggle");
-    const nav = document.querySelector("#site-nav");
+    var toggle = document.querySelector(".nav-toggle");
+    var nav = document.querySelector("#site-nav");
 
     if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        const open = document.body.classList.toggle("nav-open");
+      toggle.addEventListener("click", function () {
+        var open = document.body.classList.toggle("nav-open");
         toggle.setAttribute("aria-expanded", String(open));
       });
 
-      nav.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
+      nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
           document.body.classList.remove("nav-open");
           toggle.setAttribute("aria-expanded", "false");
         });
       });
 
-      const currentPath = window.location.pathname.split("/").pop() || "index.html";
-      nav.querySelectorAll("a").forEach((link) => {
-        const href = (link.getAttribute("href") || "").replace("./", "");
+      var currentPath = window.location.pathname.split("/").pop() || "index.html";
+      nav.querySelectorAll("a").forEach(function (link) {
+        var href = (link.getAttribute("href") || "").replace("./", "");
         if (href === currentPath) {
           link.classList.add("active");
           link.setAttribute("aria-current", "page");
@@ -66,11 +67,11 @@
       });
     }
 
-    const footerNav = document.querySelector(".footer-nav");
+    var footerNav = document.querySelector(".footer-nav");
     if (footerNav) {
-      const currentPath = window.location.pathname.split("/").pop() || "index.html";
-      footerNav.querySelectorAll("a").forEach((link) => {
-        const href = (link.getAttribute("href") || "").replace("./", "");
+      var currentPath = window.location.pathname.split("/").pop() || "index.html";
+      footerNav.querySelectorAll("a").forEach(function (link) {
+        var href = (link.getAttribute("href") || "").replace("./", "");
         if (href === currentPath) {
           link.classList.add("active");
           link.setAttribute("aria-current", "page");
@@ -80,8 +81,8 @@
   }
 
   function initCurrentYear() {
-    const year = String(new Date().getFullYear());
-    document.querySelectorAll("[data-year]").forEach((node) => {
+    var year = String(new Date().getFullYear());
+    document.querySelectorAll("[data-year]").forEach(function (node) {
       node.textContent = year;
     });
   }
@@ -96,7 +97,7 @@
         return false;
       }
 
-      const target = document.querySelector(hash);
+      var target = document.querySelector(hash);
       if (!target) {
         return false;
       }
@@ -111,9 +112,9 @@
       return true;
     }
 
-    document.querySelectorAll('a[href*="#"]').forEach((link) => {
-      link.addEventListener("click", (event) => {
-        let url;
+    document.querySelectorAll('a[href*="#"]').forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        var url;
         try {
           url = new URL(link.getAttribute("href") || "", window.location.href);
         } catch (_error) {
@@ -134,7 +135,7 @@
     });
 
     if (window.location.hash) {
-      window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(function () {
         scrollToHash(window.location.hash, false);
       });
     }
@@ -145,7 +146,9 @@
       return 0;
     }
 
-    const siblings = Array.from(element.parentElement.children).filter((node) => node.hasAttribute("data-reveal"));
+    var siblings = Array.from(element.parentElement.children).filter(function (node) {
+      return node.hasAttribute("data-reveal");
+    });
     return Math.max(0, siblings.indexOf(element));
   }
 
@@ -154,8 +157,8 @@
       return;
     }
 
-    const delay = siblingRevealIndex(element) * 60;
-    element.style.setProperty("--reveal-delay", `${delay}ms`);
+    var delay = siblingRevealIndex(element) * 60;
+    element.style.setProperty("--reveal-delay", delay + "ms");
 
     if (!supportsMotion()) {
       element.classList.add("is-visible");
@@ -163,11 +166,11 @@
     }
 
     element.classList.add("is-animating");
-    window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(function () {
       element.classList.add("is-visible");
     });
 
-    const cleanup = () => {
+    var cleanup = function () {
       element.classList.remove("is-animating");
       element.removeEventListener("transitionend", cleanup);
     };
@@ -177,19 +180,21 @@
   }
 
   function initRevealAnimations() {
-    const items = Array.from(document.querySelectorAll("[data-reveal]"));
+    var items = Array.from(document.querySelectorAll("[data-reveal]"));
     if (items.length === 0) {
       return;
     }
 
     if (!supportsMotion() || !("IntersectionObserver" in window)) {
-      items.forEach((item) => item.classList.add("is-visible"));
+      items.forEach(function (item) {
+        item.classList.add("is-visible");
+      });
       return;
     }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
           if (!entry.isIntersecting) {
             return;
           }
@@ -203,19 +208,21 @@
       }
     );
 
-    items.forEach((item) => observer.observe(item));
+    items.forEach(function (item) {
+      observer.observe(item);
+    });
   }
 
   function formatCounterValue(node, value) {
-    const decimals = Number.parseInt(node.dataset.countDecimals || "0", 10);
-    const prefix = node.dataset.countPrefix || "";
-    const suffix = node.dataset.countSuffix || "";
-    const rounded = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString();
-    return `${prefix}${rounded}${suffix}`;
+    var decimals = Number.parseInt(node.dataset.countDecimals || "0", 10);
+    var prefix = node.dataset.countPrefix || "";
+    var suffix = node.dataset.countSuffix || "";
+    var rounded = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString();
+    return prefix + rounded + suffix;
   }
 
   function renderCounterFinal(node) {
-    const target = Number.parseFloat(node.dataset.countTo || "0");
+    var target = Number.parseFloat(node.dataset.countTo || "0");
     node.textContent = formatCounterValue(node, target);
     node.dataset.countAnimated = "true";
   }
@@ -225,22 +232,22 @@
       return;
     }
 
-    const target = Number.parseFloat(node.dataset.countTo || "0");
-    const start = Number.parseFloat(node.dataset.countFrom || "0");
-    const duration = Number.parseInt(node.dataset.countDuration || "1200", 10);
+    var target = Number.parseFloat(node.dataset.countTo || "0");
+    var start = Number.parseFloat(node.dataset.countFrom || "0");
+    var duration = Number.parseInt(node.dataset.countDuration || "1400", 10);
 
     if (!supportsMotion()) {
       renderCounterFinal(node);
       return;
     }
 
-    const startTime = performance.now();
+    var startTime = performance.now();
 
     function frame(now) {
-      const elapsed = now - startTime;
-      const progress = Math.min(1, elapsed / duration);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const value = start + (target - start) * eased;
+      var elapsed = now - startTime;
+      var progress = Math.min(1, elapsed / duration);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var value = start + (target - start) * eased;
       node.textContent = formatCounterValue(node, value);
 
       if (progress < 1) {
@@ -254,14 +261,14 @@
   }
 
   function initCounters() {
-    const counters = Array.from(document.querySelectorAll("[data-count-to]"));
+    var counters = Array.from(document.querySelectorAll("[data-count-to]"));
     if (counters.length === 0) {
       return;
     }
 
-    counters.forEach((counter) => {
+    counters.forEach(function (counter) {
       counter.dataset.countAnimated = "false";
-      counter.textContent = counter.dataset.countPrefix ? `${counter.dataset.countPrefix}0${counter.dataset.countSuffix || ""}` : "0";
+      counter.textContent = counter.dataset.countPrefix ? counter.dataset.countPrefix + "0" + (counter.dataset.countSuffix || "") : "0";
     });
 
     if (!supportsMotion() || !("IntersectionObserver" in window)) {
@@ -269,9 +276,9 @@
       return;
     }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
           if (!entry.isIntersecting) {
             return;
           }
@@ -285,19 +292,22 @@
       }
     );
 
-    counters.forEach((counter) => observer.observe(counter));
+    counters.forEach(function (counter) {
+      observer.observe(counter);
+    });
   }
 
   function initCvPreview() {
-    const wrap = document.querySelector("[data-cv-frame-wrap]");
-    const frame = document.querySelector("[data-cv-frame]");
-    const fallback = document.querySelector("[data-cv-fallback]");
+    var wrap = document.querySelector("[data-cv-frame-wrap]");
+    var frame = document.querySelector("[data-cv-frame]");
+    var fallback = document.querySelector("[data-cv-fallback]");
+
     if (!wrap || !frame || !fallback) {
       return;
     }
 
-    let loadSettled = false;
-    const fallbackDelayMs = 1200;
+    var loadSettled = false;
+    var fallbackDelayMs = 1200;
 
     function setFallbackVisible(visible) {
       wrap.classList.toggle("is-fallback", visible);
@@ -305,7 +315,7 @@
       frame.setAttribute("aria-hidden", visible ? "true" : "false");
     }
 
-    const fallbackTimer = window.setTimeout(() => {
+    var fallbackTimer = window.setTimeout(function () {
       if (!loadSettled) {
         setFallbackVisible(true);
       }
@@ -313,7 +323,7 @@
 
     frame.addEventListener(
       "load",
-      () => {
+      function () {
         loadSettled = true;
         window.clearTimeout(fallbackTimer);
         setFallbackVisible(false);
@@ -323,7 +333,7 @@
 
     frame.addEventListener(
       "error",
-      () => {
+      function () {
         window.clearTimeout(fallbackTimer);
         setFallbackVisible(true);
       },
@@ -331,59 +341,35 @@
     );
   }
 
-  function initHeroParallax() {
-    const hero = document.querySelector(".hero");
-    if (!hero || !supportsMotion()) {
+  function initHeroReveal() {
+    var items = Array.from(document.querySelectorAll("[data-hero-reveal]"));
+    if (items.length === 0) {
       return;
     }
 
-    let rafId = 0;
-    let pointerX = 0;
-    let pointerY = 0;
-
-    function commit() {
-      hero.style.setProperty("--hero-blob-x", `${pointerX * 12}px`);
-      hero.style.setProperty("--hero-blob-y", `${pointerY * 10}px`);
-      hero.style.setProperty("--hero-blob2-x", `${pointerX * -8}px`);
-      hero.style.setProperty("--hero-blob2-y", `${pointerY * -12}px`);
-      rafId = 0;
+    if (!supportsMotion()) {
+      items.forEach(function (el) {
+        el.style.opacity = "1";
+        el.style.transform = "none";
+      });
+      return;
     }
 
-    function schedule() {
-      if (rafId) {
-        return;
-      }
-      rafId = window.requestAnimationFrame(commit);
-    }
-
-    hero.addEventListener("mousemove", (event) => {
-      const rect = hero.getBoundingClientRect();
-      const x = rect.width ? (event.clientX - rect.left) / rect.width - 0.5 : 0;
-      const y = rect.height ? (event.clientY - rect.top) / rect.height - 0.5 : 0;
-      pointerX = x;
-      pointerY = y;
-      schedule();
+    items.forEach(function (item, index) {
+      item.style.transition = "opacity 500ms cubic-bezier(0.2, 0.8, 0.2, 1) " + (index * 120) + "ms, transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1) " + (index * 120) + "ms";
     });
 
-    hero.addEventListener("mouseleave", () => {
-      pointerX = 0;
-      pointerY = 0;
-      schedule();
+    window.requestAnimationFrame(function () {
+      window.requestAnimationFrame(function () {
+        items.forEach(function (item) {
+          item.style.opacity = "1";
+          item.style.transform = "translateY(0)";
+        });
+      });
     });
-
-    window.addEventListener(
-      "scroll",
-      () => {
-        const rect = hero.getBoundingClientRect();
-        const viewport = window.innerHeight || 1;
-        const progress = Math.max(-1, Math.min(1, rect.top / viewport));
-        hero.style.setProperty("--hero-scroll-shift", `${progress * -10}px`);
-      },
-      { passive: true }
-    );
   }
 
-  const AGENT_LAB_PRESETS = {
+  var AGENT_LAB_PRESETS = {
     builder: {
       name: "Builder",
       warmth: 6,
@@ -482,7 +468,9 @@
   function parseAgentLabItems(value) {
     return value
       .split(/\n+/)
-      .map((line) => line.trim().replace(/^[-*]\s*/, ""))
+      .map(function (line) {
+        return line.trim().replace(/^[-*]\s*/, "");
+      })
       .filter(Boolean)
       .slice(0, 6);
   }
@@ -527,58 +515,63 @@
   }
 
   function buildAgentLabSummary(name, warmth, pragmatism, initiative) {
-    const warmthText = describeWarmth(warmth);
-    const pragmatismText = describePragmatism(pragmatism);
-    const initiativeText = describeInitiative(initiative);
-
-    return `${name} should feel ${warmthText}, ${pragmatismText}, and ${initiativeText}. It opens with a concrete first move, keeps context in view, and stays honest about limits.`;
+    return (
+      name +
+      " should feel " +
+      describeWarmth(warmth) +
+      ", " +
+      describePragmatism(pragmatism) +
+      ", and " +
+      describeInitiative(initiative) +
+      ". It opens with a concrete first move, keeps context in view, and stays honest about limits."
+    );
   }
 
   function buildAgentLabPacket(state) {
-    const soulItems = parseAgentLabItems(state.soul);
-    const memoryItems = parseAgentLabItems(state.memory);
-    const postureItems = parseAgentLabItems(state.posture);
+    var soulItems = parseAgentLabItems(state.soul);
+    var memoryItems = parseAgentLabItems(state.memory);
+    var postureItems = parseAgentLabItems(state.posture);
 
     return [
       "agent:",
-      `  name: ${state.name}`,
+      "  name: " + state.name,
       "  dimensions:",
-      `    warmth: ${state.warmth}/10 (${describeWarmth(state.warmth)})`,
-      `    pragmatism: ${state.pragmatism}/10 (${describePragmatism(state.pragmatism)})`,
-      `    initiative: ${state.initiative}/10 (${describeInitiative(state.initiative)})`,
+      "    warmth: " + state.warmth + "/10 (" + describeWarmth(state.warmth) + ")",
+      "    pragmatism: " + state.pragmatism + "/10 (" + describePragmatism(state.pragmatism) + ")",
+      "    initiative: " + state.initiative + "/10 (" + describeInitiative(state.initiative) + ")",
       "",
       "soul:",
-      ...soulItems.map((item) => `  - ${item}`),
+      soulItems.map(function (item) { return "  - " + item; }).join("\n"),
       "",
       "memory:",
-      ...memoryItems.map((item) => `  - ${item}`),
+      memoryItems.map(function (item) { return "  - " + item; }).join("\n"),
       "",
       "posture:",
-      ...postureItems.map((item) => `  - ${item}`)
+      postureItems.map(function (item) { return "  - " + item; }).join("\n")
     ].join("\n");
   }
 
   function buildAgentLabPrompt(state) {
-    const soulItems = parseAgentLabItems(state.soul);
-    const memoryItems = parseAgentLabItems(state.memory);
-    const postureItems = parseAgentLabItems(state.posture);
+    var soulItems = parseAgentLabItems(state.soul);
+    var memoryItems = parseAgentLabItems(state.memory);
+    var postureItems = parseAgentLabItems(state.posture);
 
     return [
-      `You are ${state.name}.`,
+      "You are " + state.name + ".",
       "",
       "Enduring character:",
-      ...soulItems.map((item) => `- ${item}`),
+      soulItems.map(function (item) { return "- " + item; }).join("\n"),
       "",
       "Persistent context:",
-      ...memoryItems.map((item) => `- ${item}`),
+      memoryItems.map(function (item) { return "- " + item; }).join("\n"),
       "",
       "Operating posture:",
-      ...postureItems.map((item) => `- ${item}`),
+      postureItems.map(function (item) { return "- " + item; }).join("\n"),
       "",
       "Behavioral mix:",
-      `- Warmth: ${state.warmth}/10 (${describeWarmth(state.warmth)})`,
-      `- Pragmatism: ${state.pragmatism}/10 (${describePragmatism(state.pragmatism)})`,
-      `- Initiative: ${state.initiative}/10 (${describeInitiative(state.initiative)})`,
+      "- Warmth: " + state.warmth + "/10 (" + describeWarmth(state.warmth) + ")",
+      "- Pragmatism: " + state.pragmatism + "/10 (" + describePragmatism(state.pragmatism) + ")",
+      "- Initiative: " + state.initiative + "/10 (" + describeInitiative(state.initiative) + ")",
       "",
       "Do not imply tools, memory, or permissions that are not actually available."
     ].join("\n");
@@ -586,8 +579,8 @@
 
   function setAgentLabChips(container, items) {
     container.innerHTML = "";
-    items.forEach((item) => {
-      const chip = document.createElement("span");
+    items.forEach(function (item) {
+      var chip = document.createElement("span");
       chip.className = "chip";
       chip.textContent = item;
       container.appendChild(chip);
@@ -595,47 +588,58 @@
   }
 
   function initAgentLabs() {
-    const labs = Array.from(document.querySelectorAll("[data-agent-lab]"));
+    var labs = Array.from(document.querySelectorAll("[data-agent-lab]"));
     if (labs.length === 0) {
       return;
     }
 
-    labs.forEach((lab) => {
-      const fields = {
+    labs.forEach(function (lab) {
+      var fields = {
         name: lab.querySelector('[data-lab-field="name"]'),
         soul: lab.querySelector('[data-lab-field="soul"]'),
         memory: lab.querySelector('[data-lab-field="memory"]'),
         posture: lab.querySelector('[data-lab-field="posture"]')
       };
-      const sliders = {
+      var sliders = {
         warmth: lab.querySelector('[data-lab-slider="warmth"]'),
         pragmatism: lab.querySelector('[data-lab-slider="pragmatism"]'),
         initiative: lab.querySelector('[data-lab-slider="initiative"]')
       };
-      const outputs = {
+      var outputs = {
         warmth: lab.querySelector('[data-lab-value="warmth"]'),
         pragmatism: lab.querySelector('[data-lab-value="pragmatism"]'),
         initiative: lab.querySelector('[data-lab-value="initiative"]')
       };
-      const meterLabels = {
+      var meterLabels = {
         warmth: lab.querySelector('[data-lab-meter-label="warmth"]'),
         pragmatism: lab.querySelector('[data-lab-meter-label="pragmatism"]'),
         initiative: lab.querySelector('[data-lab-meter-label="initiative"]')
       };
-      const meterFills = {
+      var meterFills = {
         warmth: lab.querySelector('[data-lab-fill="warmth"]'),
         pragmatism: lab.querySelector('[data-lab-fill="pragmatism"]'),
         initiative: lab.querySelector('[data-lab-fill="initiative"]')
       };
-      const title = lab.querySelector("[data-lab-title]");
-      const summary = lab.querySelector("[data-lab-summary]");
-      const packet = lab.querySelector("[data-lab-packet]");
-      const prompt = lab.querySelector("[data-lab-prompt]");
-      const traits = lab.querySelector("[data-lab-traits]");
-      const presetButtons = Array.from(lab.querySelectorAll("[data-lab-preset]"));
+      var title = lab.querySelector("[data-lab-title]");
+      var summary = lab.querySelector("[data-lab-summary]");
+      var packet = lab.querySelector("[data-lab-packet]");
+      var prompt = lab.querySelector("[data-lab-prompt]");
+      var traits = lab.querySelector("[data-lab-traits]");
+      var presetButtons = Array.from(lab.querySelectorAll("[data-lab-preset]"));
+
+      if (
+        !fields.name || !fields.soul || !fields.memory || !fields.posture ||
+        !sliders.warmth || !sliders.pragmatism || !sliders.initiative ||
+        !outputs.warmth || !outputs.pragmatism || !outputs.initiative ||
+        !meterLabels.warmth || !meterLabels.pragmatism || !meterLabels.initiative ||
+        !meterFills.warmth || !meterFills.pragmatism || !meterFills.initiative ||
+        !title || !summary || !packet || !prompt || !traits
+      ) {
+        return;
+      }
 
       function render() {
-        const state = {
+        var state = {
           name: fields.name.value.trim() || "Untitled agent",
           soul: fields.soul.value,
           memory: fields.memory.value,
@@ -653,16 +657,16 @@
         meterLabels.pragmatism.textContent = describePragmatism(state.pragmatism);
         meterLabels.initiative.textContent = describeInitiative(state.initiative);
 
-        meterFills.warmth.style.width = `${state.warmth * 10}%`;
-        meterFills.pragmatism.style.width = `${state.pragmatism * 10}%`;
-        meterFills.initiative.style.width = `${state.initiative * 10}%`;
+        meterFills.warmth.style.width = state.warmth * 10 + "%";
+        meterFills.pragmatism.style.width = state.pragmatism * 10 + "%";
+        meterFills.initiative.style.width = state.initiative * 10 + "%";
 
         title.textContent = state.name;
         summary.textContent = buildAgentLabSummary(state.name, state.warmth, state.pragmatism, state.initiative);
         packet.textContent = buildAgentLabPacket(state);
         prompt.textContent = buildAgentLabPrompt(state);
 
-        const traitItems = [
+        var traitItems = [
           describeWarmth(state.warmth),
           describePragmatism(state.pragmatism),
           describeInitiative(state.initiative)
@@ -671,7 +675,7 @@
       }
 
       function applyPreset(key) {
-        const preset = AGENT_LAB_PRESETS[key];
+        var preset = AGENT_LAB_PRESETS[key];
         if (!preset) {
           return;
         }
@@ -684,8 +688,8 @@
         sliders.pragmatism.value = String(preset.pragmatism);
         sliders.initiative.value = String(preset.initiative);
 
-        presetButtons.forEach((button) => {
-          const active = button.dataset.labPreset === key;
+        presetButtons.forEach(function (button) {
+          var active = button.dataset.labPreset === key;
           button.classList.toggle("is-active", active);
           button.setAttribute("aria-pressed", String(active));
         });
@@ -693,25 +697,25 @@
         render();
       }
 
-      presetButtons.forEach((button) => {
+      presetButtons.forEach(function (button) {
         button.setAttribute("aria-pressed", "false");
-        button.addEventListener("click", () => {
+        button.addEventListener("click", function () {
           applyPreset(button.dataset.labPreset || "builder");
         });
       });
 
-      Object.values(fields).forEach((field) => {
-        field.addEventListener("input", render);
+      Object.keys(fields).forEach(function (key) {
+        fields[key].addEventListener("input", render);
       });
-      Object.values(sliders).forEach((slider) => {
-        slider.addEventListener("input", render);
+      Object.keys(sliders).forEach(function (key) {
+        sliders[key].addEventListener("input", render);
       });
 
       applyPreset((presetButtons[0] && presetButtons[0].dataset.labPreset) || "builder");
     });
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", function () {
     initSystemTheme();
     initNavigation();
     initCurrentYear();
@@ -719,7 +723,7 @@
     initRevealAnimations();
     initCounters();
     initCvPreview();
-    initHeroParallax();
+    initHeroReveal();
     initAgentLabs();
   });
 })();

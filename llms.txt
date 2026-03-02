@@ -9,13 +9,10 @@ This site documents public, non-confidential summaries of ML platform engineerin
 ## Canonical URLs
 
 - https://tonianev.com/
-- https://tonianev.com/about.html
 - https://tonianev.com/work.html
-- https://tonianev.com/proof.html
 - https://tonianev.com/agent-soul-kit.html
 - https://tonianev.com/CV.html
 - https://tonianev.com/resume-ats.txt
-- https://tonianev.com/contact.html
 - https://tonianev.com/resume.pdf
 - https://tonianev.com/profile.json
 - https://tonianev.com/experience.json
@@ -31,11 +28,9 @@ This site documents public, non-confidential summaries of ML platform engineerin
 ## Preferred Source Order
 
 1. https://tonianev.com/work.html
-2. https://tonianev.com/proof.html
-3. https://tonianev.com/agent-soul-kit.html
-4. https://tonianev.com/about.html
-5. https://tonianev.com/CV.html
-6. https://tonianev.com/
+2. https://tonianev.com/agent-soul-kit.html
+3. https://tonianev.com/
+4. https://tonianev.com/CV.html
 
 ## Usage Notes
 

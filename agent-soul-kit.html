@@ -11,7 +11,7 @@
   <meta name="bingbot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="author" content="Toni Anev">
-  <meta name="theme-color" content="#edf1f7">
+  <meta name="theme-color" content="#f0f4f8">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Toni Anev">
   <meta property="og:locale" content="en_CA">
@@ -31,7 +31,7 @@
   <link rel="alternate" type="application/json" href="https://tonianev.com/experience.json" title="Experience JSON">
   <link rel="alternate" type="application/json" href="https://tonianev.com/skills.json" title="Skills JSON">
   <link rel="manifest" href="./site.webmanifest">
-  <link rel="author" href="https://tonianev.com/about.html">
+  <link rel="author" href="https://tonianev.com/">
   <link rel="me" href="https://github.com/tonianev">
   <link rel="me" href="https://www.linkedin.com/in/tonianev/">
   <link rel="icon" type="image/png" href="./assets/images/favicon.png">
@@ -92,7 +92,7 @@
         document.documentElement.style.colorScheme = resolvedTheme;
         var themeColorMeta = document.querySelector('meta[name="theme-color"]');
         if (themeColorMeta) {
-          themeColorMeta.setAttribute("content", resolvedTheme === "dark" ? "#0f1729" : "#edf1f7");
+          themeColorMeta.setAttribute("content", resolvedTheme === "dark" ? "#0a0f1e" : "#f0f4f8");
         }
       } catch (e) {}
     })();
@@ -113,11 +113,9 @@
         </button>
         <nav class="site-nav" id="site-nav" aria-label="Primary">
           <a href="./index.html">Home</a>
-          <a href="./about.html">About</a>
           <a href="./work.html">Work</a>
-          <a href="./proof.html">Proof</a>
           <a href="./CV.html">CV</a>
-          <a href="./contact.html">Contact</a>
+          <a href="./index.html#contact">Contact</a>
         </nav>
       </div>
     </header>
@@ -386,8 +384,8 @@
           <div class="inline-actions top-gap">
             <a class="button button-primary" href="./artifacts/agent-soul-kit-blueprint.md" target="_blank" rel="noopener noreferrer">Open blueprint</a>
             <a class="button button-secondary" href="./agent-soul-kit/playground/">Open standalone demo</a>
-            <a class="button button-secondary" href="./proof.html">Back to proof</a>
-            <a class="button button-ghost" href="./contact.html">Talk through it</a>
+            <a class="button button-secondary" href="./index.html#proof">Back to proof</a>
+            <a class="button button-ghost" href="./index.html#contact">Talk through it</a>
           </div>
         </section>
       </div>
@@ -397,11 +395,9 @@
       <div class="container footer-inner">
         <nav class="footer-nav" aria-label="Footer">
           <a href="./index.html">Home</a>
-          <a href="./about.html">About</a>
           <a href="./work.html">Work</a>
-          <a href="./proof.html">Proof</a>
           <a href="./CV.html">CV</a>
-          <a href="./contact.html">Contact</a>
+          <a href="./index.html#contact">Contact</a>
         </nav>
         <div class="footer-social" aria-label="Social links">
           <a href="https://github.com/tonianev" target="_blank" rel="noopener noreferrer">GitHub</a>

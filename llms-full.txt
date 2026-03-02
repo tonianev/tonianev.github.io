@@ -43,7 +43,6 @@ Toni Anev is a Machine Learning Engineering Lead focused on AI infrastructure, M
 
 - Portfolio: https://tonianev.com/
 - Work: https://tonianev.com/work.html
-- Proof: https://tonianev.com/proof.html
 - Agent Soul Kit: https://tonianev.com/agent-soul-kit.html
 - CV: https://tonianev.com/CV.html
 - ATS Resume: https://tonianev.com/resume-ats.txt
