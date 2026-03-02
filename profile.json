@@ -11,7 +11,8 @@
     "resume_pdf": "https://tonianev.com/resume.pdf",
     "resume_ats": "https://tonianev.com/resume-ats.txt",
     "work": "https://tonianev.com/work.html",
-    "proof": "https://tonianev.com/proof.html"
+    "about": "https://tonianev.com/#about",
+    "contact": "https://tonianev.com/#contact"
   },
   "focus_areas": [
     "ML platform architecture",

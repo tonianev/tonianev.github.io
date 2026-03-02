@@ -3,8 +3,8 @@
   "short_name": "Toni Anev",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#edf1f7",
-  "theme_color": "#edf1f7",
+  "background_color": "#0a0f1e",
+  "theme_color": "#0a0f1e",
   "description": "ML platform engineering, MLOps, and production AI infrastructure leadership.",
   "icons": [
     {

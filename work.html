@@ -11,7 +11,7 @@
   <meta name="bingbot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="author" content="Toni Anev">
-  <meta name="theme-color" content="#edf1f7">
+  <meta name="theme-color" content="#0a0f1e">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Toni Anev">
   <meta property="og:locale" content="en_CA">
@@ -31,7 +31,6 @@
   <link rel="alternate" type="application/json" href="https://tonianev.com/experience.json" title="Experience JSON">
   <link rel="alternate" type="application/json" href="https://tonianev.com/skills.json" title="Skills JSON">
   <link rel="manifest" href="./site.webmanifest">
-  <link rel="author" href="https://tonianev.com/about.html">
   <link rel="me" href="https://github.com/tonianev">
   <link rel="me" href="https://www.linkedin.com/in/tonianev/">
   <link rel="icon" type="image/png" href="./assets/images/favicon.png">
@@ -120,16 +119,14 @@
         </button>
         <nav class="site-nav" id="site-nav" aria-label="Primary">
           <a href="./index.html">Home</a>
-          <a href="./about.html">About</a>
           <a href="./work.html">Work</a>
-          <a href="./proof.html">Proof</a>
           <a href="./CV.html">CV</a>
-          <a href="./contact.html">Contact</a>
+          <a href="./index.html#contact">Contact</a>
         </nav>
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">
           <span class="theme-toggle-track" aria-hidden="true">
-            <span class="theme-glyph theme-glyph-sun">☀</span>
-            <span class="theme-glyph theme-glyph-moon">☾</span>
+            <span class="theme-glyph theme-glyph-sun">&#9728;</span>
+            <span class="theme-glyph theme-glyph-moon">&#9790;</span>
             <span class="theme-toggle-knob"></span>
           </span>
         </button>
@@ -148,7 +145,7 @@
           <article class="project-card" id="sanofi" data-reveal>
             <div class="project-layout">
               <div class="project-main">
-                <p class="project-meta">Sanofi · Machine Learning Engineering Lead</p>
+                <p class="project-meta">Sanofi &middot; Machine Learning Engineering Lead</p>
                 <h2 class="project-title">AI infrastructure and ML platform scale-out</h2>
                 <p class="project-copy">Led platform architecture and delivery systems for AI/ML workloads used across global R&amp;D teams, with an emphasis on throughput, reproducibility, and production readiness.</p>
                 <ul class="project-points">
@@ -176,13 +173,13 @@
                 <p class="impact-note">Leadership scope included a core engineering team plus PM and contractor coordination.</p>
               </aside>
             </div>
-            <p class="project-tools">Stack · AWS · EKS · FSx · S3 · SageMaker · Bedrock · Terraform · HPC</p>
+            <p class="project-tools">Stack &middot; AWS &middot; EKS &middot; FSx &middot; S3 &middot; SageMaker &middot; Bedrock &middot; Terraform &middot; HPC</p>
           </article>
 
           <article class="project-card" id="petco" data-reveal>
             <div class="project-layout">
               <div class="project-main">
-                <p class="project-meta">Petco · Technology Lead</p>
+                <p class="project-meta">Petco &middot; Technology Lead</p>
                 <h2 class="project-title">Pricing and personalization ML delivery</h2>
                 <p class="project-copy">Led ML engineering delivery for pricing and personalization systems, modernizing platform standards and improving the speed of experimentation and deployment.</p>
                 <ul class="project-points">
@@ -196,7 +193,7 @@
                 <dl class="metric-list compact">
                   <div>
                     <dt>Runtime</dt>
-                    <dd data-count-to="4" data-count-prefix="24h → " data-count-suffix="h">24h → 4h</dd>
+                    <dd data-count-to="4" data-count-prefix="24h &rarr; " data-count-suffix="h">24h &rarr; 4h</dd>
                   </div>
                   <div>
                     <dt>Compute load</dt>
@@ -210,19 +207,19 @@
                 <p class="impact-note">Included pricing experimentation and recommendation engine delivery across multiple data sources.</p>
               </aside>
             </div>
-            <p class="project-tools">Stack · GCP · GKE · Dataproc · Vertex AI · Airflow · Snowflake · Seldon</p>
+            <p class="project-tools">Stack &middot; GCP &middot; GKE &middot; Dataproc &middot; Vertex AI &middot; Airflow &middot; Snowflake &middot; Seldon</p>
           </article>
 
           <article class="project-card" id="loblaw" data-reveal>
             <div class="project-layout">
               <div class="project-main">
-                <p class="project-meta">Loblaw Companies Limited · Data / MLOps Engineering</p>
+                <p class="project-meta">Loblaw Companies Limited &middot; Data / MLOps Engineering</p>
                 <h2 class="project-title">Enterprise pricing, promotions, and segmentation systems</h2>
                 <p class="project-copy">Built and scaled production data / ML systems across pricing, promotions, and targeted marketing, from early decisioning engines to enterprise MLOps orchestration.</p>
                 <ul class="project-points">
                   <li>Led rollout of a promotion optimization engine across 16 divisions and 200+ product categories on GCP, Terraform, and Airflow.</li>
                   <li>Built orchestration services that reduced batch latency by 73% and lowered compute cost by $2.7K/month.</li>
-                  <li>Contributed to segmentation and pricing systems tied to $42M+ annual incremental revenue and $15–20M revenue lift in earlier pricing decisioning work.</li>
+                  <li>Contributed to segmentation and pricing systems tied to $42M+ annual incremental revenue and $15&ndash;20M revenue lift in earlier pricing decisioning work.</li>
                 </ul>
               </div>
               <aside class="impact-panel" aria-label="Loblaw impact summary">
@@ -238,23 +235,22 @@
                   </div>
                   <div>
                     <dt>Pricing decisioning lift</dt>
-                    <dd data-count-to="20" data-count-prefix="$15–" data-count-suffix="M">$15–20M</dd>
+                    <dd data-count-to="20" data-count-prefix="$15&ndash;" data-count-suffix="M">$15&ndash;20M</dd>
                   </div>
                 </dl>
                 <p class="impact-note">Work spanned Data Engineer, Senior Data Engineer, and Senior MLOps Engineer roles.</p>
               </aside>
             </div>
-            <p class="project-tools">Stack · GCP · Dataproc · Cloud Composer · Terraform · Airflow · Microservices</p>
+            <p class="project-tools">Stack &middot; GCP &middot; Dataproc &middot; Cloud Composer &middot; Terraform &middot; Airflow &middot; Microservices</p>
           </article>
         </section>
 
         <section class="section-card" data-reveal>
           <p class="eyebrow">Notes</p>
           <h2 class="section-title">Public summaries only</h2>
-          <p>Some implementation detail is confidential. I’m happy to discuss architecture decisions, tradeoffs, and delivery patterns in a direct conversation.</p>
+          <p>Some implementation detail is confidential. I'm happy to discuss architecture decisions, tradeoffs, and delivery patterns in a direct conversation.</p>
           <div class="inline-actions top-gap">
-            <a class="button button-primary" href="./contact.html">Contact</a>
-            <a class="button button-secondary" href="./proof.html">Proof artifacts</a>
+            <a class="button button-primary" href="./index.html#contact">Contact</a>
             <a class="button button-secondary" href="./CV.html">Open CV</a>
           </div>
         </section>
@@ -265,11 +261,9 @@
       <div class="container footer-inner">
         <nav class="footer-nav" aria-label="Footer">
           <a href="./index.html">Home</a>
-          <a href="./about.html">About</a>
           <a href="./work.html">Work</a>
-          <a href="./proof.html">Proof</a>
           <a href="./CV.html">CV</a>
-          <a href="./contact.html">Contact</a>
+          <a href="./index.html#contact">Contact</a>
         </nav>
         <div class="footer-social" aria-label="Social links">
           <a href="https://github.com/tonianev" target="_blank" rel="noopener noreferrer">GitHub</a>
