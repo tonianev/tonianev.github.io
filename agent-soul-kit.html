@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Agent Soul Kit is a public concept and playground for shaping AI agents with soul files, memory files, and portable operating rules.">
+  <meta name="keywords" content="AI agent soul file, memory file, agent playground, prompt architecture, Toni Anev">
+  <meta name="google" content="notranslate">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="bingbot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="author" content="Toni Anev">
+  <meta name="theme-color" content="#edf1f7">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Toni Anev">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:title" content="Agent Soul Kit | Toni Anev">
+  <meta property="og:description" content="A pragmatic open-source concept for giving AI agents memory, posture, and more useful character without special backend powers.">
+  <meta property="og:url" content="https://tonianev.com/agent-soul-kit.html">
+  <meta property="og:image" content="https://tonianev.com/assets/images/intropic.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Agent Soul Kit | Toni Anev">
+  <meta name="twitter:description" content="Portable soul files, memory files, and a playground for tuning how an agent sounds and works.">
+  <meta name="twitter:image" content="https://tonianev.com/assets/images/intropic.jpg">
+  <link rel="canonical" href="https://tonianev.com/agent-soul-kit.html">
+  <link rel="sitemap" type="application/xml" href="https://tonianev.com/sitemap.xml">
+  <link rel="alternate" type="text/plain" href="https://tonianev.com/llms.txt" title="LLMs Context">
+  <link rel="alternate" type="text/plain" href="https://tonianev.com/humans.txt" title="Humans">
+  <link rel="alternate" type="application/json" href="https://tonianev.com/profile.json" title="Profile JSON">
+  <link rel="alternate" type="application/json" href="https://tonianev.com/experience.json" title="Experience JSON">
+  <link rel="alternate" type="application/json" href="https://tonianev.com/skills.json" title="Skills JSON">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="author" href="https://tonianev.com/about.html">
+  <link rel="me" href="https://github.com/tonianev">
+  <link rel="me" href="https://www.linkedin.com/in/tonianev/">
+  <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://tonianev.com/#website",
+          "url": "https://tonianev.com/",
+          "name": "Toni Anev",
+          "description": "ML platform engineering, MLOps, and technical leadership for production-scale systems.",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://tonianev.com/#person",
+          "name": "Toni Anev",
+          "url": "https://tonianev.com/",
+          "jobTitle": "Machine Learning Engineering Lead",
+          "sameAs": [
+            "https://github.com/tonianev",
+            "https://www.linkedin.com/in/tonianev/"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://tonianev.com/agent-soul-kit.html#webpage",
+          "url": "https://tonianev.com/agent-soul-kit.html",
+          "name": "Agent Soul Kit | Toni Anev",
+          "description": "A public concept and playground for shaping AI agents with soul files, memory files, and portable operating rules.",
+          "isPartOf": {
+            "@id": "https://tonianev.com/#website"
+          },
+          "about": {
+            "@id": "https://tonianev.com/#person"
+          },
+          "hasPart": [
+            {
+              "@type": "CreativeWork",
+              "name": "Agent Soul Kit Blueprint",
+              "url": "https://tonianev.com/artifacts/agent-soul-kit-blueprint.md"
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+  <script>
+    (function () {
+      try {
+        var resolvedTheme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", resolvedTheme);
+        document.documentElement.style.colorScheme = resolvedTheme;
+        var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute("content", resolvedTheme === "dark" ? "#0f1729" : "#edf1f7");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="./site.css">
+  <title>Agent Soul Kit | Toni Anev</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="./index.html">Toni Anev</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./work.html">Work</a>
+          <a href="./proof.html">Proof</a>
+          <a href="./CV.html">CV</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page agent-lab-page" id="main-content">
+      <div class="container stack-xl">
+        <section class="hero agent-lab-hero" aria-labelledby="hero-title" data-reveal>
+          <div class="hero-grid">
+            <div class="hero-main">
+              <p class="eyebrow">Open-source kit · Agent systems</p>
+              <h1 id="hero-title">Give any agent a soul file, a memory file, and a better way to work.</h1>
+              <p class="hero-lead">Agent Soul Kit is a portable repo pattern for shaping tone, recall, and judgment without pretending the model has magic powers. The goal is practical: make agents feel more human, act more useful, and stay inspectable.</p>
+              <div class="hero-actions" aria-label="Primary actions">
+                <a class="button button-primary" href="#playground">Open playground</a>
+                <a class="button button-secondary" href="#repo-blueprint">See repo design</a>
+                <a class="button button-secondary" href="./agent-soul-kit/playground/">Open scaffold demo</a>
+                <a class="button button-secondary" href="./artifacts/agent-soul-kit-blueprint.md" target="_blank" rel="noopener noreferrer">Read blueprint</a>
+              </div>
+            </div>
+
+            <div class="hero-side stack" aria-label="Core ingredients and boundaries">
+              <article class="glass-card compact-card">
+                <p class="eyebrow">Core files</p>
+                <h2><code>soul.md</code> · <code>memory.md</code> · <code>posture.md</code></h2>
+                <p>Three small files define how the agent sounds, what it carries forward, and what it does when the work is ambiguous.</p>
+              </article>
+
+              <article class="glass-card metrics-card">
+                <p class="eyebrow">Boundaries</p>
+                <dl class="metric-list compact">
+                  <div>
+                    <dt>Special backend needed</dt>
+                    <dd data-count-to="0">0</dd>
+                  </div>
+                  <div>
+                    <dt>Portable text files</dt>
+                    <dd data-count-to="3">3</dd>
+                  </div>
+                  <div>
+                    <dt>Runtime assumption</dt>
+                    <dd>Any agent</dd>
+                  </div>
+                </dl>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card" id="repo-blueprint" data-reveal>
+          <div class="section-head">
+            <p class="eyebrow">Repository design</p>
+            <h2 class="section-title">A repo that treats character as infrastructure</h2>
+            <p class="section-intro">This is not a prompt scrapbook. The repo is a practical kit: portable files, small adapters, examples, and a playground that makes the behavioral contract visible.</p>
+          </div>
+          <div class="lab-repo-grid">
+            <article class="feature-card" data-reveal>
+              <p class="feature-kicker">Soul</p>
+              <h3><code>souls/</code></h3>
+              <p>Voice, values, pacing, and temperament. This is where the agent becomes recognizable instead of generic.</p>
+            </article>
+            <article class="feature-card" data-reveal>
+              <p class="feature-kicker">Memory</p>
+              <h3><code>memories/</code></h3>
+              <p>Long-lived context, preferences, and known facts that should survive across sessions and tasks.</p>
+            </article>
+            <article class="feature-card" data-reveal>
+              <p class="feature-kicker">Posture</p>
+              <h3><code>postures/</code></h3>
+              <p>Operating rules for initiative, escalation, uncertainty, and how the agent should make progress under constraint.</p>
+            </article>
+            <article class="feature-card" data-reveal>
+              <p class="feature-kicker">Adapters</p>
+              <h3><code>adapters/</code></h3>
+              <p>Thin templates that translate the same files into OpenAI, Claude Code, local CLI, or generic chat wrappers.</p>
+            </article>
+            <article class="feature-card" data-reveal>
+              <p class="feature-kicker">Examples</p>
+              <h3><code>examples/</code></h3>
+              <p>Reference agents for coding, research, founder support, and personal operations so the repo feels immediately usable.</p>
+            </article>
+            <article class="feature-card" data-reveal>
+              <p class="feature-kicker">Playground</p>
+              <h3><code>playground/</code></h3>
+              <p>A no-magic browser surface where people can tune character sliders, edit files, and inspect the compiled agent packet.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-card" data-reveal>
+          <div class="two-col align-start">
+            <div class="stack">
+              <div class="section-head">
+                <p class="eyebrow">Design principles</p>
+                <h2 class="section-title">Portable, inspectable, and honest about limits</h2>
+              </div>
+              <ul class="checklist checklist-light">
+                <li>No hidden backend state is required for the concept to make sense.</li>
+                <li>Character stays in human-readable files that can be versioned, reviewed, and diffed.</li>
+                <li>Adapters are thin on purpose so the same soul and memory can travel across runtimes.</li>
+                <li>The repo pushes agents toward better taste and initiative without granting fake capabilities.</li>
+                <li>The playground makes the behavior legible before someone wires it into a real product.</li>
+              </ul>
+            </div>
+
+            <article class="mini-panel">
+              <p class="feature-kicker">Proposed tree</p>
+              <pre class="lab-code-block">agent-soul-kit/
+  README.md
+  souls/
+    pragmatic-builder.md
+    warm-operator.md
+    sharp-editor.md
+  memories/
+    founder-context.md
+    product-lead.md
+    personal-assistant.md
+  postures/
+    default.md
+    decisive.md
+    gentle.md
+  adapters/
+    generic-chat.md
+    openai-api.md
+    claude-code.md
+    local-cli.md
+  examples/
+    coding-agent/
+    research-agent/
+    studio-agent/
+  playground/
+    scenarios.json
+    evaluator.md
+    browser-demo.md</pre>
+            </article>
+          </div>
+        </section>
+
+        <section class="lab-workbench" id="playground" data-reveal>
+          <div class="section-head">
+            <p class="eyebrow">Playground</p>
+            <h2 class="section-title">Tune warmth, pragmatism, and initiative in public</h2>
+            <p class="section-intro">The point of the playground is simple: edit the ingredients, inspect the compiled packet, and see whether the agent feels grounded or fake before it ships anywhere.</p>
+          </div>
+
+          <div class="lab-layout" data-agent-lab>
+            <div class="lab-controls" aria-label="Agent tuning controls">
+              <div class="lab-panel-head">
+                <p class="feature-kicker">Starter archetypes</p>
+                <div class="preset-grid" role="group" aria-label="Agent archetypes">
+                  <button class="preset-button" type="button" data-lab-preset="builder">Builder</button>
+                  <button class="preset-button" type="button" data-lab-preset="operator">Operator</button>
+                  <button class="preset-button" type="button" data-lab-preset="guide">Guide</button>
+                  <button class="preset-button" type="button" data-lab-preset="editor">Editor</button>
+                </div>
+              </div>
+
+              <div class="lab-slider-grid">
+                <label class="lab-range">
+                  <span>Warmth <output data-lab-value="warmth">0</output></span>
+                  <input type="range" min="1" max="10" value="6" data-lab-slider="warmth">
+                </label>
+                <label class="lab-range">
+                  <span>Pragmatism <output data-lab-value="pragmatism">0</output></span>
+                  <input type="range" min="1" max="10" value="9" data-lab-slider="pragmatism">
+                </label>
+                <label class="lab-range">
+                  <span>Initiative <output data-lab-value="initiative">0</output></span>
+                  <input type="range" min="1" max="10" value="8" data-lab-slider="initiative">
+                </label>
+              </div>
+
+              <label class="lab-field">
+                <span>Agent name</span>
+                <input type="text" value="Builder" data-lab-field="name">
+              </label>
+
+              <label class="lab-field">
+                <span><code>soul.md</code></span>
+                <textarea rows="8" data-lab-field="soul"></textarea>
+              </label>
+
+              <label class="lab-field">
+                <span><code>memory.md</code></span>
+                <textarea rows="7" data-lab-field="memory"></textarea>
+              </label>
+
+              <label class="lab-field">
+                <span><code>posture.md</code></span>
+                <textarea rows="7" data-lab-field="posture"></textarea>
+              </label>
+            </div>
+
+            <div class="lab-preview" aria-live="polite">
+              <article class="lab-summary-card">
+                <p class="eyebrow">Readout</p>
+                <h2 data-lab-title>Builder</h2>
+                <p data-lab-summary>The compiled agent should feel grounded, useful, and willing to take the first sensible step.</p>
+                <div class="lab-meter-list" aria-label="Character dimensions">
+                  <div class="lab-meter">
+                    <div class="lab-meter-head">
+                      <span>Warmth</span>
+                      <strong data-lab-meter-label="warmth">steady</strong>
+                    </div>
+                    <div class="lab-meter-track"><span data-lab-fill="warmth"></span></div>
+                  </div>
+                  <div class="lab-meter">
+                    <div class="lab-meter-head">
+                      <span>Pragmatism</span>
+                      <strong data-lab-meter-label="pragmatism">high</strong>
+                    </div>
+                    <div class="lab-meter-track"><span data-lab-fill="pragmatism"></span></div>
+                  </div>
+                  <div class="lab-meter">
+                    <div class="lab-meter-head">
+                      <span>Initiative</span>
+                      <strong data-lab-meter-label="initiative">forward</strong>
+                    </div>
+                    <div class="lab-meter-track"><span data-lab-fill="initiative"></span></div>
+                  </div>
+                </div>
+                <div class="chip-list" data-lab-traits></div>
+              </article>
+
+              <article class="lab-preview-card">
+                <p class="feature-kicker">Compiled packet</p>
+                <pre class="lab-code-block" data-lab-packet></pre>
+              </article>
+
+              <article class="lab-preview-card">
+                <p class="feature-kicker">Starter system prompt</p>
+                <pre class="lab-code-block" data-lab-prompt></pre>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card" data-reveal>
+          <div class="section-head">
+            <p class="eyebrow">Where it fits</p>
+            <h2 class="section-title">Three obvious starter modes</h2>
+            <p class="section-intro">The repo becomes more persuasive if it ships with examples that solve real jobs rather than abstract prompt theater.</p>
+          </div>
+          <div class="grid-3">
+            <article class="feature-card" data-reveal>
+              <p class="feature-kicker">Coding agent</p>
+              <h3>Sharper execution</h3>
+              <p>Use posture files to favor concrete edits, explicit assumptions, and honest statements about what has or has not been verified.</p>
+            </article>
+            <article class="feature-card" data-reveal>
+              <p class="feature-kicker">Research agent</p>
+              <h3>More signal, less drift</h3>
+              <p>Use soul and memory files to keep the voice human while preserving durable context about the user’s domain and preferences.</p>
+            </article>
+            <article class="feature-card" data-reveal>
+              <p class="feature-kicker">Personal operator</p>
+              <h3>Useful, not overbearing</h3>
+              <p>Use initiative rules to decide when the agent should move on its own, when it should ask, and when it should stay quiet.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-card" data-reveal>
+          <p class="eyebrow">Next move</p>
+          <h2 class="section-title">This is ready to become a real public repo</h2>
+          <p>The repo can ship as an open-source playground with starter files, adapters, sample evaluations, and no proprietary backend assumptions. The local scaffold is already packaged under <code>agent-soul-kit/</code>, which makes the split-out repo tangible and forkable.</p>
+          <div class="inline-actions top-gap">
+            <a class="button button-primary" href="./artifacts/agent-soul-kit-blueprint.md" target="_blank" rel="noopener noreferrer">Open blueprint</a>
+            <a class="button button-secondary" href="./agent-soul-kit/playground/">Open standalone demo</a>
+            <a class="button button-secondary" href="./proof.html">Back to proof</a>
+            <a class="button button-ghost" href="./contact.html">Talk through it</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./work.html">Work</a>
+          <a href="./proof.html">Proof</a>
+          <a href="./CV.html">CV</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <div class="footer-social" aria-label="Social links">
+          <a href="https://github.com/tonianev" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/tonianev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:tonianev@gmail.com">Email</a>
+        </div>
+        <p class="footer-copy">&copy; <span data-year></span> Toni Anev.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./site.js" defer></script>
+</body>
+</html>

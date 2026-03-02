@@ -99,10 +99,12 @@
   <script>
     (function () {
       try {
-        var theme = localStorage.getItem("toni-theme");
-        if (theme === "light" || theme === "dark") {
-          document.documentElement.setAttribute("data-theme", theme);
-          document.documentElement.style.colorScheme = theme;
+        var resolvedTheme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", resolvedTheme);
+        document.documentElement.style.colorScheme = resolvedTheme;
+        var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute("content", resolvedTheme === "dark" ? "#0f1729" : "#edf1f7");
         }
       } catch (e) {}
     })();
@@ -129,13 +131,6 @@
           <a href="./CV.html">CV</a>
           <a href="./contact.html">Contact</a>
         </nav>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">
-          <span class="theme-toggle-track" aria-hidden="true">
-            <span class="theme-glyph theme-glyph-sun">☀</span>
-            <span class="theme-glyph theme-glyph-moon">☾</span>
-            <span class="theme-toggle-knob"></span>
-          </span>
-        </button>
       </div>
     </header>
 
@@ -152,8 +147,17 @@
           </div>
         </section>
 
-        <section class="cv-frame-wrap" aria-label="CV preview" data-reveal>
-          <iframe class="cv-frame" src="./resume.pdf#view=FitH" title="Toni Anev CV" loading="lazy"></iframe>
+        <section class="cv-frame-wrap" aria-label="CV preview" data-cv-frame-wrap data-reveal>
+          <iframe class="cv-frame" src="./resume.pdf#view=FitH" title="Toni Anev CV" data-cv-frame></iframe>
+          <div class="cv-preview-fallback" data-cv-fallback hidden>
+            <p class="eyebrow">Preview unavailable</p>
+            <h2 class="section-title">This browser is not rendering the PDF preview.</h2>
+            <p>Use the direct PDF link or the ATS text version instead. The content is still available even when inline PDF rendering is not.</p>
+            <div class="inline-actions top-gap">
+              <a class="button button-primary" href="./resume.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
+              <a class="button button-secondary" href="./resume-ats.txt" target="_blank" rel="noopener noreferrer">ATS text version</a>
+            </div>
+          </div>
         </section>
 
         <p class="note" data-reveal>If the preview does not load in your browser, <a href="./resume.pdf" target="_blank" rel="noopener noreferrer">open the PDF in a new tab</a>. For parser-friendly text, use the <a href="./resume-ats.txt" target="_blank" rel="noopener noreferrer">ATS text version</a>.</p>

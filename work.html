@@ -96,10 +96,12 @@
   <script>
     (function () {
       try {
-        var theme = localStorage.getItem("toni-theme");
-        if (theme === "light" || theme === "dark") {
-          document.documentElement.setAttribute("data-theme", theme);
-          document.documentElement.style.colorScheme = theme;
+        var resolvedTheme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", resolvedTheme);
+        document.documentElement.style.colorScheme = resolvedTheme;
+        var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute("content", resolvedTheme === "dark" ? "#0f1729" : "#edf1f7");
         }
       } catch (e) {}
     })();
@@ -126,13 +128,6 @@
           <a href="./CV.html">CV</a>
           <a href="./contact.html">Contact</a>
         </nav>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">
-          <span class="theme-toggle-track" aria-hidden="true">
-            <span class="theme-glyph theme-glyph-sun">☀</span>
-            <span class="theme-glyph theme-glyph-moon">☾</span>
-            <span class="theme-toggle-knob"></span>
-          </span>
-        </button>
       </div>
     </header>
 

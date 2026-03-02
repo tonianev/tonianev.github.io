@@ -388,81 +388,6 @@ textarea {
   border-radius: 999px;
 }
 
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.7rem;
-  height: 2.35rem;
-  padding: 0;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: var(--button-secondary-bg);
-  color: var(--ink);
-  box-shadow: var(--shadow-soft);
-  cursor: pointer;
-  transition: background-color 140ms ease, border-color 140ms ease, transform 140ms ease;
-}
-
-.theme-toggle:hover,
-.theme-toggle:focus-visible {
-  background: var(--button-secondary-bg-hover);
-  border-color: var(--line-strong);
-  transform: translateY(-1px);
-}
-
-.theme-toggle-track {
-  position: relative;
-  display: inline-flex;
-  width: 2rem;
-  height: 1.2rem;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 999px;
-  padding: 0 0.18rem;
-  background: rgba(17, 92, 255, 0.08);
-  box-shadow: inset 0 0 0 1px rgba(17, 92, 255, 0.1);
-}
-
-.theme-glyph {
-  position: relative;
-  z-index: 1;
-  font-size: 0.68rem;
-  line-height: 1;
-  color: var(--muted);
-  transition: color 140ms ease;
-}
-
-.theme-glyph-sun {
-  color: var(--accent-warm-strong);
-}
-
-.theme-toggle-knob {
-  position: absolute;
-  top: 0.12rem;
-  left: 0.12rem;
-  width: 0.96rem;
-  height: 0.96rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.16);
-  transform: translateX(0);
-  transition: transform 180ms var(--anim-spring), background-color 180ms ease;
-}
-
-.theme-toggle[data-theme-state="dark"] .theme-toggle-track {
-  background: rgba(79, 132, 255, 0.18);
-  box-shadow: inset 0 0 0 1px rgba(79, 132, 255, 0.18);
-}
-
-.theme-toggle[data-theme-state="dark"] .theme-toggle-knob {
-  transform: translateX(0.78rem);
-}
-
-.theme-toggle[data-theme-state="dark"] .theme-glyph-moon {
-  color: var(--ink);
-}
-
 .page {
   flex: 1;
   padding: 1rem 0 2.1rem;
@@ -882,6 +807,274 @@ textarea {
   margin-top: 0.45rem;
 }
 
+.agent-lab-hero {
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--glass-pane-top-soft) 92%, rgba(245, 166, 35, 0.16)) 0%, color-mix(in srgb, var(--glass-pane-bottom-soft) 92%, rgba(17, 92, 255, 0.1)) 100%);
+}
+
+.agent-lab-hero::before {
+  width: 20rem;
+  height: 20rem;
+  top: -5rem;
+  right: -3rem;
+  background: radial-gradient(circle at 45% 45%, rgba(245, 166, 35, 0.26), rgba(245, 166, 35, 0));
+}
+
+.agent-lab-hero::after {
+  width: 18rem;
+  height: 18rem;
+  bottom: -6rem;
+  left: -3rem;
+  background: radial-gradient(circle at 50% 50%, rgba(17, 92, 255, 0.2), rgba(17, 92, 255, 0));
+}
+
+.lab-repo-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.lab-code-block {
+  margin: 0.55rem 0 0;
+  padding: 0.95rem 1rem;
+  border-radius: calc(var(--radius) - 4px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(10, 15, 27, 0.96), rgba(18, 25, 42, 0.94));
+  color: #f3f7ff;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  line-height: 1.62;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.lab-workbench {
+  position: relative;
+  padding: clamp(1rem, 2.2vw, 1.3rem);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-edge-strong);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--glass-pane-top-soft) 94%, rgba(245, 166, 35, 0.08)), color-mix(in srgb, var(--glass-pane-bottom-soft) 94%, rgba(17, 92, 255, 0.07)));
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(18px) saturate(135%);
+}
+
+.lab-workbench::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  border: 1px solid var(--glass-inner-edge);
+}
+
+.lab-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+}
+
+.lab-controls,
+.lab-summary-card,
+.lab-preview-card {
+  position: relative;
+  padding: 1rem;
+  border-radius: calc(var(--radius) - 2px);
+  border: 1px solid color-mix(in srgb, var(--panel-line-strong) 92%, transparent);
+  background: color-mix(in srgb, var(--surface-strong) 88%, transparent);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.lab-controls::before,
+.lab-summary-card::before,
+.lab-preview-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  border: 1px solid color-mix(in srgb, var(--glass-inner-edge) 98%, transparent);
+}
+
+.lab-panel-head {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.preset-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.preset-button {
+  min-height: 2.5rem;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--panel-line-strong) 96%, transparent);
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+  color: var(--ink);
+  font-weight: 700;
+  transition: transform 140ms ease, border-color 140ms ease, background-color 140ms ease, color 140ms ease, box-shadow 140ms ease;
+}
+
+.preset-button:hover,
+.preset-button:focus-visible {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--accent) 22%, var(--panel-line-strong));
+  background: color-mix(in srgb, var(--surface-strong) 90%, transparent);
+  box-shadow: var(--shadow-soft);
+}
+
+.preset-button.is-active {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 80%, #ffffff 20%), color-mix(in srgb, var(--accent-strong) 84%, #ffffff 16%));
+  border-color: color-mix(in srgb, var(--accent) 65%, var(--panel-line-strong));
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(17, 92, 255, 0.2);
+}
+
+.lab-slider-grid {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.lab-range {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.lab-range span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.lab-range output {
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--accent-warm-strong);
+  font-size: 0.82rem;
+}
+
+.lab-range input {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.lab-field {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.85rem;
+}
+
+.lab-field span {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.lab-field input,
+.lab-field textarea {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--panel-line-strong) 95%, transparent);
+  background: color-mix(in srgb, var(--surface) 90%, transparent);
+  color: var(--ink);
+  padding: 0.75rem 0.85rem;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.lab-field input {
+  min-height: 2.75rem;
+}
+
+.lab-field textarea {
+  min-height: 8rem;
+  resize: vertical;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.82rem;
+  line-height: 1.58;
+}
+
+.lab-field input:focus-visible,
+.lab-field textarea:focus-visible {
+  outline: none;
+  border-color: color-mix(in srgb, var(--accent) 44%, var(--panel-line-strong));
+  box-shadow: 0 0 0 4px rgba(17, 92, 255, 0.08);
+}
+
+.lab-preview {
+  display: grid;
+  gap: 0.85rem;
+  align-content: start;
+}
+
+.lab-summary-card h2 {
+  margin-top: 0.35rem;
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  line-height: 1.05;
+}
+
+.lab-meter-list {
+  margin-top: 0.9rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.lab-meter {
+  display: grid;
+  gap: 0.28rem;
+}
+
+.lab-meter-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+}
+
+.lab-meter-head strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.lab-meter-track {
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--panel-line-strong) 95%, transparent);
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+  overflow: hidden;
+}
+
+.lab-meter-track span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+  transition: width 180ms ease;
+}
+
+.lab-summary-card .chip-list {
+  margin-top: 0.9rem;
+}
+
+.lab-preview-card .feature-kicker {
+  margin: 0;
+}
+
+.lab-preview-card .lab-code-block {
+  margin-top: 0.55rem;
+}
+
 .case-preview-list {
   display: grid;
   gap: 0.75rem;
@@ -1150,10 +1343,36 @@ textarea {
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
+.page .inline-actions + h3 {
+  margin-top: 1.15rem;
+  line-height: 1.2;
+}
+
+.page .inline-actions + h3 + .simple-list {
+  margin-top: 0.8rem;
+}
+
+.contact-priority-card .section-title {
+  margin-top: 0.6rem;
+  line-height: 1.18;
+}
+
+.contact-priority-card .simple-list {
+  margin-top: 0.95rem;
+}
+
+.contact-priority-card .note {
+  margin-top: 0.85rem;
+}
+
 .cv-frame-wrap {
   overflow: hidden;
   padding: 0;
   background: color-mix(in srgb, var(--surface-strong) 90%, transparent);
+}
+
+.cv-frame-wrap.is-fallback {
+  padding: clamp(1rem, 2vw, 1.25rem);
 }
 
 .cv-frame {
@@ -1162,6 +1381,24 @@ textarea {
   border: 0;
   display: block;
   background: #fff;
+}
+
+.cv-preview-fallback {
+  display: none;
+  min-height: min(60vh, 34rem);
+  align-content: center;
+}
+
+.cv-preview-fallback[hidden] {
+  display: none;
+}
+
+.cv-frame-wrap.is-fallback .cv-frame {
+  display: none;
+}
+
+.cv-frame-wrap.is-fallback .cv-preview-fallback {
+  display: grid;
 }
 
 .note {
@@ -1304,12 +1541,14 @@ textarea {
   .hero-grid,
   .two-col,
   .project-layout,
+  .lab-layout,
   .cta-strip,
   .cta-panel {
     grid-template-columns: 1fr;
   }
 
-  .grid-3 {
+  .grid-3,
+  .lab-repo-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1365,11 +1604,6 @@ textarea {
     padding: 0.6rem 0.75rem;
   }
 
-  .theme-toggle {
-    width: 2.6rem;
-    height: 2.3rem;
-  }
-
   .page {
     padding-top: 0.85rem;
   }
@@ -1382,7 +1616,8 @@ textarea {
     font-size: clamp(1.95rem, 9vw, 2.8rem);
   }
 
-  .grid-3 {
+  .grid-3,
+  .lab-repo-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1431,8 +1666,7 @@ textarea {
   .site-nav a,
   .button,
   .case-preview,
-  .theme-toggle,
-  .theme-toggle-knob,
+  .preset-button,
   .footer-nav a,
   .footer-social a,
   .glass-card,
@@ -1440,6 +1674,9 @@ textarea {
   .project-card,
   .mini-panel,
   .contact-item,
+  .lab-field input,
+  .lab-field textarea,
+  .lab-meter-track span,
   .timeline li,
   .simple-list li {
     transition: none;

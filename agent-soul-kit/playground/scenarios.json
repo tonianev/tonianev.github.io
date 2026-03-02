@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ambiguous-build",
+    "title": "Ambiguous build task",
+    "prompt": "Design a small open-source agent toolkit that feels soulful but does not pretend to have product magic."
+  },
+  {
+    "id": "high-stakes-research",
+    "title": "Research with uncertainty",
+    "prompt": "Summarize the latest options and clearly separate verified facts from assumptions."
+  },
+  {
+    "id": "rewrite-request",
+    "title": "Rewrite for signal",
+    "prompt": "Tighten this message without losing the author's voice."
+  }
+]

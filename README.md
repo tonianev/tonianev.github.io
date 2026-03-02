@@ -23,10 +23,12 @@ Personal website for Toni Anev: ML platform engineering leadership, selected cas
 - `about.html` - background, approach, and stack
 - `work.html` - case studies and outcomes
 - `proof.html` - public proof artifacts and machine-readable references
+- `agent-soul-kit.html` - agent soul kit concept and interactive demo
 - `CV.html` - resume/CV page and PDF preview
 - `contact.html` - contact entry points
 - `site.css` - shared styling
 - `site.js` - interaction behavior
+- `agent-soul-kit/` - standalone scaffold for a portable soul/memory/posture repository
 - `resume.pdf` - downloadable resume
 - `resume-ats.txt` - ATS and parser-friendly resume text
 - `profile.json` - machine-readable profile summary
@@ -35,6 +37,7 @@ Personal website for Toni Anev: ML platform engineering leadership, selected cas
 - `artifacts/ml-platform-rfc-template.md` - architecture decision template
 - `artifacts/ml-incident-runbook-template.md` - incident response template
 - `artifacts/ml-production-readiness-scorecard.md` - launch readiness scoring template
+- `artifacts/agent-soul-kit-blueprint.md` - public repository design for portable agent soul/memory files
 
 ## Machine Readability
 

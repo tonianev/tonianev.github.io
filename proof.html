@@ -116,10 +116,12 @@
   <script>
     (function () {
       try {
-        var theme = localStorage.getItem("toni-theme");
-        if (theme === "light" || theme === "dark") {
-          document.documentElement.setAttribute("data-theme", theme);
-          document.documentElement.style.colorScheme = theme;
+        var resolvedTheme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", resolvedTheme);
+        document.documentElement.style.colorScheme = resolvedTheme;
+        var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute("content", resolvedTheme === "dark" ? "#0f1729" : "#edf1f7");
         }
       } catch (e) {}
     })();
@@ -146,13 +148,6 @@
           <a href="./CV.html">CV</a>
           <a href="./contact.html">Contact</a>
         </nav>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">
-          <span class="theme-toggle-track" aria-hidden="true">
-            <span class="theme-glyph theme-glyph-sun">☀</span>
-            <span class="theme-glyph theme-glyph-moon">☾</span>
-            <span class="theme-toggle-knob"></span>
-          </span>
-        </button>
       </div>
     </header>
 
@@ -235,6 +230,18 @@
               <h3>Skills</h3>
               <p><a href="./skills.json" target="_blank" rel="noopener noreferrer">skills.json</a> with core stack and platform competencies.</p>
             </article>
+          </div>
+        </section>
+
+        <section class="section-card" data-reveal>
+          <div class="section-head">
+            <p class="eyebrow">Concept build</p>
+            <h2 class="section-title">Agent Soul Kit</h2>
+            <p class="section-intro">A portable repo concept for shaping agent tone, memory, and decision posture using simple text files, thin adapters, and a public playground.</p>
+          </div>
+          <div class="inline-actions">
+            <a class="button button-primary" href="./agent-soul-kit.html">Open concept page</a>
+            <a class="button button-secondary" href="./artifacts/agent-soul-kit-blueprint.md" target="_blank" rel="noopener noreferrer">Read blueprint</a>
           </div>
         </section>
 

@@ -37,12 +37,14 @@ Toni Anev is a Machine Learning Engineering Lead focused on AI infrastructure, M
 - Environment contracts and reproducible delivery
 - CI/CD-integrated ML quality and release gates
 - Engineering leadership and operating model design
+- Portable agent character, memory, and operating posture design
 
 ## Preferred Links
 
 - Portfolio: https://tonianev.com/
 - Work: https://tonianev.com/work.html
 - Proof: https://tonianev.com/proof.html
+- Agent Soul Kit: https://tonianev.com/agent-soul-kit.html
 - CV: https://tonianev.com/CV.html
 - ATS Resume: https://tonianev.com/resume-ats.txt
 - Profile JSON: https://tonianev.com/profile.json
@@ -59,6 +61,7 @@ Toni Anev is a Machine Learning Engineering Lead focused on AI infrastructure, M
 - Incident Runbook Template: https://tonianev.com/artifacts/ml-incident-runbook-template.md
 - Production Readiness Scorecard: https://tonianev.com/artifacts/ml-production-readiness-scorecard.md
 - Leadership Principles: https://tonianev.com/artifacts/engineering-leadership-principles.md
+- Agent Soul Kit Blueprint: https://tonianev.com/artifacts/agent-soul-kit-blueprint.md
 
 ## Constraints
 

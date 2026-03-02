@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Soul Kit Playground</title>
+  <link rel="stylesheet" href="./playground.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="intro">
+      <p class="eyebrow">Agent Soul Kit</p>
+      <h1>Playground</h1>
+      <p>Edit a soul, memory, and posture file. The panel on the right compiles them into a starter agent packet and system prompt.</p>
+    </section>
+
+    <section class="layout">
+      <div class="panel">
+        <label class="field">
+          <span>Preset</span>
+          <select id="preset">
+            <option value="builder">Builder</option>
+            <option value="operator">Operator</option>
+            <option value="editor">Editor</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Agent name</span>
+          <input id="name" type="text" value="Pragmatic Builder">
+        </label>
+
+        <label class="field">
+          <span>Soul</span>
+          <textarea id="soul" rows="10"></textarea>
+        </label>
+
+        <label class="field">
+          <span>Memory</span>
+          <textarea id="memory" rows="8"></textarea>
+        </label>
+
+        <label class="field">
+          <span>Posture</span>
+          <textarea id="posture" rows="8"></textarea>
+        </label>
+      </div>
+
+      <div class="panel output">
+        <section>
+          <p class="eyebrow">Compiled packet</p>
+          <pre id="packet"></pre>
+        </section>
+
+        <section>
+          <p class="eyebrow">Starter system prompt</p>
+          <pre id="prompt"></pre>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="./playground.js" defer></script>
+</body>
+</html>

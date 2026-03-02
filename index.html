@@ -112,10 +112,12 @@
   <script>
     (function () {
       try {
-        var theme = localStorage.getItem("toni-theme");
-        if (theme === "light" || theme === "dark") {
-          document.documentElement.setAttribute("data-theme", theme);
-          document.documentElement.style.colorScheme = theme;
+        var resolvedTheme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", resolvedTheme);
+        document.documentElement.style.colorScheme = resolvedTheme;
+        var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute("content", resolvedTheme === "dark" ? "#0f1729" : "#edf1f7");
         }
       } catch (e) {}
     })();
@@ -142,13 +144,6 @@
           <a href="./CV.html">CV</a>
           <a href="./contact.html">Contact</a>
         </nav>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">
-          <span class="theme-toggle-track" aria-hidden="true">
-            <span class="theme-glyph theme-glyph-sun">☀</span>
-            <span class="theme-glyph theme-glyph-moon">☾</span>
-            <span class="theme-toggle-knob"></span>
-          </span>
-        </button>
       </div>
     </header>
 
@@ -252,6 +247,18 @@
               <h3>Engineering leadership</h3>
               <p>Teams, technical direction, and execution discipline for high-stakes ML platform work.</p>
             </article>
+          </div>
+        </section>
+
+        <section class="section-card" data-reveal>
+          <div class="section-head">
+            <p class="eyebrow">Current build</p>
+            <h2 class="section-title">Agent Soul Kit</h2>
+            <p class="section-intro">A public concept for giving any AI agent a soul file, a memory file, and a more useful operating posture without special backend powers.</p>
+          </div>
+          <div class="cta-strip">
+            <p class="cta-text">Portable files, thin adapters, and a browser playground for tuning warmth, pragmatism, and initiative in public.</p>
+            <a class="button button-primary" href="./agent-soul-kit.html">Open the kit</a>
           </div>
         </section>
 
