@@ -11,7 +11,7 @@
   <meta name="bingbot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="author" content="Toni Anev">
-  <meta name="theme-color" content="#edf1f7">
+  <meta name="theme-color" content="#0a0f1e">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Toni Anev">
   <meta property="og:locale" content="en_CA">
@@ -31,7 +31,6 @@
   <link rel="alternate" type="application/json" href="https://tonianev.com/experience.json" title="Experience JSON">
   <link rel="alternate" type="application/json" href="https://tonianev.com/skills.json" title="Skills JSON">
   <link rel="manifest" href="./site.webmanifest">
-  <link rel="author" href="https://tonianev.com/about.html">
   <link rel="me" href="https://github.com/tonianev">
   <link rel="me" href="https://www.linkedin.com/in/tonianev/">
   <link rel="icon" type="image/png" href="./assets/images/favicon.png">
@@ -96,11 +95,6 @@
             },
             {
               "@type": "WebPage",
-              "name": "Proof",
-              "url": "https://tonianev.com/proof.html"
-            },
-            {
-              "@type": "WebPage",
               "name": "CV",
               "url": "https://tonianev.com/CV.html"
             }
@@ -136,16 +130,14 @@
         </button>
         <nav class="site-nav" id="site-nav" aria-label="Primary">
           <a href="./index.html">Home</a>
-          <a href="./about.html">About</a>
           <a href="./work.html">Work</a>
-          <a href="./proof.html">Proof</a>
           <a href="./CV.html">CV</a>
-          <a href="./contact.html">Contact</a>
+          <a href="#contact">Contact</a>
         </nav>
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">
           <span class="theme-toggle-track" aria-hidden="true">
-            <span class="theme-glyph theme-glyph-sun">☀</span>
-            <span class="theme-glyph theme-glyph-moon">☾</span>
+            <span class="theme-glyph theme-glyph-sun">&#9728;</span>
+            <span class="theme-glyph theme-glyph-moon">&#9790;</span>
             <span class="theme-toggle-knob"></span>
           </span>
         </button>
@@ -154,105 +146,115 @@
 
     <main class="page" id="main-content">
       <div class="container stack-xl">
-        <section class="hero" aria-labelledby="hero-title" data-reveal>
-          <div class="hero-grid">
-            <div class="hero-main">
-              <p class="eyebrow">ML Engineering Lead · Toronto</p>
-              <h1 id="hero-title">I build machine learning platforms and the teams that run them.</h1>
-              <p class="hero-lead">Currently leading ML platform engineering at Sanofi. My work focuses on infrastructure, MLOps, and the engineering systems that make applied ML reliable at scale.</p>
-              <div class="hero-actions" aria-label="Primary actions">
-                <a class="button button-primary" href="./work.html">Selected work</a>
-                <a class="button button-secondary" href="./proof.html">Proof artifacts</a>
-                <a class="button button-secondary" href="./CV.html">CV</a>
-                <a class="button button-ghost" href="./contact.html">Contact</a>
-              </div>
-            </div>
 
-            <div class="hero-side stack" aria-label="Current role and outcomes">
-              <article class="glass-card compact-card">
-                <p class="eyebrow">Current</p>
-                <h2>Sanofi · Machine Learning Engineering Lead</h2>
-                <p>Leading AI infrastructure and ML platform engineering that supports global R&amp;D teams and production model delivery.</p>
-              </article>
-
-              <article class="glass-card metrics-card">
-                <p class="eyebrow">Selected results</p>
-                <dl class="metric-list compact">
-                  <div>
-                    <dt>Sanofi AI / HPC platform</dt>
-                    <dd data-count-to="12" data-count-prefix="$" data-count-suffix="M+">$12M+</dd>
-                  </div>
-                  <div>
-                    <dt>Platform throughput improvement</dt>
-                    <dd data-count-to="23" data-count-prefix="+" data-count-suffix="%">+23%</dd>
-                  </div>
-                  <div>
-                    <dt>Model productionization time</dt>
-                    <dd data-count-to="26" data-count-prefix="-" data-count-suffix="%">-26%</dd>
-                  </div>
-                  <div>
-                    <dt>Petco personalization impact</dt>
-                    <dd data-count-to="13" data-count-prefix="~$" data-count-suffix="M/mo">~$13M/mo</dd>
-                  </div>
-                </dl>
-              </article>
+        <!-- ===== HERO ===== -->
+        <section class="hero" id="hero" aria-labelledby="hero-title">
+          <div class="hero-content">
+            <p class="eyebrow" data-hero-reveal>ML Engineering Lead &middot; Toronto</p>
+            <h1 id="hero-title" data-hero-reveal>I build machine learning platforms and the teams that run them.</h1>
+            <p class="hero-lead" data-hero-reveal>Currently leading ML platform engineering at Sanofi. My work focuses on infrastructure, MLOps, and the engineering systems that make applied ML reliable at scale.</p>
+            <div class="hero-actions" data-hero-reveal aria-label="Primary actions">
+              <a class="button button-primary" href="./work.html">Selected work</a>
+              <a class="button button-secondary" href="./CV.html">CV</a>
+              <a class="button button-ghost" href="#contact">Contact</a>
             </div>
           </div>
         </section>
 
-        <section class="section-card" data-reveal>
+        <!-- ===== ABOUT ===== -->
+        <section class="section-card" id="about" data-reveal>
           <div class="section-head">
-            <p class="eyebrow">Highlights</p>
+            <p class="eyebrow"><span class="section-number">01</span> About</p>
+            <h2 class="section-title">I work on the engineering layer that makes ML usable.</h2>
+          </div>
+          <p>I lead machine learning engineering with a focus on platform architecture, MLOps, and production delivery. The throughline in my work is simple: make good models easier to build, ship, and operate.</p>
+          <ul class="checklist checklist-light">
+            <li>Design for reliability and repeatability from day one.</li>
+            <li>Prefer reusable platform leverage over one-off heroics.</li>
+            <li>Make tradeoffs explicit: cost, speed, complexity, ownership.</li>
+            <li>Build teams and standards that improve over time.</li>
+          </ul>
+          <p class="career-inline">Sanofi &middot; Petco &middot; Loblaw &middot; Numeris &middot; University of Toronto</p>
+          <div class="chip-list">
+            <span class="chip">Python</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Go</span>
+            <span class="chip">Terraform</span>
+            <span class="chip">AWS</span>
+            <span class="chip">GCP</span>
+            <span class="chip">Airflow</span>
+            <span class="chip">Vertex AI</span>
+            <span class="chip">SageMaker</span>
+            <span class="chip">Snowflake</span>
+            <span class="chip">CI/CD</span>
+          </div>
+        </section>
+
+        <!-- ===== SELECTED WORK ===== -->
+        <section class="section-card" id="work" data-reveal>
+          <div class="section-head">
+            <p class="eyebrow"><span class="section-number">02</span> Work</p>
             <h2 class="section-title">Selected work</h2>
-            <p class="section-intro">A few examples of platform and ML engineering work across pharma and retail.</p>
+            <p class="section-intro">Platform and ML engineering across pharma and retail.</p>
           </div>
 
           <div class="case-preview-list" aria-label="Work highlights">
             <a class="case-preview" href="./work.html#sanofi">
-              <p class="case-preview-meta">Sanofi · ML Engineering Lead</p>
+              <p class="case-preview-meta">Sanofi &middot; ML Engineering Lead</p>
               <p class="case-preview-title">AI infrastructure and ML platform scale-out</p>
-              <p class="case-preview-copy">Global R&amp;D platform architecture, IaC standardization, and faster model productionization.</p>
-              <p class="case-preview-stats">$12M+ platform · 23% throughput gain · 26% faster productionization</p>
+              <p class="case-preview-metric" data-count-to="12" data-count-prefix="$" data-count-suffix="M+">$12M+</p>
+              <p class="case-preview-stats">23% throughput gain &middot; 26% faster productionization</p>
             </a>
 
             <a class="case-preview" href="./work.html#petco">
-              <p class="case-preview-meta">Petco · Technology Lead</p>
+              <p class="case-preview-meta">Petco &middot; Technology Lead</p>
               <p class="case-preview-title">Pricing and personalization ML delivery</p>
-              <p class="case-preview-copy">MLOps modernization and delivery systems for pricing and recommendation workflows.</p>
-              <p class="case-preview-stats">24h → 4h runtime · 32% compute reduction · ~$13M/mo impact</p>
+              <p class="case-preview-metric" data-count-to="13" data-count-prefix="~$" data-count-suffix="M/mo">~$13M/mo</p>
+              <p class="case-preview-stats">24h &rarr; 4h runtime &middot; 32% compute reduction</p>
             </a>
 
             <a class="case-preview" href="./work.html#loblaw">
-              <p class="case-preview-meta">Loblaw · Data / MLOps Engineering</p>
+              <p class="case-preview-meta">Loblaw &middot; Data / MLOps Engineering</p>
               <p class="case-preview-title">Enterprise pricing, promotions, and segmentation systems</p>
-              <p class="case-preview-copy">Production ML and data systems used across pricing, promotions, and targeted marketing at enterprise scale.</p>
-              <p class="case-preview-stats">73% lower batch latency · $42M+ annual increment · $15–20M lift</p>
+              <p class="case-preview-metric" data-count-to="42" data-count-prefix="$" data-count-suffix="M+">$42M+</p>
+              <p class="case-preview-stats">73% lower batch latency &middot; $15&ndash;20M pricing lift</p>
             </a>
           </div>
         </section>
 
-        <section class="section-card" data-reveal>
+        <!-- ===== PROOF ===== -->
+        <section class="section-card" id="proof" data-reveal>
           <div class="section-head">
-            <p class="eyebrow">Focus</p>
-            <h2 class="section-title">How I contribute</h2>
+            <p class="eyebrow"><span class="section-number">03</span> Proof</p>
+            <h2 class="section-title">Public artifacts</h2>
           </div>
-          <div class="grid-3">
-            <article class="feature-card" data-reveal>
-              <p class="feature-kicker">01</p>
-              <h3>Platform architecture</h3>
-              <p>Cloud infrastructure, orchestration, compute, and reproducible environments for ML teams.</p>
-            </article>
-            <article class="feature-card" data-reveal>
-              <p class="feature-kicker">02</p>
-              <h3>MLOps delivery systems</h3>
-              <p>Pipelines, standards, and operational workflows that reduce cycle time and improve reliability.</p>
-            </article>
-            <article class="feature-card" data-reveal>
-              <p class="feature-kicker">03</p>
-              <h3>Engineering leadership</h3>
-              <p>Teams, technical direction, and execution discipline for high-stakes ML platform work.</p>
-            </article>
+          <p>Implementation checklists, RFC templates, and operational runbooks for ML platform teams. Sanitized but representative of production-grade delivery standards.</p>
+          <div class="inline-actions top-gap">
+            <a class="button button-primary" href="https://github.com/tonianev/ml-platform-reference" target="_blank" rel="noopener noreferrer">Platform reference repo</a>
+            <a class="button button-secondary" href="https://github.com/tonianev/ml-release-gates" target="_blank" rel="noopener noreferrer">Release gates</a>
+            <a class="button button-secondary" href="https://github.com/tonianev" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
+          <p class="note">Machine-readable: <a href="./profile.json">profile.json</a> &middot; <a href="./experience.json">experience.json</a> &middot; <a href="./skills.json">skills.json</a></p>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section class="section-card" id="contact" data-reveal>
+          <div class="section-head">
+            <p class="eyebrow"><span class="section-number">04</span> Contact</p>
+            <h2 class="section-title">Email is best.</h2>
+          </div>
+          <p>I reply fastest to messages about ML platform engineering, MLOps, and engineering leadership.</p>
+          <div class="inline-actions top-gap">
+            <a class="button button-primary" href="mailto:tonianev@gmail.com">tonianev@gmail.com</a>
+            <a class="button button-secondary" href="https://www.linkedin.com/in/tonianev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+          <h3>Conversations I prioritize</h3>
+          <ul class="simple-list">
+            <li>ML engineering leadership roles</li>
+            <li>ML platform and MLOps architecture work</li>
+            <li>Production ML delivery and platform modernization</li>
+            <li>Technical advisory conversations with clear scope</li>
+          </ul>
         </section>
 
       </div>
@@ -262,11 +264,9 @@
       <div class="container footer-inner">
         <nav class="footer-nav" aria-label="Footer">
           <a href="./index.html">Home</a>
-          <a href="./about.html">About</a>
           <a href="./work.html">Work</a>
-          <a href="./proof.html">Proof</a>
           <a href="./CV.html">CV</a>
-          <a href="./contact.html">Contact</a>
+          <a href="#contact">Contact</a>
         </nav>
         <div class="footer-social" aria-label="Social links">
           <a href="https://github.com/tonianev" target="_blank" rel="noopener noreferrer">GitHub</a>

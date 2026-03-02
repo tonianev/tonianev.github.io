@@ -1,11 +1,11 @@
 (function () {
-  const THEME_KEY = "toni-theme";
-  const THEME_COLORS = {
-    light: "#edf1f7",
-    dark: "#0f1729"
+  var THEME_KEY = "toni-theme";
+  var THEME_COLORS = {
+    light: "#f0f4f8",
+    dark: "#0a0f1e"
   };
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  var prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
   function supportsMotion() {
     return !prefersReducedMotion.matches;
@@ -13,7 +13,7 @@
 
   function readStoredTheme() {
     try {
-      const value = window.localStorage.getItem(THEME_KEY);
+      var value = window.localStorage.getItem(THEME_KEY);
       return value === "light" || value === "dark" ? value : null;
     } catch (_error) {
       return null;
@@ -25,18 +25,18 @@
   }
 
   function resolvedTheme() {
-    return document.documentElement.dataset.theme || readStoredTheme() || systemTheme();
+    return readStoredTheme() || document.documentElement.dataset.theme || systemTheme();
   }
 
   function applyTheme(theme, options) {
-    const settings = Object.assign({ persist: true }, options);
-    const nextTheme = theme === "dark" ? "dark" : "light";
+    var settings = Object.assign({ persist: true }, options);
+    var nextTheme = theme === "light" ? "light" : "dark";
 
     document.documentElement.dataset.theme = nextTheme;
     document.documentElement.style.colorScheme = nextTheme;
-    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+    var themeColorMeta = document.querySelector('meta[name="theme-color"]');
     if (themeColorMeta) {
-      themeColorMeta.setAttribute("content", THEME_COLORS[nextTheme] || THEME_COLORS.light);
+      themeColorMeta.setAttribute("content", THEME_COLORS[nextTheme] || THEME_COLORS.dark);
     }
 
     if (settings.persist) {
@@ -47,8 +47,8 @@
       }
     }
 
-    document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
-      const isDark = nextTheme === "dark";
+    document.querySelectorAll("[data-theme-toggle]").forEach(function (button) {
+      var isDark = nextTheme === "dark";
       button.setAttribute("aria-pressed", String(isDark));
       button.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
       button.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
@@ -57,22 +57,22 @@
   }
 
   function initThemeToggle() {
-    const buttons = Array.from(document.querySelectorAll("[data-theme-toggle]"));
+    var buttons = Array.from(document.querySelectorAll("[data-theme-toggle]"));
     if (buttons.length === 0) {
       return;
     }
 
-    const initial = resolvedTheme();
+    var initial = resolvedTheme();
     applyTheme(initial, { persist: false });
 
-    buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const nextTheme = resolvedTheme() === "dark" ? "light" : "dark";
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var nextTheme = resolvedTheme() === "dark" ? "light" : "dark";
         applyTheme(nextTheme);
       });
     });
 
-    const handleSchemeChange = () => {
+    var handleSchemeChange = function () {
       if (readStoredTheme()) {
         return;
       }
@@ -87,25 +87,25 @@
   }
 
   function initNavigation() {
-    const toggle = document.querySelector(".nav-toggle");
-    const nav = document.querySelector("#site-nav");
+    var toggle = document.querySelector(".nav-toggle");
+    var nav = document.querySelector("#site-nav");
 
     if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        const open = document.body.classList.toggle("nav-open");
+      toggle.addEventListener("click", function () {
+        var open = document.body.classList.toggle("nav-open");
         toggle.setAttribute("aria-expanded", String(open));
       });
 
-      nav.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
+      nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
           document.body.classList.remove("nav-open");
           toggle.setAttribute("aria-expanded", "false");
         });
       });
 
-      const currentPath = window.location.pathname.split("/").pop() || "index.html";
-      nav.querySelectorAll("a").forEach((link) => {
-        const href = (link.getAttribute("href") || "").replace("./", "");
+      var currentPath = window.location.pathname.split("/").pop() || "index.html";
+      nav.querySelectorAll("a").forEach(function (link) {
+        var href = (link.getAttribute("href") || "").replace("./", "");
         if (href === currentPath) {
           link.classList.add("active");
           link.setAttribute("aria-current", "page");
@@ -113,11 +113,11 @@
       });
     }
 
-    const footerNav = document.querySelector(".footer-nav");
+    var footerNav = document.querySelector(".footer-nav");
     if (footerNav) {
-      const currentPath = window.location.pathname.split("/").pop() || "index.html";
-      footerNav.querySelectorAll("a").forEach((link) => {
-        const href = (link.getAttribute("href") || "").replace("./", "");
+      var currentPath = window.location.pathname.split("/").pop() || "index.html";
+      footerNav.querySelectorAll("a").forEach(function (link) {
+        var href = (link.getAttribute("href") || "").replace("./", "");
         if (href === currentPath) {
           link.classList.add("active");
           link.setAttribute("aria-current", "page");
@@ -127,8 +127,8 @@
   }
 
   function initCurrentYear() {
-    const year = String(new Date().getFullYear());
-    document.querySelectorAll("[data-year]").forEach((node) => {
+    var year = String(new Date().getFullYear());
+    document.querySelectorAll("[data-year]").forEach(function (node) {
       node.textContent = year;
     });
   }
@@ -143,7 +143,7 @@
         return false;
       }
 
-      const target = document.querySelector(hash);
+      var target = document.querySelector(hash);
       if (!target) {
         return false;
       }
@@ -158,9 +158,9 @@
       return true;
     }
 
-    document.querySelectorAll('a[href*="#"]').forEach((link) => {
-      link.addEventListener("click", (event) => {
-        let url;
+    document.querySelectorAll('a[href*="#"]').forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        var url;
         try {
           url = new URL(link.getAttribute("href") || "", window.location.href);
         } catch (_error) {
@@ -181,7 +181,7 @@
     });
 
     if (window.location.hash) {
-      window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(function () {
         scrollToHash(window.location.hash, false);
       });
     }
@@ -192,7 +192,9 @@
       return 0;
     }
 
-    const siblings = Array.from(element.parentElement.children).filter((node) => node.hasAttribute("data-reveal"));
+    var siblings = Array.from(element.parentElement.children).filter(function (node) {
+      return node.hasAttribute("data-reveal");
+    });
     return Math.max(0, siblings.indexOf(element));
   }
 
@@ -201,8 +203,8 @@
       return;
     }
 
-    const delay = siblingRevealIndex(element) * 60;
-    element.style.setProperty("--reveal-delay", `${delay}ms`);
+    var delay = siblingRevealIndex(element) * 60;
+    element.style.setProperty("--reveal-delay", delay + "ms");
 
     if (!supportsMotion()) {
       element.classList.add("is-visible");
@@ -210,11 +212,11 @@
     }
 
     element.classList.add("is-animating");
-    window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(function () {
       element.classList.add("is-visible");
     });
 
-    const cleanup = () => {
+    var cleanup = function () {
       element.classList.remove("is-animating");
       element.removeEventListener("transitionend", cleanup);
     };
@@ -224,19 +226,19 @@
   }
 
   function initRevealAnimations() {
-    const items = Array.from(document.querySelectorAll("[data-reveal]"));
+    var items = Array.from(document.querySelectorAll("[data-reveal]"));
     if (items.length === 0) {
       return;
     }
 
     if (!supportsMotion() || !("IntersectionObserver" in window)) {
-      items.forEach((item) => item.classList.add("is-visible"));
+      items.forEach(function (item) { item.classList.add("is-visible"); });
       return;
     }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
           if (!entry.isIntersecting) {
             return;
           }
@@ -250,19 +252,19 @@
       }
     );
 
-    items.forEach((item) => observer.observe(item));
+    items.forEach(function (item) { observer.observe(item); });
   }
 
   function formatCounterValue(node, value) {
-    const decimals = Number.parseInt(node.dataset.countDecimals || "0", 10);
-    const prefix = node.dataset.countPrefix || "";
-    const suffix = node.dataset.countSuffix || "";
-    const rounded = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString();
-    return `${prefix}${rounded}${suffix}`;
+    var decimals = Number.parseInt(node.dataset.countDecimals || "0", 10);
+    var prefix = node.dataset.countPrefix || "";
+    var suffix = node.dataset.countSuffix || "";
+    var rounded = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString();
+    return prefix + rounded + suffix;
   }
 
   function renderCounterFinal(node) {
-    const target = Number.parseFloat(node.dataset.countTo || "0");
+    var target = Number.parseFloat(node.dataset.countTo || "0");
     node.textContent = formatCounterValue(node, target);
     node.dataset.countAnimated = "true";
   }
@@ -272,22 +274,22 @@
       return;
     }
 
-    const target = Number.parseFloat(node.dataset.countTo || "0");
-    const start = Number.parseFloat(node.dataset.countFrom || "0");
-    const duration = Number.parseInt(node.dataset.countDuration || "1200", 10);
+    var target = Number.parseFloat(node.dataset.countTo || "0");
+    var start = Number.parseFloat(node.dataset.countFrom || "0");
+    var duration = Number.parseInt(node.dataset.countDuration || "1400", 10);
 
     if (!supportsMotion()) {
       renderCounterFinal(node);
       return;
     }
 
-    const startTime = performance.now();
+    var startTime = performance.now();
 
     function frame(now) {
-      const elapsed = now - startTime;
-      const progress = Math.min(1, elapsed / duration);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const value = start + (target - start) * eased;
+      var elapsed = now - startTime;
+      var progress = Math.min(1, elapsed / duration);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var value = start + (target - start) * eased;
       node.textContent = formatCounterValue(node, value);
 
       if (progress < 1) {
@@ -301,14 +303,14 @@
   }
 
   function initCounters() {
-    const counters = Array.from(document.querySelectorAll("[data-count-to]"));
+    var counters = Array.from(document.querySelectorAll("[data-count-to]"));
     if (counters.length === 0) {
       return;
     }
 
-    counters.forEach((counter) => {
+    counters.forEach(function (counter) {
       counter.dataset.countAnimated = "false";
-      counter.textContent = counter.dataset.countPrefix ? `${counter.dataset.countPrefix}0${counter.dataset.countSuffix || ""}` : "0";
+      counter.textContent = counter.dataset.countPrefix ? counter.dataset.countPrefix + "0" + (counter.dataset.countSuffix || "") : "0";
     });
 
     if (!supportsMotion() || !("IntersectionObserver" in window)) {
@@ -316,9 +318,9 @@
       return;
     }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
           if (!entry.isIntersecting) {
             return;
           }
@@ -332,68 +334,44 @@
       }
     );
 
-    counters.forEach((counter) => observer.observe(counter));
+    counters.forEach(function (counter) { observer.observe(counter); });
   }
 
-  function initHeroParallax() {
-    const hero = document.querySelector(".hero");
-    if (!hero || !supportsMotion()) {
+  function initHeroReveal() {
+    var items = Array.from(document.querySelectorAll("[data-hero-reveal]"));
+    if (items.length === 0) {
       return;
     }
 
-    let rafId = 0;
-    let pointerX = 0;
-    let pointerY = 0;
-
-    function commit() {
-      hero.style.setProperty("--hero-blob-x", `${pointerX * 12}px`);
-      hero.style.setProperty("--hero-blob-y", `${pointerY * 10}px`);
-      hero.style.setProperty("--hero-blob2-x", `${pointerX * -8}px`);
-      hero.style.setProperty("--hero-blob2-y", `${pointerY * -12}px`);
-      rafId = 0;
+    if (!supportsMotion()) {
+      items.forEach(function (el) {
+        el.style.opacity = "1";
+        el.style.transform = "none";
+      });
+      return;
     }
 
-    function schedule() {
-      if (rafId) {
-        return;
-      }
-      rafId = window.requestAnimationFrame(commit);
-    }
-
-    hero.addEventListener("mousemove", (event) => {
-      const rect = hero.getBoundingClientRect();
-      const x = rect.width ? (event.clientX - rect.left) / rect.width - 0.5 : 0;
-      const y = rect.height ? (event.clientY - rect.top) / rect.height - 0.5 : 0;
-      pointerX = x;
-      pointerY = y;
-      schedule();
+    items.forEach(function (item, index) {
+      item.style.transition = "opacity 500ms cubic-bezier(0.2, 0.8, 0.2, 1) " + (index * 120) + "ms, transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1) " + (index * 120) + "ms";
     });
 
-    hero.addEventListener("mouseleave", () => {
-      pointerX = 0;
-      pointerY = 0;
-      schedule();
+    window.requestAnimationFrame(function () {
+      window.requestAnimationFrame(function () {
+        items.forEach(function (item) {
+          item.style.opacity = "1";
+          item.style.transform = "translateY(0)";
+        });
+      });
     });
-
-    window.addEventListener(
-      "scroll",
-      () => {
-        const rect = hero.getBoundingClientRect();
-        const viewport = window.innerHeight || 1;
-        const progress = Math.max(-1, Math.min(1, rect.top / viewport));
-        hero.style.setProperty("--hero-scroll-shift", `${progress * -10}px`);
-      },
-      { passive: true }
-    );
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", function () {
     initThemeToggle();
     initNavigation();
     initCurrentYear();
     initSmoothScrollAnchors();
     initRevealAnimations();
     initCounters();
-    initHeroParallax();
+    initHeroReveal();
   });
 })();
