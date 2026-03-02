@@ -1,6 +1,28 @@
 # tonianev.github.io
 
+[![Live site](https://img.shields.io/badge/live-tonianev.com-0f172a)](https://tonianev.com)
+[![Stack](https://img.shields.io/badge/stack-static_html%2Fcss%2Fjs-2563eb)](./site.css)
+[![Machine readable](https://img.shields.io/badge/llms.txt-available-f59e0b)](./llms.txt)
+[![Profile JSON](https://img.shields.io/badge/profile.json-published-10b981)](./profile.json)
+
 Personal website for Toni Anev: ML platform engineering leadership, selected case studies, and contact-driven hiring conversations.
+
+## Site map
+
+```mermaid
+flowchart TD
+    A["Homepage"] --> B["Work"]
+    A --> C["Proof"]
+    A --> D["Contact"]
+    A --> E["Agent Soul Kit"]
+    A --> F["Legacy CV route"]
+    B --> G["Case study detail"]
+    C --> H["Public artifacts and machine-readable files"]
+    E --> I["Interactive agent playground"]
+    F --> D
+    H --> J["profile.json / experience.json / skills.json"]
+    H --> K["llms.txt / llms-full.txt / sitemap.xml"]
+```
 
 ## Live Site
 
@@ -11,6 +33,7 @@ Personal website for Toni Anev: ML platform engineering leadership, selected cas
 - Clear positioning for recruiters, hiring managers, and technical peers.
 - Human-readable content with machine-friendly metadata and structured data.
 - Search and crawler friendliness across traditional bots and LLM systems.
+- Resume access routed through direct contact instead of a public file drop.
 
 ## Stack
 
@@ -62,6 +85,10 @@ Then open [http://localhost:8080](http://localhost:8080).
 
 ```bash
 npx --yes htmlhint@latest "./*.html"
+```
+
+```bash
+node --check site.js
 ```
 
 ```bash
