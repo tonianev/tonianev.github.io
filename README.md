@@ -1,15 +1,15 @@
 # tonianev.github.io
 
-[![Live site](https://img.shields.io/badge/live-tonianev.com-141413)](https://tonianev.com)
-[![Stack](https://img.shields.io/badge/stack-static_html%2Fcss%2Fjs-a8401f)](./site.css)
-[![Machine readable](https://img.shields.io/badge/llms.txt-available-5c5850)](./llms.txt)
-[![Profile JSON](https://img.shields.io/badge/profile.json-published-5c5850)](./profile.json)
+[![Live site](https://img.shields.io/badge/live-tonianev.com-0a0f1e)](https://tonianev.com)
+[![Stack](https://img.shields.io/badge/stack-static_html%2Fcss%2Fjs-3b82f6)](./site.css)
+[![Machine readable](https://img.shields.io/badge/llms.txt-available-94a3b8)](./llms.txt)
+[![Profile JSON](https://img.shields.io/badge/profile.json-published-94a3b8)](./profile.json)
 
 Personal website for Toni Anev: AI platform engineering leadership, selected case studies, and a direct line for conversations.
 
 ## Design
 
-Editorial, type-led, near-monochrome ("Ledger"). Set in the native Lucida Grande stack — the same typeface as the resume — with no webfonts, no framework, no tracking, and no build step. Structure comes from the type hierarchy, 1px hairline rules, and whitespace on an 8px rhythm; one iron-red accent does all the color work. Dark and light themes follow `prefers-color-scheme`. Press `g` (or the `[grid]` footer button) to see the baseline grid.
+Glass: a dark-first navy palette with a light theme that follows `prefers-color-scheme`, a frosted pill header and nav, translucent rounded cards, and one blue accent. Set in Manrope and IBM Plex Mono, with scroll reveals and count-up figures that respect reduced-motion settings.
 
 ## Site map
 
@@ -44,17 +44,17 @@ flowchart TD
 ## Stack
 
 - Static HTML/CSS/JS
-- No runtime framework, build step, or external requests (fonts included)
+- No runtime framework or build step
 
 ## Site Structure
 
-- `index.html` - homepage: hero, figures band, about, selected work, building, contact
+- `index.html` - homepage: hero, about, selected work, building, contact
 - `work.html` - case studies (Sanofi, Petco, Loblaw), earlier career, education
 - `CV.html` - public career summary
 - `agent-soul-kit.html` - agent soul kit concept and interactive playground
 - `about.html` / `contact.html` / `proof.html` - meta-refresh redirects to homepage anchors
-- `site.css` - the "Ledger" design system (tokens, rules, print stylesheet)
-- `site.js` - theme sync, nav marking, grid overlay, playground logic
+- `site.css` - the glass design system (tokens, components, dark and light themes)
+- `site.js` - theme sync, mobile nav, scroll reveals, count-up figures, playground logic
 - `agent-soul-kit/` - standalone scaffold for a portable soul/memory/posture repository
 - `profile.json` / `experience.json` / `skills.json` - machine-readable career data
 - `artifacts/` - ML platform templates (RFC, runbook, readiness scorecards, principles)

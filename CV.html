@@ -10,7 +10,7 @@
   <meta name="bingbot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="author" content="Toni Anev">
-  <meta name="theme-color" content="#141413">
+  <meta name="theme-color" content="#0a0f1e">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Toni Anev">
   <meta property="og:locale" content="en_CA">
@@ -34,6 +34,9 @@
   <link rel="me" href="https://www.linkedin.com/in/tonianev/">
   <link rel="icon" type="image/png" href="./assets/images/favicon.png">
   <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -83,119 +86,132 @@
         document.documentElement.style.colorScheme = resolvedTheme;
         var themeColorMeta = document.querySelector('meta[name="theme-color"]');
         if (themeColorMeta) {
-          themeColorMeta.setAttribute("content", resolvedTheme === "dark" ? "#141413" : "#f7f5f0");
+          themeColorMeta.setAttribute("content", resolvedTheme === "dark" ? "#0a0f1e" : "#f0f4f8");
         }
       } catch (e) {}
     })();
   </script>
-  <link rel="stylesheet" href="./site.css">
+  <link rel="stylesheet" href="./site.css?v=20261008g">
+  <noscript><style>[data-reveal],[data-hero-reveal]{opacity:1;transform:none}</style></noscript>
   <title>CV | Toni Anev</title>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="./index.html">Toni Anev</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="./index.html">Home</a>
+          <a href="./work.html">Work</a>
+          <a href="./CV.html">CV</a>
+          <a href="./index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="./index.html">Toni Anev</a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="./work.html">Work</a>
-        <a href="./CV.html">CV</a>
-        <a href="./index.html#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main-content">
-    <div class="container">
-      <div class="letter">
-        <span class="dateline">Toronto &mdash; 2026</span>
-        <p class="meta">Curriculum vitae</p>
-        <h1>The short version<span class="sig">.</span></h1>
-        <p>Roles, dates, and outcomes, most recent first. The Work page has the detail behind each.</p>
-        <p class="contact-alt"><a href="https://www.linkedin.com/in/tonianev/" target="_blank" rel="noopener noreferrer">LinkedIn &nearr;</a> &nbsp;&middot;&nbsp; <a href="./work.html">Full case studies &rarr;</a></p>
-
-        <section class="section" aria-labelledby="glance-title">
-          <h2 id="glance-title">Career at a glance</h2>
-          <div class="ruled-rows">
-            <div class="ruled-row">
-              <span class="row-when">Sep 2026&ndash;present</span>
-              <div class="row-what">
-                <strong>Okta &mdash; Principal Software Engineer, AI</strong>
-              </div>
-            </div>
-            <div class="ruled-row">
-              <span class="row-when">Jul 2023&ndash;Sep 2026</span>
-              <div class="row-what">
-                <strong>Sanofi &mdash; Software Engineering Lead &rarr; ML Engineering Lead, R&amp;D AI Engineering</strong>
-                <p>Founded Sanofi&rsquo;s first AI engineering organization and scaled it to 70+ across Toronto, Paris, and Boston (7 direct reports, 30+ FTEs, 40+ contractors), reporting to the VP of R&amp;D. $12M+ HPC platform strategy (A100/H100, EKS, FSx Lustre); event-driven vLLM/FP8 LLM platform for clinical data analysis; 23% throughput gain; 26% faster productionization across 7+ R&amp;D teams; incidents down 50%+, onboarding down 40%.</p>
-              </div>
-            </div>
-            <div class="ruled-row">
-              <span class="row-when">Jan&ndash;Jun 2023</span>
-              <div class="row-what">
-                <strong>Petco (via ShyftLabs) &mdash; Technology Lead, Customer AI</strong>
-                <p>$5M ML infrastructure budget, 5-person team, MLOps standards on GCP; deployment cycles &minus;25%. $3M personalization program: 3% basket-size uplift, ~$13M/month incremental revenue. Price-elasticity platform: 24h &rarr; 4h, compute &minus;32%.</p>
-              </div>
-            </div>
-            <div class="ruled-row">
-              <span class="row-when">2019&ndash;2023</span>
-              <div class="row-what">
-                <strong>Loblaw &mdash; Data Engineer &rarr; Senior Data Engineer &rarr; Senior MLOps Engineer</strong>
-                <p>Promotion optimization across 16 divisions and 200+ categories. Segmentation platform: 1B+ transactions/year, 21M loyalty members, $42M annual incremental revenue; architecture became the Loblaw Media backbone ($40M/year). First ML decisioning engine for pricing and markdown timing: $15&ndash;20M (~25%) annual lift; batch latency &minus;73%.</p>
-              </div>
-            </div>
-            <div class="ruled-row">
-              <span class="row-when">2017&ndash;2019</span>
-              <div class="row-what">
-                <strong>Numeris &mdash; Research Analyst, PPM Platform Engineering</strong>
-                <p>Automated ingestion and quality monitoring of national audience data (~27M individuals); throughput +90%.</p>
-              </div>
-            </div>
-            <div class="ruled-row">
-              <span class="row-when">2014&ndash;2015</span>
-              <div class="row-what">
-                <strong>University of Toronto &mdash; Research Analyst, Faculty of Medicine</strong>
-                <p>ETL and warehousing pipelines across 1,600+ principal investigators and 5,000 faculty.</p>
-              </div>
-            </div>
-            <div class="ruled-row">
-              <span class="row-when">2012&ndash;2016</span>
-              <div class="row-what">
-                <strong>McMaster University &mdash; Bachelor of Science</strong>
-              </div>
-            </div>
+    <main class="page" id="main-content">
+      <div class="container stack-xl">
+        <section class="section-card" data-reveal>
+          <p class="eyebrow">Curriculum vitae</p>
+          <h1>The short version.</h1>
+          <p>Roles, dates, and outcomes, most recent first. The Work page has the detail behind each.</p>
+          <div class="inline-actions top-gap">
+            <a class="button button-primary" href="./work.html">Full case studies</a>
+            <a class="button button-secondary" href="https://www.linkedin.com/in/tonianev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </section>
 
-        <section class="section" aria-labelledby="contact-title">
-          <h2 id="contact-title">Contact</h2>
-          <p>Email reaches me directly: <a href="mailto:tonianev@gmail.com">tonianev@gmail.com</a>.</p>
-          <div class="hero-actions">
-            <a class="action-primary" href="./work.html">Full case studies &rarr;</a>
-            <a class="action-quiet" href="https://github.com/tonianev" target="_blank" rel="noopener noreferrer">GitHub &nearr;</a>
+        <section class="section-card" aria-labelledby="glance-title" data-reveal>
+          <div class="section-head">
+            <h2 class="section-title" id="glance-title">Career at a glance</h2>
+          </div>
+          <ol class="timeline" aria-label="Career timeline">
+            <li>
+              <p class="timeline-meta">Sep 2026&ndash;present</p>
+              <div>
+                <p class="timeline-title">Okta &mdash; Principal Software Engineer, AI</p>
+              </div>
+            </li>
+            <li>
+              <p class="timeline-meta">Jul 2023&ndash;Sep 2026</p>
+              <div>
+                <p class="timeline-title">Sanofi &mdash; Software Engineering Lead &rarr; ML Engineering Lead, R&amp;D AI Engineering</p>
+                <p class="timeline-copy">Founded Sanofi&rsquo;s first AI engineering organization and scaled it to 70+ across Toronto, Paris, and Boston (7 direct reports, 30+ FTEs, 40+ contractors), reporting to the VP of R&amp;D. $12M+ HPC platform strategy (A100/H100, EKS, FSx Lustre); event-driven vLLM/FP8 LLM platform for clinical data analysis; 23% throughput gain; 26% faster productionization across 7+ R&amp;D teams; incidents down 50%+, onboarding down 40%.</p>
+              </div>
+            </li>
+            <li>
+              <p class="timeline-meta">Jan&ndash;Jun 2023</p>
+              <div>
+                <p class="timeline-title">Petco (via ShyftLabs) &mdash; Technology Lead, Customer AI</p>
+                <p class="timeline-copy">$5M ML infrastructure budget, 5-person team, MLOps standards on GCP; deployment cycles &minus;25%. $3M personalization program: 3% basket-size uplift, $13M/month incremental revenue. Price-elasticity platform: 24h &rarr; 4h, compute &minus;32%.</p>
+              </div>
+            </li>
+            <li>
+              <p class="timeline-meta">2019&ndash;2023</p>
+              <div>
+                <p class="timeline-title">Loblaw &mdash; Data Engineer &rarr; Senior Data Engineer &rarr; Senior MLOps Engineer</p>
+                <p class="timeline-copy">Promotion optimization across 16 divisions and 200+ categories. Segmentation platform: 1B+ transactions/year, 21M loyalty members, $42M annual incremental revenue; architecture became the Loblaw Media backbone ($40M/year). First ML decisioning engine for pricing and markdown timing: $15&ndash;20M (~25%) annual lift; batch latency &minus;73%.</p>
+              </div>
+            </li>
+            <li>
+              <p class="timeline-meta">2017&ndash;2019</p>
+              <div>
+                <p class="timeline-title">Numeris &mdash; Research Analyst, PPM Platform Engineering</p>
+                <p class="timeline-copy">Automated ingestion and quality monitoring of national audience data (~27M individuals); throughput +90%.</p>
+              </div>
+            </li>
+            <li>
+              <p class="timeline-meta">2014&ndash;2015</p>
+              <div>
+                <p class="timeline-title">University of Toronto &mdash; Research Analyst, Faculty of Medicine</p>
+                <p class="timeline-copy">ETL and warehousing pipelines across 1,600+ principal investigators and 5,000 faculty.</p>
+              </div>
+            </li>
+            <li>
+              <p class="timeline-meta">2012&ndash;2016</p>
+              <div>
+                <p class="timeline-title">McMaster University &mdash; Bachelor of Science</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section class="section-card" id="contact" aria-labelledby="contact-title" data-reveal>
+          <div class="section-head">
+            <h2 class="section-title" id="contact-title">Contact</h2>
+          </div>
+          <p>The best way to reach me is a message on LinkedIn.</p>
+          <div class="inline-actions top-gap">
+            <a class="button button-primary" href="https://www.linkedin.com/in/tonianev/" target="_blank" rel="noopener noreferrer">Message me on LinkedIn</a>
+            <a class="button button-secondary" href="https://github.com/tonianev" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </section>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; <span data-year>2026</span> Toni Anev</p>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="./index.html">Home</a>
-        <a href="./work.html">Work</a>
-        <a href="./CV.html">CV</a>
-      </nav>
-      <nav class="footer-social" aria-label="Social links">
-        <a href="https://github.com/tonianev" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/tonianev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="mailto:tonianev@gmail.com">Email</a>
-      </nav>
-      <p class="colophon">Set in Lucida Grande on Mac. No webfonts, no framework, no tracking. Updated 2026-10. <button type="button" class="grid-toggle" data-grid-toggle aria-pressed="false">[grid]</button></p>
-    </div>
-  </footer>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="./index.html">Home</a>
+          <a href="./work.html">Work</a>
+          <a href="./CV.html">CV</a>
+          <a href="./index.html#contact">Contact</a>
+        </nav>
+        <div class="footer-social" role="group" aria-label="Social links">
+          <a href="https://github.com/tonianev" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/tonianev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <p class="footer-copy">&copy; <span data-year></span> Toni Anev.</p>
+      </div>
+    </footer>
+  </div>
 
-  <script src="./site.js" defer></script>
+  <script src="./site.js?v=20261008g" defer></script>
 </body>
 </html>

@@ -3,13 +3,14 @@ Name: Toni Anev
 Role: Principal Software Engineer, AI, Okta (previously ML Engineering Lead, R&D AI Engineering, Sanofi, Jul 2023 - Sep 2026)
 Education: McMaster University, BSc
 Site: https://tonianev.com
-Contact: tonianev@gmail.com
+Contact: https://www.linkedin.com/in/tonianev/
 GitHub: https://github.com/tonianev
 LinkedIn: https://www.linkedin.com/in/tonianev/
 
 /* SITE */
 Stack: Static HTML, CSS, JavaScript
-Typeface: Lucida Grande (native stack, no webfonts)
+Design: Dark-first navy palette with a light theme, frosted header, translucent cards
+Typeface: Manrope and IBM Plex Mono
 Accessibility: Keyboard navigation, skip links, reduced-motion support
 Machine Readability: JSON-LD, sitemap.xml, robots.txt, llms.txt
 

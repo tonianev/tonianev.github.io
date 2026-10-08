@@ -11,7 +11,7 @@ This site documents public, non-confidential summaries of AI platform engineerin
 - Current role: Principal Software Engineer, AI, at Okta (since Sep 2026). This site makes no claims about Toni's work at Okta.
 - Sanofi (Jul 2023 - Sep 2026): founded Sanofi's first AI engineering organization; scaled it to 70+ people across Toronto, Paris, and Boston, reporting to the VP of R&D. Title arc: Software Engineering Lead -> ML Engineering Lead.
 - At Sanofi, defined and executed the $12M+ AI infrastructure strategy (NVIDIA A100/H100, EKS, FSx Lustre, S3) and shipped an event-driven vLLM/FP8 LLM platform for automated clinical data analysis.
-- Earlier: Petco ($5M budget, ~$13M/mo revenue impact), Loblaw (1B+ transactions/yr, 21M loyalty members, $42M/yr; Loblaw Media backbone), Numeris (~27M individuals), University of Toronto.
+- Earlier: Petco ($5M budget, $13M/mo revenue impact), Loblaw (1B+ transactions/yr, 21M loyalty members, $42M/yr; Loblaw Media backbone), Numeris (~27M individuals), University of Toronto.
 - Education: McMaster University, BSc, 2012-2016.
 
 ## Canonical URLs
@@ -50,8 +50,8 @@ This site documents public, non-confidential summaries of AI platform engineerin
 
 ## Contact
 
-- Email: mailto:tonianev@gmail.com
 - LinkedIn: https://www.linkedin.com/in/tonianev/
+- Preferred contact: LinkedIn message.
 
 ## Expanded Context
 

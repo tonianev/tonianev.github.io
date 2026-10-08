@@ -42,7 +42,7 @@
       "end": "2023-06",
       "highlights": [
         "Managed a $5M ML infrastructure budget across a 5-person engineering team; established MLOps standards on GCP (GKE, Dataproc, Cloud Composer) and cut deployment cycles by 25%.",
-        "Directed a $3M personalization program: recommendation engine combining clickstream, transactional, and product data - 3% basket-size uplift and ~$13M/month incremental revenue.",
+        "Directed a $3M personalization program: recommendation engine combining clickstream, transactional, and product data - 3% basket-size uplift and $13M/month incremental revenue.",
         "Redesigned the price-elasticity platform on Snowflake, Vertex AI, Airflow, and Seldon: runtime 24h -> 4h and compute load reduced 32%."
       ],
       "metrics": {
