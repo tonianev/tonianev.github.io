@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Toni Anev is a machine learning engineering leader focused on ML platforms, MLOps, and production systems.">
+  <meta name="description" content="Toni Anev founded Sanofi's first AI engineering organization (70+ people) and builds AI platforms, LLM systems, and production ML infrastructure.">
   <meta name="keywords" content="Toni Anev, machine learning engineering, ML platform, MLOps, AI infrastructure, ML leadership">
   <meta name="google" content="notranslate">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
@@ -11,17 +11,17 @@
   <meta name="bingbot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="author" content="Toni Anev">
-  <meta name="theme-color" content="#0a0f1e">
+  <meta name="theme-color" content="#141413">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Toni Anev">
   <meta property="og:locale" content="en_CA">
   <meta property="og:title" content="Toni Anev | ML Engineering Lead">
-  <meta property="og:description" content="ML platform engineering, MLOps, and technical leadership for production-scale systems.">
+  <meta property="og:description" content="Founded Sanofi's first AI engineering organization and scaled it to 70+ people. AI platforms, LLM systems, and production ML infrastructure.">
   <meta property="og:url" content="https://tonianev.com/">
   <meta property="og:image" content="https://tonianev.com/assets/images/intropic.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Toni Anev | ML Engineering Lead">
-  <meta name="twitter:description" content="ML platform engineering, MLOps, and technical leadership for production-scale systems.">
+  <meta name="twitter:description" content="Founded Sanofi's first AI engineering organization and scaled it to 70+ people. AI platforms, LLM systems, and production ML infrastructure.">
   <meta name="twitter:image" content="https://tonianev.com/assets/images/intropic.jpg">
   <link rel="canonical" href="https://tonianev.com/">
   <link rel="sitemap" type="application/xml" href="https://tonianev.com/sitemap.xml">
@@ -34,9 +34,7 @@
   <link rel="me" href="https://github.com/tonianev">
   <link rel="me" href="https://www.linkedin.com/in/tonianev/">
   <link rel="icon" type="image/png" href="./assets/images/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -46,7 +44,7 @@
           "@id": "https://tonianev.com/#website",
           "url": "https://tonianev.com/",
           "name": "Toni Anev",
-          "description": "ML platform engineering, MLOps, and technical leadership for production-scale systems.",
+          "description": "AI platforms, LLM systems, and production ML infrastructure. Founded Sanofi's first AI engineering organization.",
           "inLanguage": "en"
         },
         {
@@ -54,7 +52,15 @@
           "@id": "https://tonianev.com/#person",
           "name": "Toni Anev",
           "url": "https://tonianev.com/",
-          "jobTitle": "Machine Learning Engineering Lead",
+          "jobTitle": "ML Engineering Lead, R&D AI Engineering",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Sanofi"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "McMaster University"
+          },
           "email": "mailto:tonianev@gmail.com",
           "address": {
             "@type": "PostalAddress",
@@ -69,6 +75,9 @@
             "Machine Learning Platform Engineering",
             "MLOps",
             "AI Infrastructure",
+            "LLM Inference (vLLM)",
+            "Event-Driven ML Orchestration",
+            "AI Engineering Org Design",
             "Terraform",
             "AWS",
             "GCP",
@@ -86,12 +95,21 @@
           "about": {
             "@id": "https://tonianev.com/#person"
           },
+          "mainEntity": {
+            "@id": "https://tonianev.com/#person"
+          },
+          "dateModified": "2026-07-06",
           "primaryImageOfPage": "https://tonianev.com/assets/images/intropic.jpg",
           "hasPart": [
             {
               "@type": "WebPage",
               "name": "Work",
               "url": "https://tonianev.com/work.html"
+            },
+            {
+              "@type": "WebPage",
+              "name": "CV",
+              "url": "https://tonianev.com/CV.html"
             },
             {
               "@type": "WebPage",
@@ -111,7 +129,7 @@
         document.documentElement.style.colorScheme = resolvedTheme;
         var themeColorMeta = document.querySelector('meta[name="theme-color"]');
         if (themeColorMeta) {
-          themeColorMeta.setAttribute("content", resolvedTheme === "dark" ? "#0a0f1e" : "#f0f4f8");
+          themeColorMeta.setAttribute("content", resolvedTheme === "dark" ? "#141413" : "#f7f5f0");
         }
       } catch (e) {}
     })();
@@ -121,167 +139,198 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <div class="site-shell">
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="./index.html">Toni Anev</a>
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <nav class="site-nav" id="site-nav" aria-label="Primary">
-          <a href="./index.html">Home</a>
-          <a href="./work.html">Work</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
 
-    <main class="page" id="main-content">
-      <div class="container stack-xl">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html">Toni Anev</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="./work.html">Work</a>
+        <a href="./CV.html">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-        <!-- ===== HERO ===== -->
-        <section class="hero" id="hero" aria-labelledby="hero-title">
-          <div class="hero-content">
-            <p class="eyebrow" data-hero-reveal>ML Engineering Lead &middot; Toronto</p>
-            <h1 id="hero-title" data-hero-reveal>I build machine learning platforms and the teams that run them.</h1>
-            <p class="hero-lead" data-hero-reveal>Currently leading ML platform engineering at Sanofi. My work focuses on infrastructure, MLOps, and the engineering systems that make applied ML reliable at scale.</p>
-            <div class="hero-actions" data-hero-reveal aria-label="Primary actions">
-              <a class="button button-primary" href="./work.html">Selected work</a>
-              <a class="button button-secondary" href="mailto:tonianev@gmail.com?subject=Resume%20request">Request resume</a>
-              <a class="button button-ghost" href="#contact">Contact</a>
-            </div>
-          </div>
-        </section>
+  <main id="main-content">
+    <div class="container">
 
-        <!-- ===== ABOUT ===== -->
-        <section class="section-card" id="about" data-reveal>
-          <div class="section-head">
-            <p class="eyebrow"><span class="section-number">01</span> About</p>
-            <h2 class="section-title">I work on the engineering layer that makes ML usable.</h2>
-          </div>
-          <p>I lead machine learning engineering with a focus on platform architecture, MLOps, and production delivery. The throughline in my work is simple: make good models easier to build, ship, and operate.</p>
-          <ul class="checklist checklist-light">
-            <li>Design for reliability and repeatability from day one.</li>
-            <li>Prefer reusable platform leverage over one-off heroics.</li>
-            <li>Make tradeoffs explicit: cost, speed, complexity, ownership.</li>
-            <li>Build teams and standards that improve over time.</li>
+      <!-- ===== HERO ===== -->
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="meta">ML Engineering Lead, R&amp;D AI Engineering &middot; Toronto 43.65&deg;N 79.38&deg;W</p>
+        <h1 id="hero-title">I build AI platforms and the organizations that run them<span class="sig">.</span></h1>
+        <p class="hero-lead lead">Founded Sanofi&rsquo;s first AI engineering organization and scaled it to 70+ people across Toronto, Paris, and Boston &mdash; owning a $12M+ GPU platform, an event-driven LLM platform, and the standards that keep production ML reliable. Before that: the pricing, promotion, and segmentation systems behind 16 retail divisions and 21M loyalty members.</p>
+        <div class="hero-actions" role="group" aria-label="Primary actions">
+          <a class="action-primary" href="./work.html">Selected work &rarr;</a>
+          <a class="action-quiet" href="mailto:tonianev@gmail.com?subject=Resume%20request">Request resume</a>
+          <a class="action-quiet" href="mailto:tonianev@gmail.com">tonianev@gmail.com</a>
+        </div>
+      </section>
+
+      <!-- ===== FIGURES BAND ===== -->
+      <section class="figures" aria-label="Headline figures">
+        <div class="figure">
+          <p class="figure-value">70+</p>
+          <span class="figure-label">Engineers &mdash; org built from zero</span>
+        </div>
+        <div class="figure">
+          <p class="figure-value">$12M+<a class="fn-mark" href="#fn-1" aria-label="Footnote 1">&dagger;</a></p>
+          <span class="figure-label">HPC platform owned</span>
+        </div>
+        <div class="figure">
+          <p class="figure-value">$42M<a class="fn-mark" href="#fn-2" aria-label="Footnote 2">&Dagger;</a></p>
+          <span class="figure-label">Annual incremental revenue, Loblaw</span>
+        </div>
+        <div class="figure">
+          <p class="figure-value">16</p>
+          <span class="figure-label">Retail divisions served</span>
+        </div>
+      </section>
+
+      <!-- ===== 01 ABOUT ===== -->
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="section-rail">
+          <span class="rail-label"><span class="rail-num">01</span> About</span>
+        </div>
+        <div class="section-body">
+          <h2 id="about-title">I build the engineering layer that makes ML usable &mdash; and the orgs that keep it running.</h2>
+          <p>I founded Sanofi&rsquo;s first AI engineering organization and grew it from zero to 70+ people across Toronto, Paris, and Boston &mdash; 7 direct reports, 30+ FTEs, 40+ contractors &mdash; reporting to the VP of R&amp;D. Before that: Customer AI at Petco, and four years at Loblaw building the pricing, promotion, and segmentation platforms behind Canada&rsquo;s largest retailer.</p>
+          <p>The throughline is simple: make good models easier to build, ship, and operate &mdash; then build the team and standards so it stays that way.</p>
+          <ul class="rule-list">
+            <li><strong>Reliability first.</strong> Design for repeatability from day one.</li>
+            <li><strong>Platform leverage.</strong> Reusable systems over one-off heroics.</li>
+            <li><strong>Explicit tradeoffs.</strong> Cost, speed, complexity, ownership &mdash; named and priced.</li>
+            <li><strong>Compounding standards.</strong> Teams and defaults that improve over time.</li>
           </ul>
-          <p class="career-inline">Sanofi &middot; Petco &middot; Loblaw &middot; Numeris &middot; University of Toronto</p>
-          <div class="chip-list">
-            <span class="chip">Python</span>
-            <span class="chip">SQL</span>
-            <span class="chip">Go</span>
-            <span class="chip">Terraform</span>
-            <span class="chip">AWS</span>
-            <span class="chip">GCP</span>
-            <span class="chip">Airflow</span>
-            <span class="chip">Vertex AI</span>
-            <span class="chip">SageMaker</span>
-            <span class="chip">Snowflake</span>
-            <span class="chip">CI/CD</span>
-          </div>
-        </section>
+          <p class="mono-line">Sanofi (2023&ndash;present) &middot; Petco (2023) &middot; Loblaw (2019&ndash;2023) &middot; Numeris (2017&ndash;2019) &middot; University of Toronto (2014&ndash;2015)</p>
+          <p class="mono-line">Python, SQL, Go, Scala, Terraform, AWS, GCP, Kubernetes, vLLM, Airflow, SageMaker, Vertex AI, Spark, Snowflake</p>
+        </div>
+      </section>
 
-        <!-- ===== SELECTED WORK ===== -->
-        <section class="section-card" id="work" data-reveal>
-          <div class="section-head">
-            <p class="eyebrow"><span class="section-number">02</span> Work</p>
-            <h2 class="section-title">Selected work</h2>
-            <p class="section-intro">Platform and ML engineering across pharma and retail.</p>
-          </div>
+      <!-- ===== 02 SELECTED WORK ===== -->
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="section-rail">
+          <span class="rail-label"><span class="rail-num">02</span> Work</span>
+        </div>
+        <div class="section-body">
+          <h2 id="work-title">Selected work</h2>
+          <p>Platform, LLM, and ML engineering across pharma and retail.</p>
 
-          <div class="case-preview-list" aria-label="Work highlights">
-            <a class="case-preview" href="./work.html#sanofi">
-              <p class="case-preview-meta">Sanofi &middot; ML Engineering Lead</p>
-              <p class="case-preview-title">AI infrastructure and ML platform scale-out</p>
-              <p class="case-preview-metric" data-count-to="12" data-count-prefix="$" data-count-suffix="M+">$12M+</p>
-              <p class="case-preview-stats">23% throughput gain &middot; 26% faster productionization</p>
+          <div class="work-list">
+            <a class="work-row" href="./work.html#sanofi">
+              <span class="work-main">
+                <span class="work-meta mono">Sanofi &middot; Software Engineering Lead &rarr; ML Engineering Lead &middot; 2023&ndash;present</span>
+                <span class="work-title">Founding Sanofi&rsquo;s first AI engineering organization</span>
+                <span class="work-summary">$12M+ HPC platform &middot; event-driven vLLM/FP8 LLM platform &middot; 50%+ fewer incidents</span>
+              </span>
+              <span class="work-figure">
+                <span class="work-figure-value">0 &rarr; 70+</span>
+                <span class="work-figure-label">People, org scale <span class="work-arrow">&rarr;</span></span>
+              </span>
             </a>
 
-            <a class="case-preview" href="./work.html#petco">
-              <p class="case-preview-meta">Petco &middot; Technology Lead</p>
-              <p class="case-preview-title">Pricing and personalization ML delivery</p>
-              <p class="case-preview-metric" data-count-to="13" data-count-prefix="~$" data-count-suffix="M/mo">~$13M/mo</p>
-              <p class="case-preview-stats">24h &rarr; 4h runtime &middot; 32% compute reduction</p>
+            <a class="work-row" href="./work.html#petco">
+              <span class="work-main">
+                <span class="work-meta mono">Petco (via ShyftLabs) &middot; Technology Lead, Customer AI &middot; 2023</span>
+                <span class="work-title">Customer AI: pricing and personalization at revenue scale</span>
+                <span class="work-summary">$5M infrastructure budget &middot; 24h &rarr; 4h runtime &middot; 3% basket-size uplift</span>
+              </span>
+              <span class="work-figure">
+                <span class="work-figure-value">~$13M/mo</span>
+                <span class="work-figure-label">Incremental revenue <span class="work-arrow">&rarr;</span></span>
+              </span>
             </a>
 
-            <a class="case-preview" href="./work.html#loblaw">
-              <p class="case-preview-meta">Loblaw &middot; Data / MLOps Engineering</p>
-              <p class="case-preview-title">Enterprise pricing, promotions, and segmentation systems</p>
-              <p class="case-preview-metric" data-count-to="42" data-count-prefix="$" data-count-suffix="M+">$42M+</p>
-              <p class="case-preview-stats">73% lower batch latency &middot; $15&ndash;20M pricing lift</p>
+            <a class="work-row" href="./work.html#loblaw">
+              <span class="work-main">
+                <span class="work-meta mono">Loblaw &middot; Data Engineer &rarr; Senior MLOps Engineer &middot; 2019&ndash;2023</span>
+                <span class="work-title">Pricing, promotions, and segmentation for 16 divisions</span>
+                <span class="work-summary">21M loyalty members &middot; $42M segmentation revenue &middot; $15&ndash;20M pricing lift</span>
+              </span>
+              <span class="work-figure">
+                <span class="work-figure-value">1B+</span>
+                <span class="work-figure-label">Transactions / year <span class="work-arrow">&rarr;</span></span>
+              </span>
             </a>
           </div>
-        </section>
 
-        <!-- ===== PROOF ===== -->
-        <section class="section-card" id="proof" data-reveal>
-          <div class="section-head">
-            <p class="eyebrow"><span class="section-number">03</span> Proof</p>
-            <h2 class="section-title">Public artifacts</h2>
-          </div>
+          <a class="work-more" href="./work.html">All case studies &rarr;</a>
+        </div>
+      </section>
+
+      <!-- ===== 03 PROOF ===== -->
+      <section class="section" id="proof" aria-labelledby="proof-title">
+        <div class="section-rail">
+          <span class="rail-label"><span class="rail-num">03</span> Proof</span>
+        </div>
+        <div class="section-body">
+          <h2 id="proof-title">Public artifacts</h2>
           <p>Implementation checklists, RFC templates, and operational runbooks for ML platform teams. Sanitized but representative of production-grade delivery standards.</p>
-          <div class="inline-actions top-gap">
-            <a class="button button-primary" href="https://github.com/tonianev/ml-platform-reference" target="_blank" rel="noopener noreferrer">Platform reference repo</a>
-            <a class="button button-secondary" href="https://github.com/tonianev/ml-release-gates" target="_blank" rel="noopener noreferrer">Release gates</a>
-            <a class="button button-secondary" href="https://github.com/tonianev" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-          <p class="note">Machine-readable: <a href="./profile.json">profile.json</a> &middot; <a href="./experience.json">experience.json</a> &middot; <a href="./skills.json">skills.json</a></p>
-        </section>
+          <ul class="link-list">
+            <li><a href="https://github.com/tonianev/ml-platform-reference" target="_blank" rel="noopener noreferrer">Platform reference repo &nearr;</a></li>
+            <li><a href="https://github.com/tonianev/ml-release-gates" target="_blank" rel="noopener noreferrer">Release gates &nearr;</a></li>
+            <li><a href="https://github.com/tonianev" target="_blank" rel="noopener noreferrer">GitHub &nearr;</a></li>
+          </ul>
+          <p class="mono-line">Machine-readable: <a href="./profile.json">profile.json</a> &middot; <a href="./experience.json">experience.json</a> &middot; <a href="./skills.json">skills.json</a> &middot; <a href="./llms.txt">llms.txt</a></p>
+        </div>
+      </section>
 
-        <section class="section-card" data-reveal>
-          <div class="section-head">
-            <p class="eyebrow">Current build</p>
-            <h2 class="section-title">Agent Soul Kit</h2>
-            <p class="section-intro">A public concept for giving any AI agent a soul file, a memory file, and a more useful operating posture without special backend powers.</p>
-          </div>
-          <div class="cta-strip">
-            <p class="cta-text">Portable files, thin adapters, and a browser playground for tuning warmth, pragmatism, and initiative in public.</p>
-            <a class="button button-primary" href="./agent-soul-kit.html">Open the kit</a>
-          </div>
-        </section>
+      <!-- ===== 04 NOW BUILDING ===== -->
+      <section class="section" id="now-building" aria-labelledby="ask-title">
+        <div class="section-rail">
+          <span class="rail-label"><span class="rail-num">04</span> Side project</span>
+        </div>
+        <div class="section-body">
+          <h2 id="ask-title">Agent Soul Kit</h2>
+          <p>A public concept for giving any AI agent a soul file, a memory file, and a more useful operating posture &mdash; built with the same no-magic discipline as the production LLM platforms I run at Sanofi.</p>
+          <a class="work-more" href="./agent-soul-kit.html">Open the kit &rarr;</a>
+        </div>
+      </section>
 
-        <!-- ===== CONTACT ===== -->
-        <section class="section-card" id="contact" data-reveal>
-          <div class="section-head">
-            <p class="eyebrow"><span class="section-number">04</span> Contact</p>
-            <h2 class="section-title">Email is best.</h2>
-          </div>
-          <p>I reply fastest to messages about ML platform engineering, MLOps, and engineering leadership. Resume available on request.</p>
-          <div class="inline-actions top-gap">
-            <a class="button button-primary" href="mailto:tonianev@gmail.com">tonianev@gmail.com</a>
-            <a class="button button-secondary" href="https://www.linkedin.com/in/tonianev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </div>
-          <h3>Conversations I prioritize</h3>
-          <ul class="simple-list">
-            <li>ML engineering leadership roles</li>
-            <li>ML platform and MLOps architecture work</li>
+      <!-- ===== 05 CONTACT ===== -->
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="section-rail">
+          <span class="rail-label"><span class="rail-num">05</span> Contact</span>
+        </div>
+        <div class="section-body">
+          <h2 id="contact-title">Email is best.</h2>
+          <p>I reply fastest to messages about AI platform engineering, LLM infrastructure, MLOps, and engineering leadership. Resume available on request.</p>
+          <a class="contact-email" href="mailto:tonianev@gmail.com">tonianev@gmail.com</a>
+          <p class="contact-alt"><a href="https://www.linkedin.com/in/tonianev/" target="_blank" rel="noopener noreferrer">LinkedIn &nearr;</a></p>
+          <h3 class="top-gap">Conversations I prioritize</h3>
+          <ul class="rule-list">
+            <li>ML engineering leadership roles with org-building or platform scope</li>
+            <li>LLM and ML platform architecture with real operational constraints</li>
             <li>Production ML delivery and platform modernization</li>
             <li>Technical advisory conversations with clear scope</li>
           </ul>
-        </section>
-
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <nav class="footer-nav" aria-label="Footer">
-          <a href="./index.html">Home</a>
-          <a href="./work.html">Work</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <div class="footer-social" aria-label="Social links">
-          <a href="https://github.com/tonianev" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/tonianev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="mailto:tonianev@gmail.com">Email</a>
         </div>
-        <p class="footer-copy">&copy; <span data-year></span> Toni Anev.</p>
-      </div>
-    </footer>
-  </div>
+      </section>
+
+      <!-- ===== FOOTNOTES ===== -->
+      <aside class="footnotes" aria-label="Footnotes">
+        <p id="fn-1"><span class="mono">&dagger;</span> Dedicated A100/H100 HPC platform, secured over a competing corporate platform.</p>
+        <p id="fn-2"><span class="mono">&Dagger;</span> Revenue figures are employer-reported program outcomes.</p>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span data-year>2026</span> Toni Anev</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="./index.html">Home</a>
+        <a href="./work.html">Work</a>
+        <a href="./CV.html">CV</a>
+      </nav>
+      <nav class="footer-social" aria-label="Social links">
+        <a href="https://github.com/tonianev" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/tonianev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:tonianev@gmail.com">Email</a>
+      </nav>
+      <p class="colophon">Set in Lucida Grande. No webfonts, no framework, no tracking. Updated 2026-07. <button type="button" class="grid-toggle" data-grid-toggle aria-pressed="false">[grid]</button></p>
+    </div>
+  </footer>
 
   <script src="./site.js" defer></script>
 </body>

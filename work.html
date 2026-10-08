@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Selected ML platform, MLOps, and production engineering work by Toni Anev.">
+  <meta name="description" content="Selected work across Sanofi (first AI engineering org, 0 to 70+), Petco, Loblaw, Numeris, and the University of Toronto.">
   <meta name="keywords" content="ML platform case studies, MLOps projects, AI infrastructure outcomes, Toni Anev work">
   <meta name="google" content="notranslate">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
@@ -11,17 +11,17 @@
   <meta name="bingbot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="author" content="Toni Anev">
-  <meta name="theme-color" content="#0a0f1e">
+  <meta name="theme-color" content="#141413">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Toni Anev">
   <meta property="og:locale" content="en_CA">
   <meta property="og:title" content="Work | Toni Anev">
-  <meta property="og:description" content="Selected ML platform and MLOps work across Sanofi, Petco, and Loblaw.">
+  <meta property="og:description" content="Selected work across Sanofi (first AI engineering org, 0 to 70+), Petco, Loblaw, Numeris, and the University of Toronto.">
   <meta property="og:url" content="https://tonianev.com/work.html">
   <meta property="og:image" content="https://tonianev.com/assets/images/intropic.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Work | Toni Anev">
-  <meta name="twitter:description" content="Selected ML platform and MLOps work across Sanofi, Petco, and Loblaw.">
+  <meta name="twitter:description" content="Selected work across Sanofi (first AI engineering org, 0 to 70+), Petco, Loblaw, Numeris, and the University of Toronto.">
   <meta name="twitter:image" content="https://tonianev.com/assets/images/intropic.jpg">
   <link rel="canonical" href="https://tonianev.com/work.html">
   <link rel="sitemap" type="application/xml" href="https://tonianev.com/sitemap.xml">
@@ -34,9 +34,7 @@
   <link rel="me" href="https://github.com/tonianev">
   <link rel="me" href="https://www.linkedin.com/in/tonianev/">
   <link rel="icon" type="image/png" href="./assets/images/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -46,7 +44,7 @@
           "@id": "https://tonianev.com/#website",
           "url": "https://tonianev.com/",
           "name": "Toni Anev",
-          "description": "ML platform engineering, MLOps, and technical leadership for production-scale systems.",
+          "description": "AI platforms, LLM systems, and production ML infrastructure. Founded Sanofi's first AI engineering organization.",
           "inLanguage": "en"
         },
         {
@@ -54,7 +52,15 @@
           "@id": "https://tonianev.com/#person",
           "name": "Toni Anev",
           "url": "https://tonianev.com/",
-          "jobTitle": "Machine Learning Engineering Lead",
+          "jobTitle": "ML Engineering Lead, R&D AI Engineering",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Sanofi"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "McMaster University"
+          },
           "sameAs": [
             "https://github.com/tonianev",
             "https://www.linkedin.com/in/tonianev/"
@@ -74,18 +80,23 @@
           "hasPart": [
             {
               "@type": "CreativeWork",
-              "name": "Sanofi - AI infrastructure and ML platform scale-out",
+              "name": "Sanofi - Founding Sanofi's first AI engineering organization",
               "url": "https://tonianev.com/work.html#sanofi"
             },
             {
               "@type": "CreativeWork",
-              "name": "Petco - Pricing and personalization ML delivery",
+              "name": "Petco - Customer AI: pricing and personalization at revenue scale",
               "url": "https://tonianev.com/work.html#petco"
             },
             {
               "@type": "CreativeWork",
-              "name": "Loblaw - Enterprise pricing, promotions, and segmentation systems",
+              "name": "Loblaw - Enterprise pricing, promotions, and segmentation at 1B+ transactions a year",
               "url": "https://tonianev.com/work.html#loblaw"
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "Earlier work - Numeris and University of Toronto",
+              "url": "https://tonianev.com/work.html#earlier"
             }
           ]
         }
@@ -100,7 +111,7 @@
         document.documentElement.style.colorScheme = resolvedTheme;
         var themeColorMeta = document.querySelector('meta[name="theme-color"]');
         if (themeColorMeta) {
-          themeColorMeta.setAttribute("content", resolvedTheme === "dark" ? "#0a0f1e" : "#f0f4f8");
+          themeColorMeta.setAttribute("content", resolvedTheme === "dark" ? "#141413" : "#f7f5f0");
         }
       } catch (e) {}
     })();
@@ -110,163 +121,198 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <div class="site-shell">
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="./index.html">Toni Anev</a>
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <nav class="site-nav" id="site-nav" aria-label="Primary">
-          <a href="./index.html">Home</a>
-          <a href="./work.html">Work</a>
-          <a href="./index.html#contact">Contact</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html">Toni Anev</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="./work.html">Work</a>
+        <a href="./CV.html">CV</a>
+        <a href="./index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container">
+
+      <section class="page-head" aria-labelledby="page-title">
+        <p class="meta">Case studies</p>
+        <h1 id="page-title">Selected work<span class="sig">.</span></h1>
+        <p class="lead">Public summaries of platform, LLM, and ML engineering work. Details are condensed; scope, dates, and outcomes match the current resume.</p>
+        <nav class="jump-line mono" aria-label="Case study index">
+          <a href="#sanofi">Sanofi</a>
+          <a href="#petco">Petco</a>
+          <a href="#loblaw">Loblaw</a>
+          <a href="#earlier">Earlier</a>
         </nav>
-      </div>
-    </header>
+      </section>
 
-    <main class="page" id="main-content">
-      <div class="container stack-xl">
-        <section class="section-card" data-reveal>
-          <p class="eyebrow">Case studies</p>
-          <h1>Selected work</h1>
-          <p>Public summaries of platform and ML engineering work. Details are condensed, but the scope and outcomes are representative.</p>
-        </section>
-
-        <section class="projects" aria-label="Project highlights">
-          <article class="project-card" id="sanofi" data-reveal>
-            <div class="project-layout">
-              <div class="project-main">
-                <p class="project-meta">Sanofi &middot; Machine Learning Engineering Lead</p>
-                <h2 class="project-title">AI infrastructure and ML platform scale-out</h2>
-                <p class="project-copy">Led platform architecture and delivery systems for AI/ML workloads used across global R&amp;D teams, with an emphasis on throughput, reproducibility, and production readiness.</p>
-                <ul class="project-points">
-                  <li>Scaled a global AI / HPC platform spanning Nvidia A100/H100, EKS, FSx, and S3-backed storage patterns.</li>
-                  <li>Standardized Terraform-based IaC and automated compute provisioning to improve platform throughput by 23%.</li>
-                  <li>Operationalized internal models through SageMaker and Bedrock, reducing time-to-production by 26% across 7+ teams.</li>
-                </ul>
-              </div>
-              <aside class="impact-panel" aria-label="Sanofi impact summary">
-                <p class="eyebrow">Impact</p>
-                <dl class="metric-list compact">
-                  <div>
-                    <dt>Platform budget / scale</dt>
-                    <dd data-count-to="12" data-count-prefix="$" data-count-suffix="M+">$12M+</dd>
-                  </div>
-                  <div>
-                    <dt>Throughput</dt>
-                    <dd data-count-to="23" data-count-prefix="+" data-count-suffix="%">+23%</dd>
-                  </div>
-                  <div>
-                    <dt>Productionization time</dt>
-                    <dd data-count-to="26" data-count-prefix="-" data-count-suffix="%">-26%</dd>
-                  </div>
-                </dl>
-                <p class="impact-note">Leadership scope included a core engineering team plus PM and contractor coordination.</p>
-              </aside>
-            </div>
-            <p class="project-tools">Stack &middot; AWS &middot; EKS &middot; FSx &middot; S3 &middot; SageMaker &middot; Bedrock &middot; Terraform &middot; HPC</p>
-          </article>
-
-          <article class="project-card" id="petco" data-reveal>
-            <div class="project-layout">
-              <div class="project-main">
-                <p class="project-meta">Petco &middot; Technology Lead</p>
-                <h2 class="project-title">Pricing and personalization ML delivery</h2>
-                <p class="project-copy">Led ML engineering delivery for pricing and personalization systems, modernizing platform standards and improving the speed of experimentation and deployment.</p>
-                <ul class="project-points">
-                  <li>Built and led a 5-person ML engineering team and introduced modern MLOps practices on GCP.</li>
-                  <li>Redesigned a price-elasticity platform, reducing runtime from 24 hours to 4 hours and compute load by 32%.</li>
-                  <li>Directed a personalization program that delivered a 3% basket-size uplift and approximately $13M/month in incremental revenue.</li>
-                </ul>
-              </div>
-              <aside class="impact-panel" aria-label="Petco impact summary">
-                <p class="eyebrow">Impact</p>
-                <dl class="metric-list compact">
-                  <div>
-                    <dt>Runtime</dt>
-                    <dd data-count-to="4" data-count-prefix="24h &rarr; " data-count-suffix="h">24h &rarr; 4h</dd>
-                  </div>
-                  <div>
-                    <dt>Compute load</dt>
-                    <dd data-count-to="32" data-count-prefix="-" data-count-suffix="%">-32%</dd>
-                  </div>
-                  <div>
-                    <dt>Incremental revenue</dt>
-                    <dd data-count-to="13" data-count-prefix="~$" data-count-suffix="M/mo">~$13M/mo</dd>
-                  </div>
-                </dl>
-                <p class="impact-note">Included pricing experimentation and recommendation engine delivery across multiple data sources.</p>
-              </aside>
-            </div>
-            <p class="project-tools">Stack &middot; GCP &middot; GKE &middot; Dataproc &middot; Vertex AI &middot; Airflow &middot; Snowflake &middot; Seldon</p>
-          </article>
-
-          <article class="project-card" id="loblaw" data-reveal>
-            <div class="project-layout">
-              <div class="project-main">
-                <p class="project-meta">Loblaw Companies Limited &middot; Data / MLOps Engineering</p>
-                <h2 class="project-title">Enterprise pricing, promotions, and segmentation systems</h2>
-                <p class="project-copy">Built and scaled production data / ML systems across pricing, promotions, and targeted marketing, from early decisioning engines to enterprise MLOps orchestration.</p>
-                <ul class="project-points">
-                  <li>Led rollout of a promotion optimization engine across 16 divisions and 200+ product categories on GCP, Terraform, and Airflow.</li>
-                  <li>Built orchestration services that reduced batch latency by 73% and lowered compute cost by $2.7K/month.</li>
-                  <li>Contributed to segmentation and pricing systems tied to $42M+ annual incremental revenue and $15&ndash;20M revenue lift in earlier pricing decisioning work.</li>
-                </ul>
-              </div>
-              <aside class="impact-panel" aria-label="Loblaw impact summary">
-                <p class="eyebrow">Impact</p>
-                <dl class="metric-list compact">
-                  <div>
-                    <dt>Batch latency</dt>
-                    <dd data-count-to="73" data-count-prefix="-" data-count-suffix="%">-73%</dd>
-                  </div>
-                  <div>
-                    <dt>Segmentation impact</dt>
-                    <dd data-count-to="42" data-count-prefix="$" data-count-suffix="M+">$42M+</dd>
-                  </div>
-                  <div>
-                    <dt>Pricing decisioning lift</dt>
-                    <dd data-count-to="20" data-count-prefix="$15&ndash;" data-count-suffix="M">$15&ndash;20M</dd>
-                  </div>
-                </dl>
-                <p class="impact-note">Work spanned Data Engineer, Senior Data Engineer, and Senior MLOps Engineer roles.</p>
-              </aside>
-            </div>
-            <p class="project-tools">Stack &middot; GCP &middot; Dataproc &middot; Cloud Composer &middot; Terraform &middot; Airflow &middot; Microservices</p>
-          </article>
-        </section>
-
-        <section class="section-card" data-reveal>
-          <p class="eyebrow">Notes</p>
-          <h2 class="section-title">Public summaries only</h2>
-          <p>Some implementation detail is confidential. I am happy to discuss architecture decisions, tradeoffs, delivery patterns, and share the current resume directly when there is relevant context.</p>
-          <div class="inline-actions top-gap">
-            <a class="button button-primary" href="./index.html#contact">Contact</a>
-            <a class="button button-secondary" href="mailto:tonianev@gmail.com?subject=Resume%20request">Request resume</a>
+      <!-- ===== SANOFI ===== -->
+      <article class="case" id="sanofi" aria-labelledby="sanofi-title">
+        <span class="case-meta">Sanofi &mdash; Software Engineering Lead &rarr; ML Engineering Lead, R&amp;D AI Engineering &mdash; Jul 2023&ndash;present</span>
+        <h2 id="sanofi-title">Founding Sanofi&rsquo;s first AI engineering organization</h2>
+        <p class="lead">Founded Sanofi&rsquo;s first AI engineering organization and scaled it to 70+ people across Toronto, Paris, and Boston &mdash; 7 direct reports, 30+ FTEs, 40+ contractors &mdash; reporting to the VP of R&amp;D. Owned the global AI infrastructure strategy and the platforms it funds.</p>
+        <ul class="dash-list">
+          <li>Defined and executed the global AI infrastructure strategy: a <strong>$12M+ HPC platform</strong> on NVIDIA A100/H100, EKS, FSx Lustre, and S3 &mdash; securing dedicated infrastructure over a competing corporate platform through alignment with R&amp;D, IT Security, Legal, and Finance.</li>
+          <li>Delivered platform architecture and budget strategy to SVP stakeholders <strong>within 6 weeks</strong>. Blueprints and Terraform modules adopted by Vaccines and Small Molecule R&amp;D as Sanofi&rsquo;s internal reference.</li>
+          <li>Shipped an <strong>event-driven LLM platform</strong> for automated clinical data analysis: vLLM-served models with FP8 quantization on ECS, EventBridge, and AWS Batch &mdash; manifest-driven orchestration that scales to zero between workloads, eliminating idle GPU spend.</li>
+          <li>Standardized Terraform IaC and automated provisioning pipelines: <strong>23% throughput improvement</strong> and reproducible ML experimentation at scale.</li>
+          <li>Operationalized protein models via SageMaker and Bedrock, reducing time-to-production <strong>26%</strong> across 7+ R&amp;D teams.</li>
+          <li>Cut incident frequency <strong>50%+</strong> and onboarding time <strong>40%</strong> through standardized CI/CD and async-first documentation.</li>
+        </ul>
+        <div class="impact-figures" role="group" aria-label="Sanofi impact figures">
+          <div class="impact-cell">
+            <span class="impact-label">Org scale</span>
+            <p class="impact-value">0 &rarr; 70+</p>
           </div>
-        </section>
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <nav class="footer-nav" aria-label="Footer">
-          <a href="./index.html">Home</a>
-          <a href="./work.html">Work</a>
-          <a href="./index.html#contact">Contact</a>
-        </nav>
-        <div class="footer-social" aria-label="Social links">
-          <a href="https://github.com/tonianev" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/tonianev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="mailto:tonianev@gmail.com">Email</a>
+          <div class="impact-cell">
+            <span class="impact-label">Platform investment</span>
+            <p class="impact-value">$12M+</p>
+          </div>
+          <div class="impact-cell">
+            <span class="impact-label">Incident frequency</span>
+            <p class="impact-value">&minus;50%+</p>
+          </div>
+          <div class="impact-cell">
+            <span class="impact-label">Time-to-production</span>
+            <p class="impact-value">&minus;26%</p>
+          </div>
         </div>
-        <p class="footer-copy">&copy; <span data-year></span> Toni Anev.</p>
-      </div>
-    </footer>
-  </div>
+        <p class="impact-note">7 direct reports, 30+ FTEs, and 40+ contractors across Toronto, Paris, and Boston, reporting to the VP of R&amp;D.</p>
+        <span class="stack-line">Stack &mdash; AWS &middot; EKS &middot; ECS &middot; EventBridge &middot; AWS Batch &middot; FSx Lustre &middot; S3 &middot; vLLM &middot; SageMaker &middot; Bedrock &middot; Terraform &middot; HPC (A100/H100)</span>
+      </article>
+
+      <!-- ===== PETCO ===== -->
+      <article class="case" id="petco" aria-labelledby="petco-title">
+        <span class="case-meta">Petco (via ShyftLabs) &mdash; Technology Lead, Customer AI &mdash; Jan 2023&ndash;Jun 2023</span>
+        <h2 id="petco-title">Customer AI: pricing and personalization at revenue scale</h2>
+        <p class="lead">Owned Customer AI delivery: a $5M ML infrastructure budget, a 5-person engineering team, and the pricing and personalization programs they shipped.</p>
+        <ul class="dash-list">
+          <li>Managed a <strong>$5M ML infrastructure budget</strong> across a 5-person engineering team; set MLOps standards on GCP (GKE, Dataproc, Cloud Composer) and cut deployment cycles <strong>25%</strong>.</li>
+          <li>Directed a <strong>$3M personalization program</strong>: a recommendation engine combining clickstream, transactional, and product data &mdash; 3% basket-size uplift, <strong>~$13M/month incremental revenue</strong>.</li>
+          <li>Redesigned the price-elasticity platform on Snowflake, Vertex AI, Airflow, and Seldon: runtime <strong>24h &rarr; 4h</strong>, compute load down <strong>32%</strong>.</li>
+        </ul>
+        <div class="impact-figures" role="group" aria-label="Petco impact figures">
+          <div class="impact-cell">
+            <span class="impact-label">Infrastructure budget</span>
+            <p class="impact-value">$5M</p>
+          </div>
+          <div class="impact-cell">
+            <span class="impact-label">Incremental revenue</span>
+            <p class="impact-value">~$13M/mo</p>
+          </div>
+          <div class="impact-cell">
+            <span class="impact-label">Runtime</span>
+            <p class="impact-value">24h &rarr; 4h</p>
+          </div>
+          <div class="impact-cell">
+            <span class="impact-label">Deployment cycles</span>
+            <p class="impact-value">&minus;25%</p>
+          </div>
+        </div>
+        <p class="impact-note">A $3M personalization program and pricing experimentation across clickstream, transactional, and product data.</p>
+        <span class="stack-line">Stack &mdash; GCP &middot; GKE &middot; Dataproc &middot; Cloud Composer &middot; Vertex AI &middot; Airflow &middot; Snowflake &middot; Seldon</span>
+      </article>
+
+      <!-- ===== LOBLAW ===== -->
+      <article class="case" id="loblaw" aria-labelledby="loblaw-title">
+        <span class="case-meta">Loblaw &mdash; Data Engineer &rarr; Senior Data Engineer &rarr; Senior MLOps Engineer &mdash; Jan 2019&ndash;Jan 2023</span>
+        <h2 id="loblaw-title">Enterprise pricing, promotions, and segmentation at 1B+ transactions a year</h2>
+        <p class="lead">Four years building the production data and ML systems behind Canada&rsquo;s largest retailer &mdash; from Loblaw&rsquo;s first ML decisioning engine to the segmentation backbone that became Loblaw Media.</p>
+        <ul class="dash-list">
+          <li>Architected a promotion optimization platform serving <strong>16 divisions and 200+ product categories</strong> on GCP Dataproc, Terraform, and Airflow, with Azure DevOps CI/CD and Azure SQL.</li>
+          <li>Built a precision segmentation platform processing <strong>1B+ transactions/year from 21M loyalty members</strong>, powering $42M in annual incremental revenue. The architecture became the backbone for Loblaw Media, a <strong>$40M/year business</strong>.</li>
+          <li>Designed Loblaw&rsquo;s first ML decisioning engine for pricing and markdown timing: <strong>$15&ndash;20M (~25%) annual revenue lift</strong>. A microservices orchestration framework cut batch latency <strong>73%</strong>.</li>
+        </ul>
+        <div class="impact-figures" role="group" aria-label="Loblaw impact figures">
+          <div class="impact-cell">
+            <span class="impact-label">Transactions</span>
+            <p class="impact-value">1B+/yr</p>
+          </div>
+          <div class="impact-cell">
+            <span class="impact-label">Loyalty members</span>
+            <p class="impact-value">21M</p>
+          </div>
+          <div class="impact-cell">
+            <span class="impact-label">Segmentation revenue</span>
+            <p class="impact-value">$42M/yr</p>
+          </div>
+          <div class="impact-cell">
+            <span class="impact-label">Batch latency</span>
+            <p class="impact-value">&minus;73%</p>
+          </div>
+        </div>
+        <p class="impact-note">Progressed Data Engineer &rarr; Senior Data Engineer &rarr; Senior MLOps Engineer; the segmentation architecture became the Loblaw Media backbone.</p>
+        <span class="stack-line">Stack &mdash; GCP &middot; Dataproc &middot; Terraform &middot; Airflow &middot; Azure DevOps &middot; Azure SQL &middot; Microservices</span>
+      </article>
+
+      <!-- ===== EARLIER + EDUCATION ===== -->
+      <section class="section" id="earlier" aria-labelledby="earlier-title">
+        <div class="section-rail">
+          <span class="rail-label">Earlier</span>
+        </div>
+        <div class="section-body">
+          <h2 id="earlier-title">Where the data discipline comes from</h2>
+          <div class="ruled-rows">
+            <div class="ruled-row">
+              <span class="row-when">2017&ndash;2019</span>
+              <div class="row-what">
+                <strong>Numeris &mdash; Research Analyst, PPM Platform Engineering</strong>
+                <p>Automated ingestion and quality monitoring of national audience measurement data covering ~27M individuals: 90%+ throughput improvement, manual processing eliminated.</p>
+              </div>
+            </div>
+            <div class="ruled-row">
+              <span class="row-when">2014&ndash;2015</span>
+              <div class="row-what">
+                <strong>University of Toronto &mdash; Research Analyst, Faculty of Medicine</strong>
+                <p>Built ETL and warehousing pipelines analyzing research output across 1,600+ principal investigators and 5,000 faculty.</p>
+              </div>
+            </div>
+            <div class="ruled-row">
+              <span class="row-when">2012&ndash;2016</span>
+              <div class="row-what">
+                <strong>McMaster University &mdash; Bachelor of Science</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== NOTES ===== -->
+      <section class="section" aria-labelledby="notes-title">
+        <div class="section-rail">
+          <span class="rail-label">Notes</span>
+        </div>
+        <div class="section-body">
+          <h2 id="notes-title">Public summaries only</h2>
+          <p>Some implementation detail is confidential. I am happy to discuss architecture decisions, tradeoffs, and delivery patterns &mdash; and to share the current resume directly when there is relevant context.</p>
+          <div class="hero-actions">
+            <a class="action-primary" href="./index.html#contact">Contact &rarr;</a>
+            <a class="action-quiet" href="mailto:tonianev@gmail.com?subject=Resume%20request">Request resume</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span data-year>2026</span> Toni Anev</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="./index.html">Home</a>
+        <a href="./work.html">Work</a>
+        <a href="./CV.html">CV</a>
+      </nav>
+      <nav class="footer-social" aria-label="Social links">
+        <a href="https://github.com/tonianev" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/tonianev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:tonianev@gmail.com">Email</a>
+      </nav>
+      <p class="colophon">Set in Lucida Grande. No webfonts, no framework, no tracking. Updated 2026-07. <button type="button" class="grid-toggle" data-grid-toggle aria-pressed="false">[grid]</button></p>
+    </div>
+  </footer>
 
   <script src="./site.js" defer></script>
 </body>

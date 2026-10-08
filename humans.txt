@@ -1,6 +1,7 @@
 /* TEAM */
 Name: Toni Anev
-Role: Machine Learning Engineering Lead
+Role: ML Engineering Lead, R&D AI Engineering at Sanofi (Software Engineering Lead -> ML Engineering Lead)
+Education: McMaster University, BSc
 Site: https://tonianev.com
 Contact: tonianev@gmail.com
 GitHub: https://github.com/tonianev
@@ -8,8 +9,9 @@ LinkedIn: https://www.linkedin.com/in/tonianev/
 
 /* SITE */
 Stack: Static HTML, CSS, JavaScript
+Typeface: Lucida Grande (native stack, no webfonts)
 Accessibility: Keyboard navigation, skip links, reduced-motion support
 Machine Readability: JSON-LD, sitemap.xml, robots.txt, llms.txt
 
 /* UPDATED */
-Last updated: 2026-03-02
+Last updated: 2026-07-06

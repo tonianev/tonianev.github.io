@@ -3,33 +3,47 @@
   "roles": [
     {
       "company": "Sanofi",
-      "title": "Machine Learning Engineering Lead",
+      "title": "Software Engineering Lead -> ML Engineering Lead (R&D AI Engineering)",
       "location": "Toronto, ON",
-      "start": "2023-06",
+      "locations": ["Toronto", "Paris", "Boston"],
+      "reports_to": "VP of R&D",
+      "start": "2023-07",
       "end": "present",
       "highlights": [
-        "Directed architecture and scale-out of a global AI/HPC platform with NVIDIA A100/H100, EKS, FSx, and S3.",
-        "Standardized Terraform IaC and automated compute provisioning, improving throughput by 23%.",
-        "Reduced model time-to-production by 26% across 7+ teams with SageMaker and Bedrock workflows."
+        "Founded Sanofi's first AI engineering organization and scaled it to 70+ globally (7 direct reports, 30+ FTEs, 40+ contractors) across Toronto, Paris, and Boston.",
+        "Defined and executed the global AI infrastructure strategy: $12M+ HPC platform on NVIDIA A100/H100, EKS, FSx Lustre, and S3 - secured over a competing corporate platform via alignment with R&D, IT Security, Legal, and Finance.",
+        "Delivered platform architecture and budget strategy to SVP stakeholders within 6 weeks; blueprints and Terraform modules adopted by Vaccines and Small Molecule R&D as Sanofi's internal reference.",
+        "Shipped an event-driven LLM platform for automated clinical data analysis: vLLM-served models with FP8 quantization on ECS, EventBridge, and AWS Batch, with manifest-driven orchestration that scales to zero between workloads.",
+        "Standardized Terraform IaC and automated provisioning pipelines, improving throughput by 23%.",
+        "Operationalized protein models via SageMaker and Bedrock, reducing time-to-production by 26% across 7+ R&D teams.",
+        "Cut incident frequency 50%+ and onboarding time 40% through standardized CI/CD and async-first documentation."
       ],
       "metrics": {
+        "org_scale_people": "70+",
+        "direct_reports": 7,
         "platform_scale_usd": "12M+",
         "throughput_gain_pct": 23,
-        "productionization_time_reduction_pct": 26
+        "productionization_time_reduction_pct": 26,
+        "incident_reduction_pct": "50+",
+        "onboarding_reduction_pct": 40
       }
     },
     {
-      "company": "Petco",
-      "title": "Technology Lead",
+      "company": "Petco (via ShyftLabs)",
+      "title": "Technology Lead (Customer AI)",
       "location": "Toronto, ON",
       "start": "2023-01",
       "end": "2023-06",
       "highlights": [
-        "Built and led a 5-person ML engineering team and modernized MLOps standards on GCP.",
-        "Redesigned price-elasticity platform runtime from 24h to 4h with 32% lower compute load.",
-        "Led personalization program with 3% basket-size uplift and approximately $13M/month incremental revenue."
+        "Managed a $5M ML infrastructure budget across a 5-person engineering team; established MLOps standards on GCP (GKE, Dataproc, Cloud Composer) and cut deployment cycles by 25%.",
+        "Directed a $3M personalization program: recommendation engine combining clickstream, transactional, and product data - 3% basket-size uplift and ~$13M/month incremental revenue.",
+        "Redesigned the price-elasticity platform on Snowflake, Vertex AI, Airflow, and Seldon: runtime 24h -> 4h and compute load reduced 32%."
       ],
       "metrics": {
+        "ml_infra_budget_usd": "5M",
+        "personalization_program_usd": "3M",
+        "deployment_cycle_reduction_pct": 25,
+        "basket_size_uplift_pct": 3,
         "runtime_before_hours": 24,
         "runtime_after_hours": 4,
         "compute_reduction_pct": 32,
@@ -38,19 +52,56 @@
     },
     {
       "company": "Loblaw Companies Limited",
-      "title": "Senior MLOps Engineer / Senior Data Engineer / Data Engineer",
+      "title": "Data Engineer -> Senior Data Engineer -> Senior MLOps Engineer",
       "location": "Toronto, ON",
       "start": "2019-01",
       "end": "2023-01",
       "highlights": [
-        "Led promotion optimization rollout across 16 divisions and 200+ product categories.",
-        "Built orchestration services reducing batch latency by 73%.",
-        "Contributed to pricing and segmentation systems tied to $42M+ annual incremental revenue."
+        "Architected a promotion optimization platform serving 16 divisions and 200+ product categories on GCP Dataproc, Terraform, and Airflow, with Azure DevOps CI/CD and Azure SQL.",
+        "Built a precision segmentation platform processing 1B+ transactions/year from 21M loyalty members, powering $42M annual incremental revenue; the architecture became the backbone for Loblaw Media ($40M annual revenue).",
+        "Designed Loblaw's first ML decisioning engine for pricing and markdown timing, delivering $15-20M (~25%) annual revenue lift.",
+        "Developed a microservices orchestration framework achieving 73% batch latency reduction."
       ],
       "metrics": {
-        "batch_latency_reduction_pct": 73,
-        "annual_incremental_revenue_usd": "42M+"
+        "transactions_per_year": "1B+",
+        "loyalty_members": "21M",
+        "annual_incremental_revenue_usd": "42M",
+        "loblaw_media_annual_revenue_usd": "40M",
+        "pricing_lift_usd": "15-20M (~25%)",
+        "batch_latency_reduction_pct": 73
       }
+    },
+    {
+      "company": "Numeris",
+      "title": "Research Analyst (PPM Platform Engineering)",
+      "location": "Toronto, ON",
+      "start": "2017-02",
+      "end": "2019-01",
+      "highlights": [
+        "Automated ingestion and quality monitoring of national audience measurement data covering ~27M individuals, improving throughput 90%+ and eliminating manual processing."
+      ],
+      "metrics": {
+        "individuals_covered": "27M",
+        "throughput_improvement_pct": "90+"
+      }
+    },
+    {
+      "company": "University of Toronto",
+      "title": "Research Analyst (Faculty of Medicine)",
+      "location": "Toronto, ON",
+      "start": "2014-05",
+      "end": "2015-09",
+      "highlights": [
+        "Built ETL and warehousing pipelines analyzing research output across 1,600+ principal investigators and 5,000 faculty, supporting funding allocation and collaboration analytics."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "McMaster University",
+      "degree": "Bachelor of Science",
+      "start": 2012,
+      "end": 2016
     }
   ]
 }

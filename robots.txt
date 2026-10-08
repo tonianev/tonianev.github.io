@@ -23,5 +23,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Host: tonianev.com
 Sitemap: https://tonianev.com/sitemap.xml

@@ -1,14 +1,9 @@
 (function () {
   var THEME_COLORS = {
-    light: "#f0f4f8",
-    dark: "#0a0f1e"
+    light: "#f7f5f0",
+    dark: "#141413"
   };
-  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   var prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-  function supportsMotion() {
-    return !prefersReducedMotion.matches;
-  }
 
   function systemTheme() {
     return prefersDarkScheme.matches ? "dark" : "light";
@@ -40,44 +35,23 @@
     }
   }
 
+  function markActiveLinks(scope) {
+    if (!scope) {
+      return;
+    }
+    var currentPath = window.location.pathname.split("/").pop() || "index.html";
+    scope.querySelectorAll("a").forEach(function (link) {
+      var href = (link.getAttribute("href") || "").replace("./", "");
+      if (href === currentPath) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+      }
+    });
+  }
+
   function initNavigation() {
-    var toggle = document.querySelector(".nav-toggle");
-    var nav = document.querySelector("#site-nav");
-
-    if (toggle && nav) {
-      toggle.addEventListener("click", function () {
-        var open = document.body.classList.toggle("nav-open");
-        toggle.setAttribute("aria-expanded", String(open));
-      });
-
-      nav.querySelectorAll("a").forEach(function (link) {
-        link.addEventListener("click", function () {
-          document.body.classList.remove("nav-open");
-          toggle.setAttribute("aria-expanded", "false");
-        });
-      });
-
-      var currentPath = window.location.pathname.split("/").pop() || "index.html";
-      nav.querySelectorAll("a").forEach(function (link) {
-        var href = (link.getAttribute("href") || "").replace("./", "");
-        if (href === currentPath) {
-          link.classList.add("active");
-          link.setAttribute("aria-current", "page");
-        }
-      });
-    }
-
-    var footerNav = document.querySelector(".footer-nav");
-    if (footerNav) {
-      var currentPath = window.location.pathname.split("/").pop() || "index.html";
-      footerNav.querySelectorAll("a").forEach(function (link) {
-        var href = (link.getAttribute("href") || "").replace("./", "");
-        if (href === currentPath) {
-          link.classList.add("active");
-          link.setAttribute("aria-current", "page");
-        }
-      });
-    }
+    markActiveLinks(document.querySelector(".site-nav"));
+    markActiveLinks(document.querySelector(".footer-nav"));
   }
 
   function initCurrentYear() {
@@ -87,241 +61,46 @@
     });
   }
 
-  function initSmoothScrollAnchors() {
-    if (!supportsMotion()) {
+  /* Press "g" (or the [grid] colophon button) to see the baseline grid. */
+  function initGridOverlay() {
+    var button = document.querySelector("[data-grid-toggle]");
+    if (!button) {
       return;
     }
 
-    function scrollToHash(hash, updateHistory) {
-      if (!hash || hash === "#") {
-        return false;
+    function setOverlay(on) {
+      document.body.classList.toggle("grid-overlay-on", on);
+      button.setAttribute("aria-pressed", String(on));
+    }
+
+    function toggle() {
+      setOverlay(!document.body.classList.contains("grid-overlay-on"));
+    }
+
+    button.addEventListener("click", toggle);
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        setOverlay(false);
+        return;
       }
-
-      var target = document.querySelector(hash);
-      if (!target) {
-        return false;
+      if (event.key !== "g" && event.key !== "G") {
+        return;
       }
-
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-      if (target instanceof HTMLElement) {
-        target.focus({ preventScroll: true });
+      if (event.metaKey || event.ctrlKey || event.altKey) {
+        return;
       }
-      if (updateHistory) {
-        window.history.replaceState(null, "", hash);
+      var target = event.target;
+      if (
+        target &&
+        (target.tagName === "INPUT" ||
+          target.tagName === "TEXTAREA" ||
+          target.tagName === "SELECT" ||
+          target.isContentEditable)
+      ) {
+        return;
       }
-      return true;
-    }
-
-    document.querySelectorAll('a[href*="#"]').forEach(function (link) {
-      link.addEventListener("click", function (event) {
-        var url;
-        try {
-          url = new URL(link.getAttribute("href") || "", window.location.href);
-        } catch (_error) {
-          return;
-        }
-
-        if (url.origin !== window.location.origin || url.pathname !== window.location.pathname) {
-          return;
-        }
-
-        if (!url.hash || url.hash === "#") {
-          return;
-        }
-
-        event.preventDefault();
-        scrollToHash(url.hash, true);
-      });
-    });
-
-    if (window.location.hash) {
-      window.requestAnimationFrame(function () {
-        scrollToHash(window.location.hash, false);
-      });
-    }
-  }
-
-  function siblingRevealIndex(element) {
-    if (!element.parentElement) {
-      return 0;
-    }
-
-    var siblings = Array.from(element.parentElement.children).filter(function (node) {
-      return node.hasAttribute("data-reveal");
-    });
-    return Math.max(0, siblings.indexOf(element));
-  }
-
-  function revealElement(element) {
-    if (element.classList.contains("is-visible")) {
-      return;
-    }
-
-    var delay = siblingRevealIndex(element) * 60;
-    element.style.setProperty("--reveal-delay", delay + "ms");
-
-    if (!supportsMotion()) {
-      element.classList.add("is-visible");
-      return;
-    }
-
-    element.classList.add("is-animating");
-    window.requestAnimationFrame(function () {
-      element.classList.add("is-visible");
-    });
-
-    var cleanup = function () {
-      element.classList.remove("is-animating");
-      element.removeEventListener("transitionend", cleanup);
-    };
-
-    element.addEventListener("transitionend", cleanup);
-    window.setTimeout(cleanup, 900);
-  }
-
-  function initRevealAnimations() {
-    var items = Array.from(document.querySelectorAll("[data-reveal]"));
-    if (items.length === 0) {
-      return;
-    }
-
-    if (!supportsMotion() || !("IntersectionObserver" in window)) {
-      items.forEach(function (item) {
-        item.classList.add("is-visible");
-      });
-      return;
-    }
-
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) {
-            return;
-          }
-          revealElement(entry.target);
-          observer.unobserve(entry.target);
-        });
-      },
-      {
-        threshold: 0.12,
-        rootMargin: "0px 0px -8% 0px"
-      }
-    );
-
-    items.forEach(function (item) {
-      observer.observe(item);
-    });
-  }
-
-  function formatCounterValue(node, value) {
-    var decimals = Number.parseInt(node.dataset.countDecimals || "0", 10);
-    var prefix = node.dataset.countPrefix || "";
-    var suffix = node.dataset.countSuffix || "";
-    var rounded = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString();
-    return prefix + rounded + suffix;
-  }
-
-  function renderCounterFinal(node) {
-    var target = Number.parseFloat(node.dataset.countTo || "0");
-    node.textContent = formatCounterValue(node, target);
-    node.dataset.countAnimated = "true";
-  }
-
-  function animateCounter(node) {
-    if (node.dataset.countAnimated === "true") {
-      return;
-    }
-
-    var target = Number.parseFloat(node.dataset.countTo || "0");
-    var start = Number.parseFloat(node.dataset.countFrom || "0");
-    var duration = Number.parseInt(node.dataset.countDuration || "1400", 10);
-
-    if (!supportsMotion()) {
-      renderCounterFinal(node);
-      return;
-    }
-
-    var startTime = performance.now();
-
-    function frame(now) {
-      var elapsed = now - startTime;
-      var progress = Math.min(1, elapsed / duration);
-      var eased = 1 - Math.pow(1 - progress, 3);
-      var value = start + (target - start) * eased;
-      node.textContent = formatCounterValue(node, value);
-
-      if (progress < 1) {
-        window.requestAnimationFrame(frame);
-      } else {
-        node.dataset.countAnimated = "true";
-      }
-    }
-
-    window.requestAnimationFrame(frame);
-  }
-
-  function initCounters() {
-    var counters = Array.from(document.querySelectorAll("[data-count-to]"));
-    if (counters.length === 0) {
-      return;
-    }
-
-    counters.forEach(function (counter) {
-      counter.dataset.countAnimated = "false";
-      counter.textContent = counter.dataset.countPrefix ? counter.dataset.countPrefix + "0" + (counter.dataset.countSuffix || "") : "0";
-    });
-
-    if (!supportsMotion() || !("IntersectionObserver" in window)) {
-      counters.forEach(renderCounterFinal);
-      return;
-    }
-
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) {
-            return;
-          }
-          animateCounter(entry.target);
-          observer.unobserve(entry.target);
-        });
-      },
-      {
-        threshold: 0.45,
-        rootMargin: "0px 0px -10% 0px"
-      }
-    );
-
-    counters.forEach(function (counter) {
-      observer.observe(counter);
-    });
-  }
-
-  function initHeroReveal() {
-    var items = Array.from(document.querySelectorAll("[data-hero-reveal]"));
-    if (items.length === 0) {
-      return;
-    }
-
-    if (!supportsMotion()) {
-      items.forEach(function (el) {
-        el.style.opacity = "1";
-        el.style.transform = "none";
-      });
-      return;
-    }
-
-    items.forEach(function (item, index) {
-      item.style.transition = "opacity 500ms cubic-bezier(0.2, 0.8, 0.2, 1) " + (index * 120) + "ms, transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1) " + (index * 120) + "ms";
-    });
-
-    window.requestAnimationFrame(function () {
-      window.requestAnimationFrame(function () {
-        items.forEach(function (item) {
-          item.style.opacity = "1";
-          item.style.transform = "translateY(0)";
-        });
-      });
+      toggle();
     });
   }
 
@@ -470,6 +249,10 @@
     return "decisive";
   }
 
+  function formatLabScore(score) {
+    return String(score).padStart(2, "0") + " / 10";
+  }
+
   function buildAgentLabSummary(name, warmth, pragmatism, initiative) {
     return (
       name +
@@ -531,6 +314,14 @@
       "",
       "Do not imply tools, memory, or permissions that are not actually available."
     ].join("\n");
+  }
+
+  /* Write to a node only when the value changed — keeps live regions
+     from re-announcing identical content on every input event. */
+  function setLiveText(node, value) {
+    if (node.textContent !== value) {
+      node.textContent = value;
+    }
   }
 
   function setAgentLabChips(container, items) {
@@ -605,22 +396,22 @@
           initiative: Number.parseInt(sliders.initiative.value || "5", 10)
         };
 
-        outputs.warmth.textContent = String(state.warmth);
-        outputs.pragmatism.textContent = String(state.pragmatism);
-        outputs.initiative.textContent = String(state.initiative);
+        setLiveText(outputs.warmth, formatLabScore(state.warmth));
+        setLiveText(outputs.pragmatism, formatLabScore(state.pragmatism));
+        setLiveText(outputs.initiative, formatLabScore(state.initiative));
 
-        meterLabels.warmth.textContent = describeWarmth(state.warmth);
-        meterLabels.pragmatism.textContent = describePragmatism(state.pragmatism);
-        meterLabels.initiative.textContent = describeInitiative(state.initiative);
+        setLiveText(meterLabels.warmth, describeWarmth(state.warmth));
+        setLiveText(meterLabels.pragmatism, describePragmatism(state.pragmatism));
+        setLiveText(meterLabels.initiative, describeInitiative(state.initiative));
 
         meterFills.warmth.style.width = state.warmth * 10 + "%";
         meterFills.pragmatism.style.width = state.pragmatism * 10 + "%";
         meterFills.initiative.style.width = state.initiative * 10 + "%";
 
-        title.textContent = state.name;
-        summary.textContent = buildAgentLabSummary(state.name, state.warmth, state.pragmatism, state.initiative);
-        packet.textContent = buildAgentLabPacket(state);
-        prompt.textContent = buildAgentLabPrompt(state);
+        setLiveText(title, state.name);
+        setLiveText(summary, buildAgentLabSummary(state.name, state.warmth, state.pragmatism, state.initiative));
+        setLiveText(packet, buildAgentLabPacket(state));
+        setLiveText(prompt, buildAgentLabPrompt(state));
 
         var traitItems = [
           describeWarmth(state.warmth),
@@ -675,10 +466,7 @@
     initSystemTheme();
     initNavigation();
     initCurrentYear();
-    initSmoothScrollAnchors();
-    initRevealAnimations();
-    initCounters();
-    initHeroReveal();
+    initGridOverlay();
     initAgentLabs();
   });
 })();

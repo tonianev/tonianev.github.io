@@ -3,17 +3,17 @@
   "short_name": "Toni Anev",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0f1e",
-  "theme_color": "#0a0f1e",
-  "description": "ML platform engineering, MLOps, and production AI infrastructure leadership.",
+  "background_color": "#141413",
+  "theme_color": "#141413",
+  "description": "AI platforms, LLM systems, and production ML infrastructure. Founded Sanofi's first AI engineering organization.",
   "icons": [
     {
-      "src": "/assets/images/favicon.png",
+      "src": "/assets/images/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/assets/images/favicon.png",
+      "src": "/assets/images/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

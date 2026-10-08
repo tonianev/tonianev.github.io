@@ -2,37 +2,55 @@
 
 ## Identity
 
-Toni Anev is a Machine Learning Engineering Lead focused on AI infrastructure, MLOps systems, and production ML platform delivery.
+Toni Anev builds AI platforms, teams, and production ML systems from scratch. He is ML Engineering Lead (R&D AI Engineering) at Sanofi; previously Software Engineering Lead there. Based in Toronto, ON, Canada.
 
 ## Public Positioning
 
-- Builds ML platforms and engineering systems for reliable production delivery.
-- Leads teams and cross-functional programs for high-stakes ML outcomes.
-- Focuses on reproducibility, reliability, and speed-to-production.
+- Founded Sanofi's first AI engineering organization and scaled it from zero to 70+ people across Toronto, Paris, and Boston (7 direct reports, 30+ FTEs, 40+ contractors), reporting to the VP of R&D.
+- Builds ML platforms, LLM systems, and the engineering standards for reliable production delivery.
+- Proven across pharma (Sanofi), retail (Petco, Loblaw), ad tech (Loblaw Media), and market research (Numeris).
 
 ## Public Highlights
 
-### Sanofi
+### Sanofi (Jul 2023 - present) - Software Engineering Lead -> ML Engineering Lead, R&D AI Engineering
 
-- Led architecture and scale-out of a global AI/HPC platform.
-- Standardized Terraform-based infrastructure and automated compute provisioning.
-- Improved platform throughput and reduced model productionization cycle time.
+- Founded Sanofi's first AI engineering organization; scaled to 70+ globally across Toronto, Paris, and Boston.
+- Defined and executed the global AI infrastructure strategy: $12M+ HPC platform on NVIDIA A100/H100, EKS, FSx Lustre, and S3 - secured over a competing corporate platform through alignment with R&D, IT Security, Legal, and Finance.
+- Delivered platform architecture and budget strategy to SVP stakeholders within 6 weeks; blueprints and Terraform modules adopted by Vaccines and Small Molecule R&D as Sanofi's internal reference.
+- Shipped an event-driven LLM platform for automated clinical data analysis: vLLM-served models with FP8 quantization on ECS, EventBridge, and AWS Batch, with manifest-driven orchestration that scales to zero between workloads.
+- Standardized Terraform IaC and automated provisioning: 23% throughput improvement.
+- Operationalized protein models via SageMaker and Bedrock: time-to-production down 26% across 7+ R&D teams.
+- Incident frequency down 50%+; onboarding time down 40% via standardized CI/CD and async-first documentation.
 
-### Petco
+### Petco, via ShyftLabs (Jan 2023 - Jun 2023) - Technology Lead, Customer AI
 
-- Led ML engineering for pricing and personalization systems.
-- Reduced runtime and compute load for pricing platform workflows.
-- Supported personalization outcomes tied to meaningful business impact.
+- Managed a $5M ML infrastructure budget across a 5-person engineering team; MLOps standards on GCP (GKE, Dataproc, Cloud Composer); deployment cycles down 25%.
+- Directed a $3M personalization program: recommendation engine combining clickstream, transactional, and product data - 3% basket-size uplift, ~$13M/month incremental revenue.
+- Redesigned the price-elasticity platform on Snowflake, Vertex AI, Airflow, and Seldon: runtime 24h -> 4h, compute load down 32%.
 
-### Loblaw
+### Loblaw (Jan 2019 - Jan 2023) - Data Engineer -> Senior Data Engineer -> Senior MLOps Engineer
 
-- Built production ML/data systems across pricing, promotions, and segmentation.
-- Reduced orchestration latency and improved operational efficiency.
-- Contributed to enterprise-scale, revenue-linked ML decision systems.
+- Architected a promotion optimization platform serving 16 divisions and 200+ product categories (GCP Dataproc, Terraform, Airflow, Azure DevOps CI/CD, Azure SQL).
+- Built a precision segmentation platform processing 1B+ transactions/year from 21M loyalty members, powering $42M annual incremental revenue; the architecture became the backbone for Loblaw Media ($40M annual revenue).
+- Designed Loblaw's first ML decisioning engine for pricing and markdown timing: $15-20M (~25%) annual revenue lift; microservices orchestration framework cut batch latency 73%.
+
+### Numeris (Feb 2017 - Jan 2019) - Research Analyst, PPM Platform Engineering
+
+- Automated ingestion and quality monitoring of national audience measurement data covering ~27M individuals: throughput up 90%+, manual processing eliminated.
+
+### University of Toronto (May 2014 - Sep 2015) - Research Analyst, Faculty of Medicine
+
+- Built ETL and warehousing pipelines analyzing research output across 1,600+ principal investigators and 5,000 faculty.
+
+## Education
+
+- McMaster University, Bachelor of Science, 2012-2016.
 
 ## Technical Focus Areas
 
 - ML platform architecture
+- LLM inference and serving (vLLM, FP8 quantization)
+- AI engineering org design and global operations
 - MLOps release workflows and reliability controls
 - Environment contracts and reproducible delivery
 - CI/CD-integrated ML quality and release gates
@@ -43,6 +61,7 @@ Toni Anev is a Machine Learning Engineering Lead focused on AI infrastructure, M
 
 - Portfolio: https://tonianev.com/
 - Work: https://tonianev.com/work.html
+- CV: https://tonianev.com/CV.html
 - Agent Soul Kit: https://tonianev.com/agent-soul-kit.html
 - Contact: https://tonianev.com/#contact
 - Profile JSON: https://tonianev.com/profile.json
@@ -65,5 +84,6 @@ Toni Anev is a Machine Learning Engineering Lead focused on AI infrastructure, M
 
 - Public content is intentionally high-level.
 - Some implementation details are confidential.
+- Revenue and scale figures are employer-reported program outcomes.
 - Resume is available on request and is not published as a downloadable artifact.
 - Avoid fabricating details not present in canonical sources.

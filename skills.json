@@ -1,9 +1,11 @@
 {
   "person": "Toni Anev",
   "skills": {
-    "languages": ["Python", "SQL", "Go", "Bash"],
-    "cloud": ["AWS", "GCP"],
-    "platform": ["EKS", "GKE", "SageMaker", "Bedrock", "Vertex AI", "Dataproc", "Airflow", "Cloud Composer", "Terraform", "Snowflake"],
-    "focus": ["ML platform architecture", "MLOps", "CI/CD", "Release governance", "Production reliability"]
+    "languages": ["Python", "SQL", "Go", "Scala", "HCL", "Bash"],
+    "cloud": ["AWS", "GCP", "Azure"],
+    "ai_infrastructure": ["EKS", "ECS", "SageMaker", "Bedrock", "FSx Lustre", "EMR", "EventBridge", "AWS Batch", "GKE", "Vertex AI", "Dataproc", "Cloud Composer", "Terraform", "Docker", "Kubernetes", "Azure DevOps"],
+    "ml_systems": ["vLLM", "FP8 quantization", "SageMaker Pipelines", "Seldon", "Kubeflow", "Airflow", "Spark", "Databricks", "Snowflake"],
+    "focus": ["ML platform architecture", "LLM inference and serving", "MLOps", "CI/CD", "Release governance", "Production reliability"],
+    "leadership": ["Org building (0 -> 70+)", "$12M+ budget ownership", "Vendor strategy and contracts", "Multi-division platform adoption", "Global operations (Toronto, Paris, Boston)"]
   }
 }

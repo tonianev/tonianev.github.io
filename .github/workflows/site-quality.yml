@@ -17,10 +17,14 @@ jobs:
       - name: Lint HTML
         run: npx --yes htmlhint@latest "./*.html"
 
+      - name: Check JS syntax
+        run: node --check site.js
+
       - name: Check Links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress --accept 200,429 --exclude "^https://tonianev\\.com/.*" "./*.html"
+          # LinkedIn returns HTTP 999 to non-browser clients; exclude it.
+          args: --verbose --no-progress --accept 200,429 --exclude "^https://tonianev\\.com/.*" --exclude "^https://(www\\.)?linkedin\\.com" "./*.html"
           fail: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
