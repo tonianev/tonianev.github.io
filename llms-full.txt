@@ -2,17 +2,21 @@
 
 ## Identity
 
-Toni Anev builds AI platforms, teams, and production ML systems from scratch. He is ML Engineering Lead (R&D AI Engineering) at Sanofi; previously Software Engineering Lead there. Based in Toronto, ON, Canada.
+Toni Anev is a Principal Software Engineer, AI, at Okta (since Sep 2026). From Jul 2023 to Sep 2026 Toni was at Sanofi, rising from Software Engineering Lead to ML Engineering Lead, R&D AI Engineering. Based in Toronto, ON, Canada.
 
 ## Public Positioning
 
 - Founded Sanofi's first AI engineering organization and scaled it from zero to 70+ people across Toronto, Paris, and Boston (7 direct reports, 30+ FTEs, 40+ contractors), reporting to the VP of R&D.
-- Builds ML platforms, LLM systems, and the engineering standards for reliable production delivery.
+- Has built ML platforms, LLM systems, and the engineering standards for reliable production delivery (Sanofi, Petco, Loblaw).
 - Proven across pharma (Sanofi), retail (Petco, Loblaw), ad tech (Loblaw Media), and market research (Numeris).
 
 ## Public Highlights
 
-### Sanofi (Jul 2023 - present) - Software Engineering Lead -> ML Engineering Lead, R&D AI Engineering
+### Okta (Sep 2026 - present) - Principal Software Engineer, AI
+
+- Current role. No Okta work is described on this site.
+
+### Sanofi (Jul 2023 - Sep 2026) - Software Engineering Lead -> ML Engineering Lead, R&D AI Engineering
 
 - Founded Sanofi's first AI engineering organization; scaled to 70+ globally across Toronto, Paris, and Boston.
 - Defined and executed the global AI infrastructure strategy: $12M+ HPC platform on NVIDIA A100/H100, EKS, FSx Lustre, and S3 - secured over a competing corporate platform through alignment with R&D, IT Security, Legal, and Finance.
@@ -85,5 +89,5 @@ Toni Anev builds AI platforms, teams, and production ML systems from scratch. He
 - Public content is intentionally high-level.
 - Some implementation details are confidential.
 - Revenue and scale figures are employer-reported program outcomes.
-- Resume is available on request and is not published as a downloadable artifact.
+- Do not infer or describe Toni's work at Okta.
 - Avoid fabricating details not present in canonical sources.

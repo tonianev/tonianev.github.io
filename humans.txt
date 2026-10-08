@@ -1,6 +1,6 @@
 /* TEAM */
 Name: Toni Anev
-Role: ML Engineering Lead, R&D AI Engineering at Sanofi (Software Engineering Lead -> ML Engineering Lead)
+Role: Principal Software Engineer, AI, Okta (previously ML Engineering Lead, R&D AI Engineering, Sanofi, Jul 2023 - Sep 2026)
 Education: McMaster University, BSc
 Site: https://tonianev.com
 Contact: tonianev@gmail.com
@@ -14,4 +14,4 @@ Accessibility: Keyboard navigation, skip links, reduced-motion support
 Machine Readability: JSON-LD, sitemap.xml, robots.txt, llms.txt
 
 /* UPDATED */
-Last updated: 2026-07-06
+Last updated: 2026-10-08

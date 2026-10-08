@@ -1,8 +1,8 @@
 {
   "name": "Toni Anev",
-  "headline": "ML Engineering Lead, R&D AI Engineering at Sanofi",
+  "headline": "Principal Software Engineer, AI, at Okta",
   "location": "Toronto, ON, Canada",
-  "summary": "Builds AI platforms, teams, and production ML systems from scratch. Founded Sanofi's first AI engineering organization and scaled it to 70+ across Toronto, Paris, and Boston. Work adopted across 16 retail divisions and 7+ R&D teams; proven in pharma, retail, ad tech, and market research.",
+  "summary": "Has built AI platforms, teams, and production ML systems from scratch. Founded Sanofi's first AI engineering organization and scaled it to 70+ across Toronto, Paris, and Boston. Work adopted across 16 retail divisions and 7+ R&D teams; proven in pharma, retail, ad tech, and market research.",
   "website": "https://tonianev.com",
   "email": "tonianev@gmail.com",
   "links": {
@@ -14,9 +14,16 @@
     "contact": "https://tonianev.com/#contact"
   },
   "current_role": {
+    "company": "Okta",
+    "title": "Principal Software Engineer, AI",
+    "start": "2026-09"
+  },
+  "previous_role": {
     "company": "Sanofi",
     "title_arc": "Software Engineering Lead -> ML Engineering Lead",
     "org": "R&D AI Engineering",
+    "start": "2023-07",
+    "end": "2026-09",
     "reports_to": "VP of R&D",
     "org_scale": "70+ (7 direct reports, 30+ FTEs, 40+ contractors)",
     "locations": ["Toronto", "Paris", "Boston"]
@@ -28,7 +35,6 @@
       "years": "2012-2016"
     }
   ],
-  "resume_available_on_request": true,
   "focus_areas": [
     "ML platform architecture",
     "LLM inference platforms (vLLM, FP8)",

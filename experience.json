@@ -2,13 +2,19 @@
   "person": "Toni Anev",
   "roles": [
     {
+      "company": "Okta",
+      "title": "Principal Software Engineer, AI",
+      "start": "2026-09",
+      "end": null
+    },
+    {
       "company": "Sanofi",
       "title": "Software Engineering Lead -> ML Engineering Lead (R&D AI Engineering)",
       "location": "Toronto, ON",
       "locations": ["Toronto", "Paris", "Boston"],
       "reports_to": "VP of R&D",
       "start": "2023-07",
-      "end": "present",
+      "end": "2026-09",
       "highlights": [
         "Founded Sanofi's first AI engineering organization and scaled it to 70+ globally (7 direct reports, 30+ FTEs, 40+ contractors) across Toronto, Paris, and Boston.",
         "Defined and executed the global AI infrastructure strategy: $12M+ HPC platform on NVIDIA A100/H100, EKS, FSx Lustre, and S3 - secured over a competing corporate platform via alignment with R&D, IT Security, Legal, and Finance.",

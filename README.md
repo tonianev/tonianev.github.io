@@ -5,7 +5,7 @@
 [![Machine readable](https://img.shields.io/badge/llms.txt-available-5c5850)](./llms.txt)
 [![Profile JSON](https://img.shields.io/badge/profile.json-published-5c5850)](./profile.json)
 
-Personal website for Toni Anev: AI platform engineering leadership, selected case studies, and contact-driven hiring conversations.
+Personal website for Toni Anev: AI platform engineering leadership, selected case studies, and a direct line for conversations.
 
 ## Design
 
@@ -18,7 +18,10 @@ flowchart TD
     A["Homepage"] --> B["Work"]
     A --> C["CV / career summary"]
     A --> D["Contact"]
-    A --> E["Agent Soul Kit"]
+    A --> K["Building"]
+    K --> L["KeySplash"]
+    K --> M["Eonmark"]
+    K --> E["Agent Soul Kit"]
     B --> F["Case studies + earlier career"]
     C --> D
     A --> G["Machine-readable layer"]
@@ -33,10 +36,10 @@ flowchart TD
 
 ## Goals
 
-- Clear positioning for recruiters, hiring managers, and technical peers.
+- Clear positioning for technical peers and collaborators.
 - Human-readable content with machine-friendly metadata and structured data.
 - Search and crawler friendliness across traditional bots and LLM systems.
-- Full resume access routed through direct contact; CV.html carries the public career summary.
+- CV.html carries the public career summary; the full resume is not published.
 
 ## Stack
 
@@ -45,9 +48,9 @@ flowchart TD
 
 ## Site Structure
 
-- `index.html` - homepage: hero, figures band, about, selected work, proof, contact
+- `index.html` - homepage: hero, figures band, about, selected work, building, contact
 - `work.html` - case studies (Sanofi, Petco, Loblaw), earlier career, education
-- `CV.html` - public career summary; full resume on request
+- `CV.html` - public career summary
 - `agent-soul-kit.html` - agent soul kit concept and interactive playground
 - `about.html` / `contact.html` / `proof.html` - meta-refresh redirects to homepage anchors
 - `site.css` - the "Ledger" design system (tokens, rules, print stylesheet)

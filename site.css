@@ -21,7 +21,7 @@
   --accent-contrast: #141413;
   --focus: #e5764f;
 
-  --font-body: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-body: "Lucida Grande", -apple-system, "Segoe UI", Roboto, system-ui, sans-serif;
   --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
   --text-meta: 0.6875rem;    /* 11px — uppercase labels */
@@ -242,6 +242,11 @@ main strong {
   font-size: var(--text-lead);
   line-height: 1.55;
   max-width: var(--measure);
+}
+
+/* Keeps a short phrase (a title, a place) from breaking across lines. */
+.nw {
+  white-space: nowrap;
 }
 
 .top-gap {
@@ -544,6 +549,7 @@ main strong {
 }
 
 .work-title {
+  display: block;
   margin-top: var(--s2);
   font-size: var(--text-h2);
   font-weight: 700;
@@ -555,6 +561,7 @@ main strong {
 }
 
 .work-summary {
+  display: block;
   margin-top: var(--s2);
   color: var(--muted);
   font-size: var(--text-small);
